@@ -10,7 +10,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "client-portal/project-dashboard.html", 
+      "src": "client-portal/project-dashboard.html",
       "use": "@vercel/static"
     },
     {
