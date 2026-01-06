@@ -190,7 +190,7 @@ Which camp are you in?
                             type: "thread",
                             theme: "problem_awareness",
                             tweets: [
-                                "🧵 Thread: Why 80% of businesses have broken GA4 tracking (and don't know it)",
+                                "Thread: Why Shopify brands lose 11-20% of revenue visibility (proven by data)",
                                 "1/ Your Facebook ads aren't working? Maybe. Or maybe your tracking is broken and you can't see the conversions.",
                                 "2/ We audited 500+ businesses this year. Average tracking accuracy: 34%. That means 66% of conversions are invisible.",
                                 "3/ The worst part? Most tracking breaks during the GA4 migration and never gets fixed.",
@@ -252,7 +252,7 @@ Which camp are you in?
                         {
                             type: "traffic_ad",
                             headline: "Stop Wasting Money on Ads You Can't Track",
-                            description: "Your tracking is probably broken. Most businesses lose 30-50% revenue visibility.",
+                            description: "Your revenue signals are degrading. Shopify brands lose 11-20% revenue visibility daily.",
                             video_concept: "Screen recording of broken GA4 setup being fixed",
                             cta_button: "Fix My Tracking"
                         }
@@ -550,23 +550,23 @@ module.exports = { SocialMediaCampaigns };
 if (require.main === module) {
     const campaigns = new SocialMediaCampaigns();
     
-    console.log('🚀 Social Media Campaigns Initialized\n');
+    console.log('Social Media Campaigns Initialized\n');
     
     // Show available platforms
-    console.log('📱 Available Platforms:');
+    console.log('Available Platforms:');
     campaigns.getAllPlatforms().forEach(platform => {
         console.log(`- ${platform}`);
     });
     
     // Generate sample content calendar
-    console.log('\n📅 30-Day Content Calendar Sample:');
+    console.log('\n30-Day Content Calendar Sample:');
     const calendar = campaigns.generateContentCalendar('2024-12-01', 7);
     calendar.forEach(day => {
         console.log(`${day.date} | ${day.platform} | ${day.theme}`);
     });
     
     // Show content by theme
-    console.log('\n📝 Problem Awareness Content:');
+    console.log('\nProblem Awareness Content:');
     const problemContent = campaigns.getContentByTheme('problem_awareness');
     Object.keys(problemContent).forEach(platform => {
         if (problemContent[platform].length > 0) {

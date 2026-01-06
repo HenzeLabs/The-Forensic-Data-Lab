@@ -11,17 +11,17 @@ const EmailTemplates = {
         template: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #ffffff;">
             <div style="background: linear-gradient(135deg, #2563eb, #1e40af); color: white; padding: 2rem; text-align: center;">
-                <h1 style="margin: 0; font-size: 2rem;">🎯 Welcome to The Forensic Data Lab!</h1>
+                <h1 style="margin: 0; font-size: 2rem;">Welcome to The Forensic Data Lab!</h1>
                 <p style="margin: 1rem 0 0; font-size: 1.1rem;">Your {{tier}} service starts now</p>
             </div>
             
             <div style="padding: 2rem;">
                 <h2 style="color: #1f2937;">Hello {{client_name}}!</h2>
                 
-                <p>Thank you for choosing The Forensic Data Lab to fix your tracking setup. We're excited to help you achieve <strong>100% tracking accuracy</strong> for {{website_url}}.</p>
+                <p>Thank you for choosing The Forensic Data Lab to recover your revenue signals. We're excited to help you achieve <strong>100% signal integrity</strong> for {{website_url}}.</p>
                 
                 <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0;">
-                    <h3 style="margin: 0 0 1rem; color: #1e40af;">📋 Your {{tier}} Service Includes:</h3>
+                    <h3 style="margin: 0 0 1rem; color: #1e40af;">Your {{tier}} Service Includes:</h3>
                     <ul style="margin: 0; padding-left: 1.5rem;">
                         {{#each service_features}}
                         <li style="margin-bottom: 0.5rem;">{{this}}</li>
@@ -29,10 +29,10 @@ const EmailTemplates = {
                     </ul>
                 </div>
                 
-                <h3 style="color: #1f2937;">🚀 What Happens Next:</h3>
+                <h3 style="color: #1f2937;">What Happens Next:</h3>
                 <ol style="padding-left: 1.5rem;">
-                    <li style="margin-bottom: 0.75rem;"><strong>Comprehensive Audit:</strong> We'll scan {{website_url}} to identify all tracking issues</li>
-                    <li style="margin-bottom: 0.75rem;"><strong>Issue Analysis:</strong> Categorize and prioritize fixes by business impact</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Revenue Signal Analysis:</strong> We'll scan {{website_url}} to identify all signal leaks</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Revenue Impact Analysis:</strong> Quantify and prioritize recovery opportunities</li>
                     {{#if is_diy}}
                     <li style="margin-bottom: 0.75rem;"><strong>Implementation Guide:</strong> Receive detailed DIY instructions with code snippets</li>
                     <li style="margin-bottom: 0.75rem;"><strong>Support Call:</strong> 1-hour consultation to walk through everything</li>
@@ -226,7 +226,7 @@ const EmailTemplates = {
                 
                 <p>Questions about your audit results? Simply reply to this email or contact your support team.</p>
                 
-                <p style="color: #6b7280; font-style: italic;">Ready to achieve 100% tracking accuracy? Let's fix these issues! 🎯</p>
+                <p style="color: #6b7280; font-style: italic;">Ready to achieve 100% signal integrity? Let's recover your revenue!</p>
             </div>
             
             <div style="background: #f9fafb; padding: 1rem 2rem; text-align: center; color: #6b7280; font-size: 0.875rem;">
@@ -255,7 +255,7 @@ const EmailTemplates = {
                 <div style="background: #ecfdf5; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0;">
                     <h3 style="margin: 0 0 1rem; color: #059669;">✅ What We Accomplished:</h3>
                     <ul style="margin: 0; padding-left: 1.5rem;">
-                        <li style="margin-bottom: 0.5rem;">Fixed all {{total_issues_fixed}} tracking issues</li>
+                        <li style="margin-bottom: 0.5rem;">Restored all {{total_issues_fixed}} revenue signals</li>
                         <li style="margin-bottom: 0.5rem;">Implemented {{ecommerce_events}} e-commerce events</li>
                         <li style="margin-bottom: 0.5rem;">Achieved 100% data accuracy verification</li>
                         <li style="margin-bottom: 0.5rem;">Optimized {{performance_improvement}}% performance impact</li>

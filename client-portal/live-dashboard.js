@@ -482,8 +482,8 @@ class LiveDashboard {
             case '🔍 View Live Site':
                 this.viewLiveSite();
                 break;
-            case '📅 Schedule Call':
-                this.scheduleCall();
+            case 'Get Support':
+                window.open('/support', '_blank');
                 break;
             case '💬 Message Team':
                 this.focusMessageInput();

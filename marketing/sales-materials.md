@@ -1,17 +1,17 @@
 # The Forensic Data Lab - Sales Materials & Call Scripts
 
-## 📞 Discovery Call Script
+## Discovery Call Script
 
 ### Opening (2 minutes)
-**"Hi [Name], thanks for booking this call. I'm [Your Name] from The Forensic Data Lab. I saw that you requested a tracking audit for [website] - what made you reach out to us?"**
+**"Hi [Name], thanks for booking this call. I'm [Your Name] from The Forensic Data Lab. I saw that you requested a revenue signal analysis for [website] - what made you reach out to us?"
 
 *Listen actively. Common responses:*
-- "Our Facebook ads aren't showing conversions"
-- "Numbers don't match between GA4 and Shopify"
-- "Not sure if our tracking is set up correctly"
-- "Heard GA4 tracking is complicated"
+- "Our Meta Ads can't see our purchases"
+- "Revenue numbers don't match between GA4 and Shopify"
+- "Not sure if our revenue signals are accurate"
+- "Concerned about signal loss from iOS changes"
 
-**Follow-up:** "That's exactly what we specialize in fixing. Before we dive into your specific situation, can you tell me a bit about your business?"
+**Follow-up:** "That's exactly what we specialize in recovering. Before we dive into your revenue signal analysis, can you tell me a bit about your business?"
 
 ### Discovery Questions (10 minutes)
 
@@ -171,7 +171,7 @@ That's it.
 - Wasting thousands on misattributed campaigns
 
 ### Slide 2: What This Costs You
-**Average business loses 30-50% revenue visibility**
+**Shopify brands lose 11-20% revenue visibility on average**
 - For $500K/year business = $12.5K/month waste
 - For $2M/year business = $50K/month waste  
 - For $10M/year business = $250K/month waste

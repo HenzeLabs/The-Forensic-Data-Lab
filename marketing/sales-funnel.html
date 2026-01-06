@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Is Your GA4 Stealing Your Revenue? | The Forensic Data Lab</title>
-    <meta name="description" content="80% of businesses have broken tracking. We find every issue and don't stop until it's 100% perfect. Free 5-minute audit reveals exactly what's costing you money.">
+    <title>Your Shopify Store Is Bleeding Revenue | The Forensic Data Lab</title>
+    <meta name="description" content="Shopify brands lose 11-20% revenue visibility. Our forensic analysis recovers your lost signals. Start your revenue recovery today.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- OpenGraph & Social Media Meta -->
-    <meta property="og:title" content="Is Your GA4 Stealing Your Revenue? Free Audit Reveals Hidden Issues">
-    <meta property="og:description" content="Most businesses lose 30-50% revenue visibility due to broken tracking. Get your free audit in 5 minutes.">
+    <meta property="og:title" content="Your Shopify Store Is Bleeding Revenue - Free Forensic Analysis">
+    <meta property="og:description" content="Shopify brands generating $5M-$20M lose 11-20% revenue visibility. Our forensic diagnostic reveals exactly where your signals are leaking.">
     <meta property="og:image" content="https://forensicdatalab.com/images/social-audit-preview.jpg">
     <meta property="og:type" content="website">
     
@@ -585,7 +585,7 @@
         <div class="hero-content">
             <div class="hero-badge">⚠️ 80% of businesses have broken tracking</div>
             <h1 class="hero-title">Is Your GA4 <span class="highlight">Stealing Your Revenue?</span></h1>
-            <p class="hero-subtitle">Most businesses lose 30-50% revenue visibility due to broken tracking setups. Our 5-minute audit reveals exactly what's costing you money — and we don't stop until it's 100% perfect.</p>
+            <p class="hero-subtitle">Shopify brands generating $5M-$20M typically lose 11-20% revenue visibility due to signal degradation. Our forensic diagnostic reveals exactly where your revenue is leaking — and we don't stop until signals are 100% restored.</p>
             <a href="#audit" class="hero-cta">🚨 Get My FREE 5-Minute Audit</a>
             
             <div class="trust-indicators">
@@ -606,7 +606,7 @@
                 <div class="stat-card">
                     <div class="stat-number">80%</div>
                     <div class="stat-label">Broken Setups</div>
-                    <div class="stat-description">Of businesses have critical GA4 tracking issues</div>
+                    <div class="stat-description">Of Shopify brands have critical revenue signal loss</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number">$15K</div>
@@ -691,7 +691,7 @@
                         <li>1-hour expert consultation</li>
                         <li>Email support included</li>
                     </ul>
-                    <button class="plan-cta">Start Your Audit</button>
+                    <button class="plan-cta" onclick="window.location.href='/payment?service=forensicDiagnostic'">Start Forensic Diagnostic - $1,450</button>
                 </div>
                 
                 <div class="pricing-card featured">
@@ -708,7 +708,7 @@
                         <li>30-day monitoring</li>
                         <li>Priority support</li>
                     </ul>
-                    <button class="plan-cta">Fix My Tracking</button>
+                    <button class="plan-cta" onclick="window.location.href='/payment?service=signalRestoration'">Start Signal Restoration - $2,950</button>
                 </div>
                 
                 <div class="pricing-card">
@@ -724,7 +724,7 @@
                         <li>Quarterly re-audits (1 year)</li>
                         <li>Dedicated account manager</li>
                     </ul>
-                    <button class="plan-cta">Scale My Business</button>
+                    <button class="plan-cta" onclick="window.location.href='/contact?service=agencyAssurance'">Request Agency Assurance Quote</button>
                 </div>
             </div>
             
@@ -736,10 +736,10 @@
     <section class="final-cta" id="audit">
         <div class="final-cta-content">
             <h2>Stop Losing Money to Broken Tracking</h2>
-            <p>Every day you wait is revenue walking out the door. Get your free audit and see exactly what's wrong in just 5 minutes.</p>
+            <p>Every day you wait is revenue visibility walking out the door. Start your forensic diagnostic and see exactly where signals are leaking.</p>
             
             <div class="cta-buttons">
-                <a href="#" class="btn-primary">🚨 Get My FREE Audit Now</a>
+                <a href="/payment?service=forensicDiagnostic" class="btn-primary">Begin Revenue Recovery - $1,450</a>
                 <a href="#" class="btn-secondary">📞 Talk to an Expert</a>
             </div>
             
@@ -781,8 +781,9 @@
                 // Track the conversion
                 console.log('CTA clicked:', this.textContent);
                 
-                // In production, this would redirect to the actual booking/payment page
-                alert('Great choice! This would redirect to our audit booking system.');
+                // Redirect to payment page
+                const service = this.closest('.pricing-card')?.dataset?.service || 'forensicDiagnostic';
+                window.location.href = `/payment?service=${service}`;
             });
         });
 

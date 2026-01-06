@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency Assurance Quote - The Forensic Data Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0d1117 0%, #1a1f26 100%); }
+        .glass-effect { 
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white min-h-screen">
+    <!-- Header -->
+    <header class="py-6 px-8">
+        <div class="flex justify-between items-center max-w-4xl mx-auto">
+            <div class="text-2xl font-bold">The Forensic Data Lab</div>
+            <div class="text-blue-400 font-medium">Agency Assurance</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="px-8 py-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <!-- Service Details -->
+                <div class="glass-effect rounded-xl p-8">
+                    <h1 class="text-3xl font-bold mb-6">Agency Assurance</h1>
+                    
+                    <div class="mb-8">
+                        <div class="text-2xl font-bold mb-4 text-blue-400">Custom Pricing</div>
+                        <div class="text-lg text-gray-300">
+                            White-label data integrity solutions for SEO/CRO agencies managing multiple Shopify clients
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <h3 class="text-xl font-semibold mb-4">What's Included:</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
+                                <span>Everything in Signal Restoration</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
+                                <span>Custom tracking architecture design</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
+                                <span>Multi-property management setup</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
+                                <span>Compliance review (GDPR, CCPA)</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
+                                <span>Server-side tracking implementation</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
+                                <span>Quarterly re-audits (1 year)</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
+                                <span>Dedicated account manager</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
+                                <span>White-label reporting and documentation</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-900 bg-opacity-50 rounded-lg p-4">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <div class="w-5 h-5 bg-blue-500 rounded-full"></div>
+                            <span class="font-semibold">Enterprise Support</span>
+                        </div>
+                        <p class="text-sm text-gray-300">
+                            Priority access, dedicated account management, and custom SLAs for agency partnerships.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="glass-effect rounded-xl p-8">
+                    <h2 class="text-2xl font-bold mb-6">Request Custom Quote</h2>
+                    
+                    <form id="quote-form" onsubmit="submitQuoteForm(event)">
+                        <div class="space-y-6">
+                            <!-- Contact Information -->
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4">Contact Information</h3>
+                                <div class="grid gap-4">
+                                    <input 
+                                        type="text" 
+                                        id="full-name"
+                                        placeholder="Full Name"
+                                        required
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                    <input 
+                                        type="email" 
+                                        id="email"
+                                        placeholder="Email Address"
+                                        required
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                    <input 
+                                        type="tel" 
+                                        id="phone"
+                                        placeholder="Phone Number"
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- Agency Information -->
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4">Agency Information</h3>
+                                <div class="grid gap-4">
+                                    <input 
+                                        type="text" 
+                                        id="agency-name"
+                                        placeholder="Agency Name"
+                                        required
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                    <input 
+                                        type="url" 
+                                        id="agency-website"
+                                        placeholder="Agency Website"
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                    <select 
+                                        id="agency-size"
+                                        required
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                        <option value="">Agency Size</option>
+                                        <option value="1-5">1-5 employees</option>
+                                        <option value="6-15">6-15 employees</option>
+                                        <option value="16-50">16-50 employees</option>
+                                        <option value="51+">51+ employees</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Project Requirements -->
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4">Project Requirements</h3>
+                                <div class="grid gap-4">
+                                    <select 
+                                        id="client-count"
+                                        required
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                        <option value="">Number of Client Websites</option>
+                                        <option value="1-3">1-3 clients</option>
+                                        <option value="4-10">4-10 clients</option>
+                                        <option value="11-25">11-25 clients</option>
+                                        <option value="26-50">26-50 clients</option>
+                                        <option value="51+">51+ clients</option>
+                                    </select>
+                                    <select 
+                                        id="client-revenue"
+                                        required
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                        <option value="">Typical Client Monthly Revenue</option>
+                                        <option value="$1M-$5M">$1M - $5M</option>
+                                        <option value="$5M-$10M">$5M - $10M</option>
+                                        <option value="$10M-$20M">$10M - $20M</option>
+                                        <option value="$20M+">$20M+</option>
+                                    </select>
+                                    <div class="space-y-2">
+                                        <label class="block text-sm font-medium">Services Needed (check all that apply):</label>
+                                        <div class="space-y-2">
+                                            <label class="flex items-center space-x-2">
+                                                <input type="checkbox" name="services" value="initial-audits" class="rounded bg-gray-800 border-gray-700 text-blue-600 focus:ring-blue-500">
+                                                <span>Initial revenue signal audits for all clients</span>
+                                            </label>
+                                            <label class="flex items-center space-x-2">
+                                                <input type="checkbox" name="services" value="ongoing-monitoring" class="rounded bg-gray-800 border-gray-700 text-blue-600 focus:ring-blue-500">
+                                                <span>Ongoing signal monitoring and maintenance</span>
+                                            </label>
+                                            <label class="flex items-center space-x-2">
+                                                <input type="checkbox" name="services" value="white-label" class="rounded bg-gray-800 border-gray-700 text-blue-600 focus:ring-blue-500">
+                                                <span>White-label reports with your agency branding</span>
+                                            </label>
+                                            <label class="flex items-center space-x-2">
+                                                <input type="checkbox" name="services" value="team-training" class="rounded bg-gray-800 border-gray-700 text-blue-600 focus:ring-blue-500">
+                                                <span>Team training on revenue signal management</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Timeline and Budget -->
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4">Timeline & Budget</h3>
+                                <div class="grid gap-4">
+                                    <select 
+                                        id="timeline"
+                                        required
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                        <option value="">Preferred Start Timeline</option>
+                                        <option value="immediate">Immediate (within 1 week)</option>
+                                        <option value="1-2weeks">1-2 weeks</option>
+                                        <option value="1month">Within 1 month</option>
+                                        <option value="2-3months">2-3 months</option>
+                                    </select>
+                                    <select 
+                                        id="budget"
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                        <option value="">Estimated Budget Range</option>
+                                        <option value="$10k-$25k">$10K - $25K</option>
+                                        <option value="$25k-$50k">$25K - $50K</option>
+                                        <option value="$50k-$100k">$50K - $100K</option>
+                                        <option value="$100k+">$100K+</option>
+                                        <option value="flexible">Flexible - based on value</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Additional Information -->
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4">Additional Information</h3>
+                                <textarea 
+                                    id="additional-info"
+                                    placeholder="Tell us about your specific requirements, challenges, or questions..."
+                                    rows="4"
+                                    class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                ></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button 
+                                type="submit" 
+                                id="submit-button"
+                                class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                                <span id="button-text">Request Custom Quote</span>
+                                <div id="spinner" class="hidden inline-block animate-spin rounded-full h-4 w-4 border-b-2 border-white ml-2"></div>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="mt-6 text-center text-xs text-gray-400">
+                        <p>We'll respond within 24 hours with a custom quote and project timeline.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function submitQuoteForm(event) {
+            event.preventDefault();
+            
+            const submitButton = document.getElementById('submit-button');
+            const buttonText = document.getElementById('button-text');
+            const spinner = document.getElementById('spinner');
+            
+            // Disable submit button and show loading
+            submitButton.disabled = true;
+            buttonText.textContent = 'Submitting...';
+            spinner.classList.remove('hidden');
+
+            // Collect form data
+            const formData = {
+                name: document.getElementById('full-name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                agencyName: document.getElementById('agency-name').value,
+                agencyWebsite: document.getElementById('agency-website').value,
+                agencySize: document.getElementById('agency-size').value,
+                clientCount: document.getElementById('client-count').value,
+                clientRevenue: document.getElementById('client-revenue').value,
+                timeline: document.getElementById('timeline').value,
+                budget: document.getElementById('budget').value,
+                additionalInfo: document.getElementById('additional-info').value,
+                services: Array.from(document.querySelectorAll('input[name="services"]:checked')).map(cb => cb.value),
+                submittedAt: new Date().toISOString()
+            };
+
+            // In production, send to your backend API
+            fetch('/api/agency-quote', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Show success message
+                alert('Thank you! We\'ve received your quote request and will respond within 24 hours.');
+                // Reset form
+                document.getElementById('quote-form').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your request. Please try again or contact us directly.');
+            })
+            .finally(() => {
+                // Re-enable submit button
+                submitButton.disabled = false;
+                buttonText.textContent = 'Request Custom Quote';
+                spinner.classList.add('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

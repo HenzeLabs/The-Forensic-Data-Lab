@@ -6,9 +6,9 @@
 class ClientOnboardingSystem {
     constructor() {
         this.workflows = {
-            detective: this.createDetectiveWorkflow(),
-            surgeon: this.createSurgeonWorkflow(),
-            architect: this.createArchitectWorkflow()
+            forensicDiagnostic: this.createDetectiveWorkflow(),
+            signalRestoration: this.createSurgeonWorkflow(),
+            agencyAssurance: this.createArchitectWorkflow()
         };
     }
 
@@ -51,7 +51,7 @@ class ClientOnboardingSystem {
 
     createDetectiveWorkflow() {
         return {
-            name: "Tracking Detective",
+            name: "Forensic Diagnostic",
             estimatedDays: 2,
             steps: [
                 {
@@ -137,7 +137,7 @@ class ClientOnboardingSystem {
 
     createSurgeonWorkflow() {
         return {
-            name: "Tracking Surgeon",
+            name: "Signal Restoration",
             estimatedDays: 7,
             steps: [
                 {
@@ -276,7 +276,7 @@ class ClientOnboardingSystem {
 
     createArchitectWorkflow() {
         return {
-            name: "Tracking Architect",
+            name: "Agency Assurance",
             estimatedDays: 21,
             steps: [
                 {
@@ -585,10 +585,10 @@ class ClientOnboardingSystem {
         
         <h2>What happens next:</h2>
         <ul>
-            <li>📊 Comprehensive audit of ${client.website}</li>
-            <li>🔍 Detailed analysis of all tracking issues</li>
-            <li>🛠️ ${client.tier === 'detective' ? 'DIY implementation guide' : 'Complete implementation by our team'}</li>
-            <li>✅ 100% success verification</li>
+            <li>Comprehensive signal analysis of ${client.website}</li>
+            <li>Revenue leakage assessment and prioritization</li>
+            <li>${client.tier === 'forensicDiagnostic' ? 'Self-implementation roadmap provided' : 'Complete signal restoration by our team'}</li>
+            <li>100% revenue signal verification</li>
         </ul>
         
         <p><strong>Estimated completion:</strong> ${new Date(client.estimatedCompletion).toLocaleDateString()}</p>
@@ -707,7 +707,7 @@ if (require.main === module) {
         name: "Test Client",
         email: "test@example.com",
         website: "https://example.com",
-        tier: "surgeon"
+        tier: "signalRestoration"
     };
     
     onboarding.startOnboarding(testClient).then(client => {

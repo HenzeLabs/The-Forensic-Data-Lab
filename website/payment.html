@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Revenue Recovery - The Forensic Data Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0d1117 0%, #1a1f26 100%); }
+        .glass-effect { 
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white min-h-screen">
+    <!-- Header -->
+    <header class="py-6 px-8">
+        <div class="flex justify-between items-center max-w-4xl mx-auto">
+            <div class="text-2xl font-bold">The Forensic Data Lab</div>
+            <div class="text-green-400 font-medium">Secure Checkout</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="px-8 py-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <!-- Service Details -->
+                <div class="glass-effect rounded-xl p-8">
+                    <h1 class="text-3xl font-bold mb-6" id="service-title">Forensic Diagnostic</h1>
+                    
+                    <div class="mb-8">
+                        <div class="text-5xl font-bold mb-4" id="service-price">$1,450</div>
+                        <div class="text-lg text-gray-300" id="service-description">
+                            Complete revenue leakage analysis for your Shopify store
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <h3 class="text-xl font-semibold mb-4">What's Included:</h3>
+                        <ul class="space-y-3" id="service-features">
+                            <li class="flex items-start space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
+                                <span>48-hour forensic analysis of signal loss</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
+                                <span>Revenue recovery opportunity report (11-20% typical)</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
+                                <span>Signal restoration roadmap with ROI projections</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
+                                <span>DIY implementation guide</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
+                                <span>1-hour consultation call</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-900 bg-opacity-50 rounded-lg p-4">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <div class="w-5 h-5 bg-blue-500 rounded-full"></div>
+                            <span class="font-semibold">Revenue Recovery Guarantee</span>
+                        </div>
+                        <p class="text-sm text-gray-300">
+                            We guarantee to identify revenue recovery opportunities worth 10x our fee, or full refund.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Payment Form -->
+                <div class="glass-effect rounded-xl p-8">
+                    <h2 class="text-2xl font-bold mb-6">Complete Your Order</h2>
+                    
+                    <form id="payment-form">
+                        <div class="space-y-6">
+                            <!-- Contact Information -->
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4">Contact Information</h3>
+                                <div class="grid gap-4">
+                                    <input 
+                                        type="text" 
+                                        id="full-name"
+                                        placeholder="Full Name"
+                                        required
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                    <input 
+                                        type="email" 
+                                        id="email"
+                                        placeholder="Email Address"
+                                        required
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- Business Information -->
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4">Business Information</h3>
+                                <div class="grid gap-4">
+                                    <input 
+                                        type="text" 
+                                        id="company"
+                                        placeholder="Company Name"
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                    <input 
+                                        type="url" 
+                                        id="website"
+                                        placeholder="Website URL (e.g., https://yourstore.com)"
+                                        required
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                    <select 
+                                        id="monthly-revenue"
+                                        required
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                        <option value="">Select Monthly Revenue</option>
+                                        <option value="$1M-$5M">$1M - $5M</option>
+                                        <option value="$5M-$10M">$5M - $10M</option>
+                                        <option value="$10M-$20M">$10M - $20M</option>
+                                        <option value="$20M+">$20M+</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Payment Information -->
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4">Payment Information</h3>
+                                <div id="card-element" class="p-4 bg-gray-800 border border-gray-700 rounded-lg">
+                                    <!-- Stripe Elements will create form elements here -->
+                                </div>
+                                <div id="card-errors" role="alert" class="text-red-400 text-sm mt-2"></div>
+                            </div>
+
+                            <!-- Terms -->
+                            <div class="flex items-start space-x-3">
+                                <input 
+                                    type="checkbox" 
+                                    id="terms"
+                                    required
+                                    class="mt-1 w-4 h-4 text-blue-600 bg-gray-800 border-gray-700 rounded focus:ring-blue-500"
+                                >
+                                <label for="terms" class="text-sm text-gray-300">
+                                    I agree to the <a href="/terms" class="text-blue-400 hover:underline">Terms of Service</a> 
+                                    and <a href="/privacy" class="text-blue-400 hover:underline">Privacy Policy</a>
+                                </label>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button 
+                                type="submit" 
+                                id="submit-button"
+                                class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                                <span id="button-text">Complete Payment - $1,450</span>
+                                <div id="spinner" class="hidden inline-block animate-spin rounded-full h-4 w-4 border-b-2 border-white ml-2"></div>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="mt-6 text-center text-xs text-gray-400">
+                        <p>Secure payment powered by Stripe. Your payment information is encrypted and secure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Service configurations
+        const services = {
+            forensicDiagnostic: {
+                title: 'Forensic Diagnostic',
+                price: '$1,450',
+                description: 'Complete revenue leakage analysis for your Shopify store',
+                features: [
+                    '48-hour forensic analysis of signal loss',
+                    'Revenue recovery opportunity report (11-20% typical)',
+                    'Signal restoration roadmap with ROI projections',
+                    'DIY implementation guide',
+                    '1-hour consultation call',
+                    'Email support'
+                ]
+            },
+            signalRestoration: {
+                title: 'Signal Restoration',
+                price: '$2,950',
+                description: 'Complete revenue signal recovery implementation',
+                features: [
+                    'Everything in Forensic Diagnostic',
+                    'Complete professional implementation',
+                    'Automated Verification Loop until 100% success',
+                    'All e-commerce events setup',
+                    '30-day monitoring & adjustments',
+                    'Team training session (1 hour)',
+                    'Before/after performance report',
+                    '100% success guarantee'
+                ]
+            }
+        };
+
+        // Get service from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedService = urlParams.get('service') || 'forensicDiagnostic';
+        const serviceConfig = services[selectedService];
+
+        // Update page content
+        if (serviceConfig) {
+            document.getElementById('service-title').textContent = serviceConfig.title;
+            document.getElementById('service-price').textContent = serviceConfig.price;
+            document.getElementById('service-description').textContent = serviceConfig.description;
+            document.getElementById('button-text').textContent = `Complete Payment - ${serviceConfig.price}`;
+            
+            // Update features list
+            const featuresList = document.getElementById('service-features');
+            featuresList.innerHTML = serviceConfig.features.map(feature => `
+                <li class="flex items-start space-x-3">
+                    <div class="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 mt-0.5"></div>
+                    <span>${feature}</span>
+                </li>
+            `).join('');
+        }
+
+        // Initialize Stripe
+        const stripe = Stripe('pk_test_your_publishable_key_here'); // Replace with actual key
+        const elements = stripe.elements();
+
+        // Create card element
+        const cardElement = elements.create('card', {
+            style: {
+                base: {
+                    fontSize: '16px',
+                    color: '#ffffff',
+                    '::placeholder': {
+                        color: '#aab7c4',
+                    },
+                },
+                invalid: {
+                    color: '#fa755a',
+                },
+            },
+        });
+
+        cardElement.mount('#card-element');
+
+        // Handle form submission
+        const form = document.getElementById('payment-form');
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            const submitButton = document.getElementById('submit-button');
+            const buttonText = document.getElementById('button-text');
+            const spinner = document.getElementById('spinner');
+            
+            // Disable submit button and show loading
+            submitButton.disabled = true;
+            buttonText.textContent = 'Processing...';
+            spinner.classList.remove('hidden');
+
+            // Collect form data
+            const formData = {
+                name: document.getElementById('full-name').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value,
+                website: document.getElementById('website').value,
+                monthlyRevenue: document.getElementById('monthly-revenue').value,
+                service: selectedService
+            };
+
+            try {
+                // Create payment intent
+                const response = await fetch('/api/create-payment-intent', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                const { client_secret } = await response.json();
+
+                // Confirm payment
+                const { error, paymentIntent } = await stripe.confirmCardPayment(client_secret, {
+                    payment_method: {
+                        card: cardElement,
+                        billing_details: {
+                            name: formData.name,
+                            email: formData.email,
+                        },
+                    },
+                });
+
+                if (error) {
+                    // Show error message
+                    document.getElementById('card-errors').textContent = error.message;
+                } else if (paymentIntent.status === 'succeeded') {
+                    // Payment succeeded - redirect to success page
+                    window.location.href = `/success?service=${selectedService}&payment_intent=${paymentIntent.id}`;
+                }
+            } catch (error) {
+                document.getElementById('card-errors').textContent = 'An error occurred. Please try again.';
+                console.error('Payment error:', error);
+            }
+
+            // Re-enable submit button
+            submitButton.disabled = false;
+            buttonText.textContent = `Complete Payment - ${serviceConfig.price}`;
+            spinner.classList.add('hidden');
+        });
+
+        // Handle card element errors
+        cardElement.on('change', ({error}) => {
+            const displayError = document.getElementById('card-errors');
+            if (error) {
+                displayError.textContent = error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # The Forensic Data Lab: Signal Restoration as a Service
 
-This project provides the infrastructure for a forensic-grade tracking audit and repair service specializing in Shopify e-commerce.
+This project provides the infrastructure for a forensic-grade revenue signal recovery service specializing in Shopify e-commerce brands generating $5M-$20M annually.
 
 ## Service Overview
 
@@ -18,31 +18,32 @@ The Forensic Data Lab addresses the critical 90% failure rate in Google Analytic
 
 1. **SCAN** - Automated browser emulation to detect tag firing failures and script loading errors
 2. **AUDIT** - Deep-dive identification of structural flaws like double-counting or missing lower-funnel data
-3. **REPAIR** - Deployment of optimized configurations to resolve data leakage
+3. **RESTORE** - Deployment of optimized configurations to recover revenue signals
 4. **VERIFY** - Data reconciliation across Shopify, GA4, and third-party attribution platforms
 
 ## Service Tiers
 
-| Service | Price | Delivery | Target |
-|---------|-------|----------|--------|
-| **Forensic Diagnostic** | $1,450 | 48 hours | Diagnostic scan for revenue leakage |
-| **Signal Restoration** | $2,950 | 1 week | Comprehensive forensic repair |
-| **Agency Assurance** | Custom | Varies | White-label data integrity for SEO/CRO firms |
-| **Shadow Monitoring** | $350/mo | Ongoing | Automated health alerts and signal maintenance |
+| Service                 | Price   | Delivery | Target                                         |
+| ----------------------- | ------- | -------- | ---------------------------------------------- |
+| **Forensic Diagnostic** | $1,450  | 48 hours | Revenue leakage analysis for Shopify brands    |
+| **Signal Restoration**  | $2,950  | 1 week   | Complete revenue signal recovery               |
+| **Agency Assurance**    | Custom  | Varies   | White-label data integrity for SEO/CRO firms   |
+| **Shadow Monitoring**   | $350/mo | Ongoing  | Automated health alerts and signal maintenance |
 
 ## Technical Architecture
 
 After deployment, your service will be available at:
 
-- **🏠 Main Landing:** `/` - Service homepage
-- **💸 Sales Funnel:** `/sales` - High-converting sales page
-- **👤 Client Portal:** `/portal` - Real-time project dashboard
-- **📊 Business Dashboard:** `/dashboard` - Operations overview
-- **🔌 API Health:** `/api/health` - API status
+- **Main Landing:** `/` - Service homepage
+- **Sales Funnel:** `/sales` - Revenue recovery funnel
+- **Client Portal:** `/portal` - Real-time project dashboard
+- **Business Dashboard:** `/dashboard` - Operations overview
+- **API Health:** `/api/health` - API status
 
-## 🛠 Architecture
+## Architecture
 
 ### Frontend Pages
+
 ```
 website/
 ├── index.html              # Main service landing page
@@ -63,41 +64,45 @@ The service operates using a high-efficiency tech stack designed for precision:
 ## Project Structure
 
 ```
+
 website/
-├── index.html             # Main landing page
-├── styles.css             # Professional styling
-└── script.js              # Client-side interactions
+├── index.html # Main landing page
+├── styles.css # Professional styling
+└── script.js # Client-side interactions
 
 marketing/
-├── sales-funnel.html      # High-converting sales page
+├── sales-funnel.html # High-converting sales page
 └── social-media-campaigns.js
 
 client-portal/
 ├── project-dashboard.html # Real-time client portal
-├── portal-api.js          # Backend API
-├── live-dashboard.js      # Frontend JavaScript
-├── dashboard-styles.css   # Portal styling
+├── portal-api.js # Backend API
+├── live-dashboard.js # Frontend JavaScript
+├── dashboard-styles.css # Portal styling
 └── notification-system.js # Real-time notifications
 
 operations/
 ├── business-dashboard.html # Internal ops dashboard
-└── workflow-automation.js  # Business process automation
+└── workflow-automation.js # Business process automation
+
 ```
 
 ### Backend Services
 ```
+
 api/
-└── index.js               # Vercel serverless functions
+└── index.js # Vercel serverless functions
 
 platform/
-├── audit-engine.js        # Automated Verification Loop implementation
-└── api-server.js          # Full Express server (dev mode)
+├── audit-engine.js # Automated Verification Loop implementation
+└── api-server.js # Full Express server (dev mode)
 
 templates/
-├── email-templates.js     # Automated email sequences
-├── proposal-generator.js  # Dynamic proposal system
+├── email-templates.js # Automated email sequences
+├── proposal-generator.js # Dynamic proposal system
 └── audit-report-template.md
-```
+
+````
 
 ## API Endpoints
 
@@ -112,9 +117,10 @@ templates/
 curl -X POST https://your-domain.vercel.app/api/audit/quick \
   -H "Content-Type: application/json" \
   -d '{"website": "https://example.com"}'
-```
+````
 
 Response:
+
 ```json
 {
   "success": true,
@@ -131,31 +137,37 @@ Response:
 ## Customization
 
 ### Service Tiers
+
 Modify pricing in `templates/proposal-generator.js`:
+
 ```javascript
 this.serviceTiers = {
   forensicDiagnostic: { basePrice: 1450 },
   signalRestoration: { basePrice: 2950 },
-  agencyAssurance: { basePrice: "Custom" }
-}
+  agencyAssurance: { basePrice: "Custom" },
+};
 ```
 
 ### Professional Color Palette
+
 Update colors in `website/styles.css`:
+
 ```css
 :root {
-  --primary-color: #0f172a;  /* Deep Navy */
-  --accent-color: #64748b;   /* Slate Grey */
-  --success-color: #10b981;  /* Emerald Green */
+  --primary-color: #0f172a; /* Deep Navy */
+  --accent-color: #64748b; /* Slate Grey */
+  --success-color: #10b981; /* Emerald Green */
 }
 ```
 
 ### Email Templates
+
 Customize automated sequences in `templates/email-templates.js`
 
 ## Integrations
 
 ### Required Setup
+
 1. **Email Service** (ConvertKit, Mailchimp)
 2. **Payment Processing** (Stripe, PayPal)
 3. **Calendar Booking** (Calendly)
@@ -163,6 +175,7 @@ Customize automated sequences in `templates/email-templates.js`
 5. **Communication** (Slack notifications)
 
 ### Optional Integrations
+
 - Google Analytics for tracking performance
 - Facebook Pixel for retargeting
 - Zapier for workflow automation
@@ -171,18 +184,21 @@ Customize automated sequences in `templates/email-templates.js`
 ## 📊 Marketing Assets
 
 ### Email Sequences
+
 - **Lead Nurture:** 7-day educational series
 - **Audit Follow-up:** Convert audit leads
 - **Client Onboarding:** Post-purchase workflow
 - **Success Stories:** Social proof campaigns
 
 ### Social Media
+
 - **LinkedIn:** B2B thought leadership
 - **Twitter:** Quick tips and case studies
 - **Facebook:** Lead generation ads
 - **Instagram:** Behind-the-scenes content
 
 ### Sales Materials
+
 - Discovery call scripts
 - Objection handling guides
 - Proposal templates
@@ -191,6 +207,7 @@ Customize automated sequences in `templates/email-templates.js`
 ## ⚡ Performance
 
 ### Optimization Features
+
 - Real-time client portal updates via WebSocket
 - Automated audit engine with browser automation
 - Serverless architecture for instant scaling
@@ -198,6 +215,7 @@ Customize automated sequences in `templates/email-templates.js`
 - Progressive Web App capabilities
 
 ### Monitoring
+
 - Business operations dashboard
 - Real-time project tracking
 - Client satisfaction monitoring
@@ -206,6 +224,7 @@ Customize automated sequences in `templates/email-templates.js`
 ## 🔐 Security
 
 ### Data Protection
+
 - All client data encrypted
 - GDPR/CCPA compliant audit process
 - Secure credential handling
@@ -213,6 +232,7 @@ Customize automated sequences in `templates/email-templates.js`
 - Input validation and sanitization
 
 ### Access Control
+
 - Role-based team access
 - Client portal authentication
 - API key management
@@ -221,6 +241,7 @@ Customize automated sequences in `templates/email-templates.js`
 ## 🚀 Launch Checklist
 
 ### Pre-Launch
+
 - [ ] Update contact information
 - [ ] Set up payment processing
 - [ ] Configure email automation
@@ -228,6 +249,7 @@ Customize automated sequences in `templates/email-templates.js`
 - [ ] Set up analytics tracking
 
 ### Launch Day
+
 - [ ] Deploy to production
 - [ ] Update DNS settings
 - [ ] Send launch announcements
@@ -235,6 +257,7 @@ Customize automated sequences in `templates/email-templates.js`
 - [ ] Respond to inquiries
 
 ### Post-Launch
+
 - [ ] Collect client feedback
 - [ ] Optimize conversion funnel
 - [ ] Scale team as needed
@@ -244,12 +267,15 @@ Customize automated sequences in `templates/email-templates.js`
 ## 📞 Support
 
 ### Getting Help
+
 - **Documentation:** This README + code comments
 - **Issues:** GitHub issues for bugs/features
 - **Discussions:** GitHub discussions for questions
 
 ### Customization Services
+
 Need help customizing or deploying? Consider hiring a developer familiar with:
+
 - Node.js/Express backends
 - Modern vanilla JavaScript
 - Vercel deployment

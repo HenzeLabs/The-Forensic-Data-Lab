@@ -533,7 +533,7 @@ class EmailSequences {
         </head>
         <body>
             <div class="header">
-                <h1>🎯 The Forensic Data Lab</h1>
+                <h1>The Forensic Data Lab</h1>
             </div>
             <div class="content">
         `;
