@@ -1,0 +1,41 @@
+{
+  "name": "trackingfix-pro-platform",
+  "version": "1.0.0",
+  "description": "TrackingFix Pro - Professional tracking audit platform",
+  "main": "api-server.js",
+  "scripts": {
+    "start": "node api-server.js",
+    "dev": "nodemon api-server.js",
+    "audit": "node audit-engine.js",
+    "test": "jest",
+    "lint": "eslint .",
+    "build": "npm run lint && npm test"
+  },
+  "keywords": [
+    "tracking",
+    "analytics",
+    "audit",
+    "ga4",
+    "gtm",
+    "ecommerce"
+  ],
+  "author": "TrackingFix Pro",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.10.0",
+    "playwright": "^1.40.0",
+    "nodemon": "^3.0.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.54.0",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

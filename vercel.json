@@ -1,0 +1,56 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "website/index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "marketing/sales-funnel.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "client-portal/project-dashboard.html", 
+      "use": "@vercel/static"
+    },
+    {
+      "src": "operations/business-dashboard.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "platform/api-server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/website/index.html"
+    },
+    {
+      "src": "/sales",
+      "dest": "/marketing/sales-funnel.html"
+    },
+    {
+      "src": "/portal",
+      "dest": "/client-portal/project-dashboard.html"
+    },
+    {
+      "src": "/dashboard",
+      "dest": "/operations/business-dashboard.html"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/platform/api-server.js"
+    },
+    {
+      "src": "/(.+\\.(css|js|png|jpg|jpeg|gif|ico|svg))",
+      "dest": "/$1"
+    }
+  ],
+  "functions": {
+    "platform/api-server.js": {
+      "maxDuration": 30
+    }
+  }
+}

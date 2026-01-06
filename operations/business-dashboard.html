@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackingFix Pro - Business Operations Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --border: #e5e7eb;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: var(--bg-primary);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .refresh-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .refresh-btn:hover {
+            background: #1d4ed8;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .kpi-card {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+        
+        .kpi-card:hover {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transform: translateY(-1px);
+        }
+        
+        .kpi-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        
+        .kpi-title {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .kpi-trend {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+        }
+        
+        .trend-up {
+            background: #dcfce7;
+            color: #166534;
+        }
+        
+        .trend-down {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+        
+        .trend-flat {
+            background: #f3f4f6;
+            color: #374151;
+        }
+        
+        .kpi-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .kpi-target {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 0.5rem;
+            background: var(--bg-secondary);
+            border-radius: 0.25rem;
+            overflow: hidden;
+            margin: 0.5rem 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--success));
+            transition: width 0.5s ease;
+        }
+        
+        .charts-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .chart-card {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border);
+        }
+        
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .chart-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+        
+        .chart-period {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        
+        .tables-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .table-card {
+            background: var(--bg-primary);
+            border-radius: 0.75rem;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+        
+        .table-header {
+            background: var(--bg-secondary);
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .table-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+        
+        .table-content {
+            padding: 1.5rem;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .data-table th,
+        .data-table td {
+            text-align: left;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .data-table th {
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        
+        .data-table td {
+            font-weight: 500;
+        }
+        
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.375rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .status-active {
+            background: #dcfce7;
+            color: #166534;
+        }
+        
+        .status-pending {
+            background: #fef3c7;
+            color: #d97706;
+        }
+        
+        .status-completed {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .status-at-risk {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+        
+        .activity-feed {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .activity-item {
+            display: flex;
+            align-items: start;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+        
+        .activity-icon {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+        }
+        
+        .activity-content {
+            flex: 1;
+        }
+        
+        .activity-title {
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+        
+        .activity-time {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        
+        .alert-banner {
+            background: linear-gradient(90deg, #fee2e2, #fecaca);
+            border: 1px solid #fca5a5;
+            color: #7f1d1d;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .alert-icon {
+            font-size: 1.25rem;
+        }
+        
+        .alert-content {
+            flex: 1;
+        }
+        
+        .alert-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .alert-description {
+            font-size: 0.875rem;
+        }
+        
+        .last-updated {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background: var(--bg-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tables-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .kpi-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">🎯 TrackingFix Pro - Operations</div>
+            <div class="header-actions">
+                <button class="refresh-btn" onclick="refreshDashboard()">🔄 Refresh</button>
+                <div style="font-size: 0.875rem; color: var(--text-secondary);">
+                    Live Dashboard
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Alerts Section -->
+        <div id="alerts-container">
+            <div class="alert-banner">
+                <div class="alert-icon">⚠️</div>
+                <div class="alert-content">
+                    <div class="alert-title">Project Timeline Risk</div>
+                    <div class="alert-description">TechCorp implementation is 8 hours behind schedule. Team has been notified.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- KPI Grid -->
+        <div class="dashboard-grid">
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-header">
+                        <div class="kpi-title">Monthly Revenue</div>
+                        <div class="kpi-trend trend-up">↗ +12%</div>
+                    </div>
+                    <div class="kpi-value">$127K</div>
+                    <div class="kpi-target">Target: $150K</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-header">
+                        <div class="kpi-title">Pipeline Value</div>
+                        <div class="kpi-trend trend-up">↗ +24%</div>
+                    </div>
+                    <div class="kpi-value">$342K</div>
+                    <div class="kpi-target">Target: $300K</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 114%;"></div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-header">
+                        <div class="kpi-title">Close Rate</div>
+                        <div class="kpi-trend trend-up">↗ +3%</div>
+                    </div>
+                    <div class="kpi-value">28%</div>
+                    <div class="kpi-target">Target: 25%</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 112%;"></div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-header">
+                        <div class="kpi-title">Client Satisfaction</div>
+                        <div class="kpi-trend trend-flat">→ 0%</div>
+                    </div>
+                    <div class="kpi-value">9.2</div>
+                    <div class="kpi-target">Target: 9.0</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 102%;"></div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-header">
+                        <div class="kpi-title">Active Projects</div>
+                        <div class="kpi-trend trend-up">↗ +2</div>
+                    </div>
+                    <div class="kpi-value">23</div>
+                    <div class="kpi-target">Capacity: 30</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 77%;"></div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-header">
+                        <div class="kpi-title">Team Utilization</div>
+                        <div class="kpi-trend trend-down">↘ -5%</div>
+                    </div>
+                    <div class="kpi-value">82%</div>
+                    <div class="kpi-target">Target: 85%</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 82%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-grid">
+            <div class="chart-card">
+                <div class="chart-header">
+                    <div class="chart-title">Revenue Trend</div>
+                    <div class="chart-period">Last 12 months</div>
+                </div>
+                <div style="position: relative; height: 300px;">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <div class="chart-header">
+                    <div class="chart-title">Service Mix</div>
+                    <div class="chart-period">This month</div>
+                </div>
+                <div style="position: relative; height: 300px;">
+                    <canvas id="serviceMixChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Tables -->
+        <div class="tables-grid">
+            <div class="table-card">
+                <div class="table-header">
+                    <div class="table-title">Active Projects</div>
+                </div>
+                <div class="table-content">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Client</th>
+                                <th>Service</th>
+                                <th>Progress</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TechCorp</td>
+                                <td>Surgeon</td>
+                                <td>75%</td>
+                                <td><span class="status-badge status-at-risk">At Risk</span></td>
+                            </tr>
+                            <tr>
+                                <td>ShopPlus</td>
+                                <td>Detective</td>
+                                <td>100%</td>
+                                <td><span class="status-badge status-completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>StartupXYZ</td>
+                                <td>Architect</td>
+                                <td>45%</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>EcomBrand</td>
+                                <td>Surgeon</td>
+                                <td>25%</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>MarketCo</td>
+                                <td>Detective</td>
+                                <td>0%</td>
+                                <td><span class="status-badge status-pending">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="table-card">
+                <div class="table-header">
+                    <div class="table-title">Recent Activity</div>
+                </div>
+                <div class="table-content">
+                    <div class="activity-feed">
+                        <div class="activity-item">
+                            <div class="activity-icon">💰</div>
+                            <div class="activity-content">
+                                <div class="activity-title">New deal closed: RetailCorp - $2,997</div>
+                                <div class="activity-time">2 minutes ago</div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-content">
+                                <div class="activity-title">Project completed: ShopPlus tracking audit</div>
+                                <div class="activity-time">15 minutes ago</div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">🎯</div>
+                            <div class="activity-content">
+                                <div class="activity-title">New lead: TechStartup from organic search</div>
+                                <div class="activity-time">32 minutes ago</div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">📊</div>
+                            <div class="activity-content">
+                                <div class="activity-title">Weekly report generated and sent to team</div>
+                                <div class="activity-time">1 hour ago</div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">🔧</div>
+                            <div class="activity-content">
+                                <div class="activity-title">TechCorp Phase 2 implementation started</div>
+                                <div class="activity-time">2 hours ago</div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">📞</div>
+                            <div class="activity-content">
+                                <div class="activity-title">Discovery call scheduled: MegaCorp</div>
+                                <div class="activity-time">3 hours ago</div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">🎉</div>
+                            <div class="activity-content">
+                                <div class="activity-title">Client feedback: StartupXYZ rated 10/10</div>
+                                <div class="activity-time">4 hours ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="last-updated">
+        Last updated: <span id="lastUpdated">--:--:--</span>
+    </div>
+
+    <script>
+        // Initialize charts
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCharts();
+            updateTimestamp();
+            startRealTimeUpdates();
+        });
+
+        function initializeCharts() {
+            // Revenue Chart
+            const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+            new Chart(revenueCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'Monthly Revenue',
+                        data: [45000, 52000, 48000, 61000, 67000, 73000, 82000, 91000, 98000, 107000, 118000, 127000],
+                        borderColor: '#2563eb',
+                        backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return '$' + value.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Service Mix Chart
+            const serviceMixCtx = document.getElementById('serviceMixChart').getContext('2d');
+            new Chart(serviceMixCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Tracking Detective', 'Tracking Surgeon', 'Tracking Architect'],
+                    datasets: [{
+                        data: [12, 18, 8],
+                        backgroundColor: ['#f59e0b', '#10b981', '#2563eb'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                usePointStyle: true
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function refreshDashboard() {
+            console.log('🔄 Refreshing dashboard...');
+            
+            // Simulate data refresh
+            updateKPIs();
+            updateActivity();
+            updateTimestamp();
+            
+            // Show refresh feedback
+            const btn = document.querySelector('.refresh-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '✅ Updated';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+            }, 2000);
+        }
+
+        function updateKPIs() {
+            // Simulate slight changes in KPI values
+            const kpiValues = document.querySelectorAll('.kpi-value');
+            kpiValues.forEach(value => {
+                const current = parseInt(value.textContent.replace(/[^\d]/g, ''));
+                const change = Math.floor(Math.random() * 10 - 5); // -5 to +5
+                const newValue = current + change;
+                
+                if (value.textContent.includes('$')) {
+                    value.textContent = '$' + newValue + 'K';
+                } else if (value.textContent.includes('%')) {
+                    value.textContent = Math.max(0, Math.min(100, newValue)) + '%';
+                } else if (value.textContent.includes('.')) {
+                    value.textContent = (newValue / 10).toFixed(1);
+                } else {
+                    value.textContent = newValue.toString();
+                }
+            });
+        }
+
+        function updateActivity() {
+            // Add new activity item
+            const activities = [
+                { icon: '🎯', title: 'New lead: InnovateCorp from LinkedIn', time: 'Just now' },
+                { icon: '📊', title: 'Audit completed: SportsBrand with 92% score', time: 'Just now' },
+                { icon: '💰', title: 'Proposal sent: MegaRetail - $4,995', time: 'Just now' },
+                { icon: '✅', title: 'Quality gate passed: EcomStore Phase 1', time: 'Just now' }
+            ];
+            
+            const randomActivity = activities[Math.floor(Math.random() * activities.length)];
+            
+            const activityFeed = document.querySelector('.activity-feed');
+            const newItem = document.createElement('div');
+            newItem.className = 'activity-item';
+            newItem.innerHTML = `
+                <div class="activity-icon">${randomActivity.icon}</div>
+                <div class="activity-content">
+                    <div class="activity-title">${randomActivity.title}</div>
+                    <div class="activity-time">${randomActivity.time}</div>
+                </div>
+            `;
+            
+            activityFeed.insertBefore(newItem, activityFeed.firstChild);
+            
+            // Remove oldest item if more than 10
+            const items = activityFeed.querySelectorAll('.activity-item');
+            if (items.length > 10) {
+                items[items.length - 1].remove();
+            }
+        }
+
+        function updateTimestamp() {
+            const now = new Date();
+            document.getElementById('lastUpdated').textContent = now.toLocaleTimeString();
+        }
+
+        function startRealTimeUpdates() {
+            // Update timestamp every 30 seconds
+            setInterval(updateTimestamp, 30000);
+            
+            // Simulate new activity every 2-5 minutes
+            setInterval(() => {
+                if (Math.random() > 0.7) {
+                    updateActivity();
+                }
+            }, 120000); // 2 minutes
+            
+            // Simulate KPI changes every 5 minutes
+            setInterval(() => {
+                if (Math.random() > 0.5) {
+                    updateKPIs();
+                }
+            }, 300000); // 5 minutes
+        }
+
+        // Simulate real-time alerts
+        function showAlert(title, description, type = 'warning') {
+            const alertsContainer = document.getElementById('alerts-container');
+            
+            const alert = document.createElement('div');
+            alert.className = 'alert-banner';
+            alert.innerHTML = `
+                <div class="alert-icon">⚠️</div>
+                <div class="alert-content">
+                    <div class="alert-title">${title}</div>
+                    <div class="alert-description">${description}</div>
+                </div>
+            `;
+            
+            alertsContainer.appendChild(alert);
+            
+            // Auto-remove after 10 seconds
+            setTimeout(() => {
+                alert.remove();
+            }, 10000);
+        }
+
+        // Simulate occasional alerts
+        setTimeout(() => {
+            if (Math.random() > 0.7) {
+                showAlert(
+                    'High Value Lead Detected',
+                    'Enterprise client BigCorp just completed audit - score 15/10. Sales team notified.'
+                );
+            }
+        }, 30000);
+    </script>
+</body>
+</html>

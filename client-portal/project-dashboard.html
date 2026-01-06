@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackingFix Pro - Client Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">🎯 TrackingFix Pro</div>
+        <div class="header-actions">
+            <div class="connection-status status-connected">🟢 Live</div>
+            <div class="user-info">
+                <span>john@example.com</span>
+                <div class="avatar">JD</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="project-header">
+            <div class="project-title">
+                <div>
+                    <h1>Tracking Surgeon - example.com</h1>
+                    <div class="project-meta">
+                        Project ID: TFP-ABC123XYZ • Started: Dec 15, 2024
+                    </div>
+                </div>
+                <div class="status-badge status-active">Active</div>
+            </div>
+            
+            <div class="progress-section">
+                <div class="progress-text">
+                    <span>Implementation Progress</span>
+                    <span>6 of 10 steps completed</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 60%;"></div>
+                </div>
+                <div class="progress-text">
+                    <span>Estimated completion: Dec 22, 2024</span>
+                    <span>60% complete</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="main-content">
+                <!-- Project Timeline -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">📅 Project Timeline</h2>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker completed">✓</div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Project Kickoff</div>
+                                <div class="timeline-description">Client onboarding and project planning</div>
+                                <div class="timeline-meta">
+                                    <span>Dec 15, 2024</span>
+                                    <span>1h estimated</span>
+                                    <span>✓ Completed</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker completed">✓</div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Kickoff Call</div>
+                                <div class="timeline-description">Project alignment and access setup</div>
+                                <div class="timeline-meta">
+                                    <span>Dec 16, 2024</span>
+                                    <span>1h estimated</span>
+                                    <span>✓ Completed</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker completed">✓</div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Comprehensive Audit</div>
+                                <div class="timeline-description">Deep dive audit and analysis</div>
+                                <div class="timeline-meta">
+                                    <span>Dec 17, 2024</span>
+                                    <span>2h estimated</span>
+                                    <span>✓ Completed - 15 issues found</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker active">6</div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Implementation Phase 2</div>
+                                <div class="timeline-description">E-commerce event setup</div>
+                                <div class="timeline-meta">
+                                    <span>Dec 18-19, 2024</span>
+                                    <span>6h estimated</span>
+                                    <span>🔄 In Progress</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker pending">7</div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Testing & Verification</div>
+                                <div class="timeline-description">Comprehensive testing and validation</div>
+                                <div class="timeline-meta">
+                                    <span>Dec 20, 2024</span>
+                                    <span>2h estimated</span>
+                                    <span>⏳ Pending</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker pending">8</div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Client Review</div>
+                                <div class="timeline-description">Present results and train team</div>
+                                <div class="timeline-meta">
+                                    <span>Dec 21, 2024</span>
+                                    <span>1h estimated</span>
+                                    <span>⏳ Pending</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker pending">9</div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Go Live</div>
+                                <div class="timeline-description">Final deployment and monitoring setup</div>
+                                <div class="timeline-meta">
+                                    <span>Dec 22, 2024</span>
+                                    <span>1h estimated</span>
+                                    <span>⏳ Pending</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker pending">10</div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">30-Day Support</div>
+                                <div class="timeline-description">Monitoring and adjustments</div>
+                                <div class="timeline-meta">
+                                    <span>Dec 22 - Jan 21, 2025</span>
+                                    <span>4h estimated</span>
+                                    <span>⏳ Pending</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audit Results -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">📊 Audit Results</h2>
+                    </div>
+                    
+                    <div class="audit-summary">
+                        <div class="metric-card">
+                            <div class="metric-value metric-error">22%</div>
+                            <div class="metric-label">Initial Score</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value metric-error">15</div>
+                            <div class="metric-label">Issues Found</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value metric-warning">6</div>
+                            <div class="metric-label">Fixed</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value metric-success">72%</div>
+                            <div class="metric-label">Current Score</div>
+                        </div>
+                    </div>
+
+                    <div class="issues-list" style="margin-top: 1.5rem;">
+                        <h3 style="margin-bottom: 1rem;">Remaining Issues (9)</h3>
+                        
+                        <div class="issue-item">
+                            <div class="issue-severity severity-critical"></div>
+                            <div class="issue-content">
+                                <div class="issue-title">Missing E-commerce Event Tracking</div>
+                                <div class="issue-description">view_item, add_to_cart, begin_checkout events not firing</div>
+                            </div>
+                        </div>
+
+                        <div class="issue-item">
+                            <div class="issue-severity severity-high"></div>
+                            <div class="issue-content">
+                                <div class="issue-title">Cross-domain Tracking Issues</div>
+                                <div class="issue-description">Sessions not properly tracked across checkout.example.com</div>
+                            </div>
+                        </div>
+
+                        <div class="issue-item">
+                            <div class="issue-severity severity-medium"></div>
+                            <div class="issue-content">
+                                <div class="issue-title">Enhanced E-commerce Parameters Missing</div>
+                                <div class="issue-description">Product category, brand, and variant data not included</div>
+                            </div>
+                        </div>
+
+                        <div class="issue-item">
+                            <div class="issue-severity severity-medium"></div>
+                            <div class="issue-content">
+                                <div class="issue-title">Duplicate Facebook Pixel</div>
+                                <div class="issue-description">Two Facebook pixels detected causing duplicate events</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <!-- Team -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">👥 Your Team</h2>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="avatar">SM</div>
+                        <div class="member-info">
+                            <div class="member-name">Sarah Martinez</div>
+                            <div class="member-role">Implementation Specialist</div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="avatar">JC</div>
+                        <div class="member-info">
+                            <div class="member-name">James Chen</div>
+                            <div class="member-role">Quality Assurance</div>
+                        </div>
+                    </div>
+
+                    <button class="action-button">💬 Message Team</button>
+                    <button class="action-button secondary">📅 Schedule Call</button>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">📞 Communications</h2>
+                    </div>
+                    
+                    <div class="communication-item">
+                        <div class="comm-header">
+                            <div class="comm-type">Progress Update</div>
+                            <div class="comm-date">2h ago</div>
+                        </div>
+                        <div>GA4 configuration updated successfully. E-commerce events implementation in progress.</div>
+                    </div>
+
+                    <div class="communication-item">
+                        <div class="comm-header">
+                            <div class="comm-type">Implementation Note</div>
+                            <div class="comm-date">1 day ago</div>
+                        </div>
+                        <div>Fixed GTM container duplicate issue. Added enhanced e-commerce data layer.</div>
+                    </div>
+
+                    <div class="communication-item">
+                        <div class="comm-header">
+                            <div class="comm-type">Kickoff Call</div>
+                            <div class="comm-date">2 days ago</div>
+                        </div>
+                        <div>Project kickoff completed. Access credentials collected and implementation plan finalized.</div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">⚡ Quick Actions</h2>
+                    </div>
+                    
+                    <button class="action-button">📊 Download Report</button>
+                    <button class="action-button secondary">🔍 View Live Site</button>
+                    <button class="action-button secondary">📋 Implementation Guide</button>
+                </div>
+                
+                <!-- Charts Section -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">📈 Analytics</h2>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                        <div style="position: relative; height: 200px;">
+                            <h3 style="text-align: center; margin-bottom: 1rem; color: var(--text-secondary); font-size: 0.875rem;">Progress Overview</h3>
+                            <canvas id="progressChart"></canvas>
+                        </div>
+                        
+                        <div style="position: relative; height: 200px;">
+                            <h3 style="text-align: center; margin-bottom: 1rem; color: var(--text-secondary); font-size: 0.875rem;">Issues Breakdown</h3>
+                            <canvas id="issuesChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Message Modal -->
+    <div id="messageModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>💬 Message Your Team</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="messageForm">
+                    <textarea id="messageInput" placeholder="Type your message here..." rows="4" style="width: 100%; padding: 1rem; border: 1px solid var(--border-color); border-radius: 0.5rem; resize: vertical; font-family: inherit;"></textarea>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <button type="submit" class="action-button" style="margin: 0; flex: 1;">Send Message</button>
+                        <button type="button" class="action-button secondary" style="margin: 0; flex: 1;" onclick="document.getElementById('messageModal').style.display='none'">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+        }
+        
+        .modal-content {
+            background: var(--bg-primary);
+            border-radius: 1rem;
+            padding: 0;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            animation: modalSlideUp 0.3s ease-out;
+        }
+        
+        @keyframes modalSlideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h3 {
+            margin: 0;
+            color: var(--text-primary);
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            transition: all 0.2s;
+        }
+        
+        .modal-close:hover {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+        
+        .modal-body {
+            padding: 1.5rem;
+        }
+        
+        .last-update {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background: var(--bg-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+    </style>
+    
+    <div class="last-update">Last update: <span id="lastUpdateTime">--:--:--</span></div>
+
+    <script src="live-dashboard.js"></script>
+    <script>
+        // Initialize charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Progress Chart
+            const progressCtx = document.getElementById('progressChart');
+            if (progressCtx) {
+                new Chart(progressCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Completed', 'Remaining'],
+                        datasets: [{
+                            data: [72, 28],
+                            backgroundColor: ['#10b981', '#e5e7eb'],
+                            borderWidth: 0,
+                            cutout: '70%'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false }
+                        }
+                    }
+                });
+            }
+            
+            // Issues Chart
+            const issuesCtx = document.getElementById('issuesChart');
+            if (issuesCtx) {
+                new Chart(issuesCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Critical', 'High', 'Medium', 'Fixed'],
+                        datasets: [{
+                            data: [3, 5, 7, 6],
+                            backgroundColor: ['#ef4444', '#f59e0b', '#06b6d4', '#10b981'],
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false }
+                        },
+                        scales: {
+                            y: { 
+                                beginAtZero: true,
+                                ticks: { stepSize: 1 }
+                            },
+                            x: {
+                                grid: { display: false }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+
+        // Enhanced action button handling
+        document.addEventListener('click', function(e) {
+            if (e.target.matches('.action-button')) {
+                const action = e.target.textContent.trim();
+                
+                switch (action) {
+                    case '💬 Message Team':
+                        document.getElementById('messageModal').style.display = 'flex';
+                        setTimeout(() => document.getElementById('messageInput').focus(), 100);
+                        break;
+                    case '📊 Download Report':
+                        showNotification('Download Started', 'Your audit report is downloading...', 'success');
+                        break;
+                    case '📅 Schedule Call':
+                        showNotification('Redirect', 'Opening calendar booking...', 'info');
+                        break;
+                    case '🔍 View Live Site':
+                        window.open('https://example.com', '_blank');
+                        break;
+                    default:
+                        console.log('Action:', action);
+                }
+            }
+        });
+
+        // Modal close functionality
+        document.addEventListener('click', function(e) {
+            if (e.target.matches('.modal-close') || (e.target.matches('.modal') && e.target === e.currentTarget)) {
+                document.getElementById('messageModal').style.display = 'none';
+            }
+        });
+
+        // Escape key to close modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.getElementById('messageModal').style.display = 'none';
+            }
+        });
+
+        // Simple notification system
+        function showNotification(title, message, type = 'info') {
+            const container = document.getElementById('notifications') || createNotificationContainer();
+            
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <div class="notification-title">${title}</div>
+                    <div class="notification-message">${message}</div>
+                </div>
+                <button class="notification-close">×</button>
+            `;
+            
+            container.appendChild(notification);
+            setTimeout(() => notification.classList.add('show'), 10);
+            
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 5000);
+        }
+
+        function createNotificationContainer() {
+            const container = document.createElement('div');
+            container.id = 'notifications';
+            container.className = 'notification-container';
+            document.body.appendChild(container);
+            return container;
+        }
+
+        // Update timestamp
+        function updateTimestamp() {
+            const timestampElement = document.getElementById('lastUpdateTime');
+            if (timestampElement) {
+                timestampElement.textContent = new Date().toLocaleTimeString();
+            }
+        }
+
+        // Initialize
+        updateTimestamp();
+        setInterval(updateTimestamp, 30000);
+
+        // Add data attributes for dashboard initialization
+        document.body.dataset.projectId = 'TFP-ABC123XYZ';
+        document.body.dataset.clientId = 'TFP-CLIENT123';
+    </script>
+</body>
+</html>
