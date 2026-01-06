@@ -3,436 +3,324 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrackingFix Pro - Ralph Wiggum Loop Audits | Stop Losing Revenue to Broken Analytics</title>
-    <meta name="description" content="We find every tracking issue and don't stop until it's perfect. Our proprietary Ralph Wiggum Loop methodology guarantees 100% tracking accuracy for e-commerce businesses.">
+    <title>TrackingFix Pro - Stop Losing Revenue to Broken Analytics</title>
+    <meta name="description" content="Professional tracking audit service using the Ralph Wiggum Loop methodology. Guaranteed 100% tracking accuracy for e-commerce businesses.">
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="TrackingFix Pro - Stop Losing Revenue to Broken Analytics">
-    <meta property="og:description" content="Professional tracking audit service that finds every issue and fixes them all. Guaranteed results.">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'glass': 'rgba(255, 255, 255, 0.1)',
+            },
+            backdropBlur: {
+              'xl': '20px',
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+      
+      * {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      body {
+        background: linear-gradient(135deg, #0d1117 0%, #1a1f26 100%);
+        color: #e9ecef;
+      }
+      
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .glow-blue {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+      }
+      
+      .gradient-accent {
+        background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      }
+      
+      .gradient-cool {
+        background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+      }
+      
+      .float {
+        animation: float 3s ease-in-out infinite;
+      }
+    </style>
 </head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <h1>🎯 TrackingFix Pro</h1>
-                <span class="tagline">Ralph Wiggum Loop Audits</span>
+<body class="overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 glass-effect border-b border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl">🎯</span>
+                    <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">TrackingFix Pro</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="hover:text-blue-400 transition">Services</a>
+                    <a href="#how-it-works" class="hover:text-blue-400 transition">How It Works</a>
+                    <a href="#pricing" class="hover:text-blue-400 transition">Pricing</a>
+                    <button class="gradient-accent px-6 py-2 rounded-lg font-semibold hover:shadow-lg glow-blue transition">
+                        Free Audit
+                    </button>
+                </div>
             </div>
-            <div class="nav-links">
-                <a href="#services">Services</a>
-                <a href="#case-study">Case Study</a>
-                <a href="#process">Process</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#audit" class="cta-button">Free Audit</a>
-            </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                Is Your GA4 <span class="highlight">Stealing Your Revenue?</span>
-            </h1>
-            <p class="hero-subtitle">
-                80% of businesses have broken tracking setups. We find every issue and don't stop until it's 100% perfect.
-            </p>
-            
-            <div class="problem-stats">
-                <div class="stat">
-                    <span class="stat-number">80%</span>
-                    <span class="stat-text">Wrong GA4 Setup</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">$50K+</span>
-                    <span class="stat-text">Lost Revenue/Year</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">0%</span>
-                    <span class="stat-text">E-commerce Tracking</span>
-                </div>
-            </div>
+    <section class="min-h-screen flex items-center justify-center pt-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="space-y-6 animate-fadeIn">
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                    Is Your GA4
+                    <span class="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        Stealing Your Revenue?
+                    </span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                    80% of businesses have broken tracking setups. We find every issue and fix them all. Guaranteed.
+                </p>
 
-            <div class="hero-cta">
-                <button class="cta-primary" onclick="startAudit()">
-                    🔍 Get Free Tracking Audit
+                <!-- Stats Row -->
+                <div class="grid md:grid-cols-3 gap-4 mt-12 pb-12">
+                    <div class="glass-effect rounded-xl p-6 hover:border-blue-400 transition">
+                        <div class="text-3xl font-bold bg-gradient-cool bg-clip-text text-transparent">80%</div>
+                        <div class="text-sm text-slate-400 mt-2">Have Wrong GA4 Setup</div>
+                    </div>
+                    <div class="glass-effect rounded-xl p-6 hover:border-purple-400 transition">
+                        <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">$50K+</div>
+                        <div class="text-sm text-slate-400 mt-2">Revenue Loss Per Year</div>
+                    </div>
+                    <div class="glass-effect rounded-xl p-6 hover:border-cyan-400 transition">
+                        <div class="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">100%</div>
+                        <div class="text-sm text-slate-400 mt-2">Tracking Accuracy</div>
+                    </div>
+                </div>
+
+                <button class="gradient-accent px-8 py-4 rounded-lg font-bold text-lg glow-blue hover:shadow-2xl transition transform hover:scale-105">
+                    Get Your Free Audit →
                 </button>
-                <p class="cta-subtext">5-minute automated scan • No signup required • See results instantly</p>
-            </div>
-        </div>
-        
-        <div class="hero-visual">
-            <div class="tracking-demo">
-                <div class="demo-before">
-                    <h3>❌ Before: Broken Tracking</h3>
-                    <ul>
-                        <li>Wrong GA4 property (G-2NFV235X5Z)</li>
-                        <li>0/5 e-commerce events tracking</li>
-                        <li>No revenue attribution</li>
-                        <li>22.2% success rate</li>
-                    </ul>
-                </div>
-                <div class="demo-arrow">→</div>
-                <div class="demo-after">
-                    <h3>✅ After: Perfect Tracking</h3>
-                    <ul>
-                        <li>Correct GA4 property (G-382698683)</li>
-                        <li>5/5 e-commerce events firing</li>
-                        <li>Complete revenue tracking</li>
-                        <li>100% success rate</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section class="problem">
-        <div class="container">
-            <h2>The Hidden Crisis: Your Analytics Are Lying</h2>
-            
-            <div class="problem-grid">
-                <div class="problem-item">
-                    <div class="problem-icon">🚨</div>
-                    <h3>Wrong GA4 Property</h3>
-                    <p>Data flowing to incorrect analytics account - you're tracking nothing</p>
-                </div>
-                
-                <div class="problem-item">
-                    <div class="problem-icon">💸</div>
-                    <h3>Missing E-commerce Events</h3>
-                    <p>No purchase, cart, or product view tracking - zero revenue visibility</p>
-                </div>
-                
-                <div class="problem-item">
-                    <div class="problem-icon">📊</div>
-                    <h3>Broken Attribution</h3>
-                    <p>Can't optimize marketing spend - throwing money at unknown channels</p>
-                </div>
-                
-                <div class="problem-item">
-                    <div class="problem-icon">🔍</div>
-                    <h3>Invisible Issues</h3>
-                    <p>Looks like it's working but data is corrupt or missing completely</p>
-                </div>
-            </div>
-
-            <div class="impact-calculator">
-                <h3>Calculate Your Lost Revenue</h3>
-                <div class="calculator-form">
-                    <input type="number" id="monthly-revenue" placeholder="Monthly Revenue ($)">
-                    <button onclick="calculateLoss()">Calculate Loss</button>
-                </div>
-                <div id="loss-result" class="loss-result"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Study Section -->
-    <section id="case-study" class="case-study">
-        <div class="container">
-            <h2>Real Results: LW Scientific Case Study</h2>
-            <p class="case-study-subtitle">How we took a $2M+ e-commerce business from 0% to 100% tracking accuracy</p>
-            
-            <div class="case-study-content">
-                <div class="case-study-before">
-                    <h3>❌ Before Our Audit</h3>
-                    <div class="metrics">
-                        <div class="metric">
-                            <span class="metric-value">0%</span>
-                            <span class="metric-label">E-commerce Tracking</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">Wrong</span>
-                            <span class="metric-label">GA4 Property</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">$0</span>
-                            <span class="metric-label">Revenue Visibility</span>
-                        </div>
-                    </div>
-                    <ul class="issues-list">
-                        <li>Data going to wrong GA4 property (G-2NFV235X5Z)</li>
-                        <li>Zero e-commerce events firing</li>
-                        <li>No conversion tracking</li>
-                        <li>No marketing attribution</li>
-                        <li>Duplicate GTM containers</li>
-                    </ul>
-                </div>
-
-                <div class="case-study-process">
-                    <h3>🔄 Ralph Wiggum Loop Process</h3>
-                    <div class="process-steps">
-                        <div class="step">1. AUDIT</div>
-                        <div class="step-arrow">→</div>
-                        <div class="step">2. DIAGNOSE</div>
-                        <div class="step-arrow">→</div>
-                        <div class="step">3. REPAIR</div>
-                        <div class="step-arrow">→</div>
-                        <div class="step">4. VERIFY</div>
-                        <div class="step-arrow">→</div>
-                        <div class="step">5. REPEAT</div>
-                    </div>
-                    <p>We don't stop until tracking is 100% perfect</p>
-                </div>
-
-                <div class="case-study-after">
-                    <h3>✅ After Our Fix</h3>
-                    <div class="metrics">
-                        <div class="metric">
-                            <span class="metric-value">100%</span>
-                            <span class="metric-label">Success Rate</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">5/5</span>
-                            <span class="metric-label">Events Tracking</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">Complete</span>
-                            <span class="metric-label">Revenue Tracking</span>
-                        </div>
-                    </div>
-                    <ul class="fixes-list">
-                        <li>Updated GA4 property to correct ID (G-382698683)</li>
-                        <li>All 5 e-commerce events firing perfectly</li>
-                        <li>Complete purchase funnel tracking</li>
-                        <li>Accurate marketing attribution</li>
-                        <li>Consolidated GTM containers</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="case-study-testimonial">
-                <blockquote>
-                    "TrackingFix Pro found issues we didn't even know existed. Our tracking went from completely broken to 100% perfect. Now we can actually optimize our marketing spend with confidence."
-                </blockquote>
-                <cite>— LW Scientific, $2M+ E-commerce Business</cite>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="process" class="process">
-        <div class="container">
-            <h2>Our Ralph Wiggum Loop Methodology</h2>
-            <p class="process-subtitle">Systematic approach that guarantees 100% tracking accuracy</p>
-            
-            <div class="process-steps-detailed">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>AUDIT</h3>
-                    <p>Automated Playwright scanning of your entire site, GTM configuration analysis, and network request monitoring</p>
-                    <ul>
-                        <li>Complete site crawl (homepage, products, cart, checkout)</li>
-                        <li>GTM container configuration analysis</li>
-                        <li>GA4 property verification</li>
-                        <li>E-commerce event testing</li>
-                        <li>Network request analysis</li>
-                    </ul>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>DIAGNOSE</h3>
-                    <p>Comprehensive analysis of all issues found, prioritized by business impact and revenue loss</p>
-                    <ul>
-                        <li>Issue classification and severity scoring</li>
-                        <li>Business impact assessment</li>
-                        <li>Revenue loss calculation</li>
-                        <li>Fix complexity analysis</li>
-                        <li>Implementation roadmap</li>
-                    </ul>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>REPAIR</h3>
-                    <p>Implementation of all fixes using best practices and industry standards</p>
-                    <ul>
-                        <li>GA4 property configuration</li>
-                        <li>GTM tag implementation</li>
-                        <li>E-commerce event setup</li>
-                        <li>Data layer optimization</li>
-                        <li>Cross-platform integration</li>
-                    </ul>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>VERIFY</h3>
-                    <p>Comprehensive testing to ensure 100% tracking accuracy before sign-off</p>
-                    <ul>
-                        <li>End-to-end funnel testing</li>
-                        <li>Real browser verification</li>
-                        <li>Data quality validation</li>
-                        <li>Cross-device testing</li>
-                        <li>Performance impact analysis</li>
-                    </ul>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <h3>REPEAT</h3>
-                    <p>If any issues remain, we loop back and continue until tracking is perfect</p>
-                    <ul>
-                        <li>Continuous monitoring</li>
-                        <li>Issue resolution</li>
-                        <li>Performance optimization</li>
-                        <li>100% success guarantee</li>
-                        <li>Documentation and handoff</li>
-                    </ul>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Choose Your Tracking Fix Package</h2>
+    <section id="services" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">What We Fix</h2>
             
-            <div class="pricing-grid">
-                <div class="pricing-card basic">
-                    <div class="card-header">
-                        <h3>🕵️ Tracking Detective</h3>
-                        <div class="price">$497</div>
-                        <p class="price-subtitle">Perfect for DIY businesses</p>
-                    </div>
-                    
-                    <div class="card-features">
-                        <ul>
-                            <li>✅ 48-hour automated audit</li>
-                            <li>✅ Comprehensive issues report</li>
-                            <li>✅ Priority-ranked fix list</li>
-                            <li>✅ DIY implementation guide</li>
-                            <li>✅ 1-hour consultation call</li>
-                            <li>✅ Network request analysis</li>
-                            <li>✅ GA4 property verification</li>
-                        </ul>
-                    </div>
-                    
-                    <button class="select-plan" data-plan="detective">Choose Detective</button>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-effect rounded-xl p-8 hover:border-blue-400 transition group">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-blue-400 transition">Event Tracking</h3>
+                    <p class="text-slate-400">Fix missing or misconfigured events that hide your real customer behavior</p>
                 </div>
 
-                <div class="pricing-card premium featured">
-                    <div class="featured-badge">Most Popular</div>
-                    <div class="card-header">
-                        <h3>🏥 Tracking Surgeon</h3>
-                        <div class="price">$1,497</div>
-                        <p class="price-subtitle">Complete fix service</p>
-                    </div>
-                    
-                    <div class="card-features">
-                        <ul>
-                            <li>✅ Everything in Detective</li>
-                            <li>✅ <strong>We implement ALL fixes</strong></li>
-                            <li>✅ Ralph Wiggum Loop until 100% success</li>
-                            <li>✅ Complete e-commerce event setup</li>
-                            <li>✅ 30-day monitoring & adjustments</li>
-                            <li>✅ Team training session</li>
-                            <li>✅ Before/after performance report</li>
-                            <li>✅ 100% success guarantee</li>
-                        </ul>
-                    </div>
-                    
-                    <button class="select-plan" data-plan="surgeon">Choose Surgeon</button>
+                <!-- Card 2 -->
+                <div class="glass-effect rounded-xl p-8 hover:border-purple-400 transition group">
+                    <div class="text-4xl mb-4">🔗</div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-purple-400 transition">Conversion Tracking</h3>
+                    <p class="text-slate-400">Identify lost conversions and revenue leaks in your sales funnel</p>
                 </div>
 
-                <div class="pricing-card enterprise">
-                    <div class="card-header">
-                        <h3>🏗️ Tracking Architect</h3>
-                        <div class="price">$2,997+</div>
-                        <p class="price-subtitle">Enterprise solution</p>
-                    </div>
-                    
-                    <div class="card-features">
-                        <ul>
-                            <li>✅ Everything in Surgeon</li>
-                            <li>✅ Custom tracking architecture</li>
-                            <li>✅ Multi-property management</li>
-                            <li>✅ Compliance review (GDPR, CCPA)</li>
-                            <li>✅ Server-side tracking setup</li>
-                            <li>✅ Quarterly re-audits (1 year)</li>
-                            <li>✅ Dedicated account manager</li>
-                            <li>✅ Priority support</li>
-                        </ul>
-                    </div>
-                    
-                    <button class="select-plan" data-plan="architect">Choose Architect</button>
+                <!-- Card 3 -->
+                <div class="glass-effect rounded-xl p-8 hover:border-cyan-400 transition group">
+                    <div class="text-4xl mb-4">🧪</div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition">A/B Test Tracking</h3>
+                    <p class="text-slate-400">Ensure experiment tracking doesn't skew your results and decisions</p>
                 </div>
-            </div>
 
-            <div class="guarantee">
-                <h3>🎯 100% Success Guarantee</h3>
-                <p>We don't stop working until your tracking is 100% perfect. If we can't fix it, you don't pay.</p>
+                <!-- Card 4 -->
+                <div class="glass-effect rounded-xl p-8 hover:border-blue-400 transition group">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-blue-400 transition">Cross-Device Tracking</h3>
+                    <p class="text-slate-400">Track customers across all devices and touchpoints accurately</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="glass-effect rounded-xl p-8 hover:border-purple-400 transition group">
+                    <div class="text-4xl mb-4">🔐</div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-purple-400 transition">Data Quality</h3>
+                    <p class="text-slate-400">Remove duplicates, spam, and bad data poisoning your analytics</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="glass-effect rounded-xl p-8 hover:border-cyan-400 transition group">
+                    <div class="text-4xl mb-4">⚙️</div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition">Custom Implementation</h3>
+                    <p class="text-slate-400">Build tracking for unique business requirements and workflows</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Free Audit Section -->
-    <section id="audit" class="free-audit">
-        <div class="container">
-            <h2>Start with a Free 5-Minute Tracking Scan</h2>
-            <p>Get instant insights into your tracking health. No signup required.</p>
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 px-4 bg-gradient-to-b from-slate-900/50 to-dark-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">The Ralph Wiggum Loop Process</h2>
             
-            <div class="audit-form">
-                <form id="free-audit-form">
-                    <div class="form-group">
-                        <input type="url" id="website-url" placeholder="https://yourwebsite.com" required>
-                        <button type="submit" class="scan-button">🔍 Scan My Tracking</button>
+            <div class="space-y-8">
+                <!-- Step 1 -->
+                <div class="glass-effect rounded-xl p-8 border-l-4 border-cyan-400">
+                    <div class="flex items-start space-x-4">
+                        <div class="gradient-cool text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0">1</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Audit & Discover</h3>
+                            <p class="text-slate-400">We deeply analyze your entire tracking setup using our proprietary methodology</p>
+                        </div>
                     </div>
-                    <p class="form-note">We'll analyze your GA4 setup, e-commerce tracking, and data flow in real-time</p>
-                </form>
-                
-                <div id="scan-results" class="scan-results hidden">
-                    <!-- Results populated by JavaScript -->
                 </div>
+
+                <!-- Step 2 -->
+                <div class="glass-effect rounded-xl p-8 border-l-4 border-blue-400">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0">2</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Identify Issues</h3>
+                            <p class="text-slate-400">Find hidden tracking failures, configuration mistakes, and revenue leaks</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-effect rounded-xl p-8 border-l-4 border-purple-400">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0">3</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Implement Fixes</h3>
+                            <p class="text-slate-400">We don't just report—we implement fixes and validate everything works perfectly</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="glass-effect rounded-xl p-8 border-l-4 border-pink-400">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-gradient-to-r from-pink-500 to-pink-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0">4</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Train & Support</h3>
+                            <p class="text-slate-400">Teach your team how to maintain perfect tracking going forward</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-2xl mx-auto text-center glass-effect rounded-2xl p-12 glow-blue">
+            <h2 class="text-3xl font-bold mb-4">Stop Guessing. Start Knowing.</h2>
+            <p class="text-slate-300 mb-8 text-lg">Get a detailed audit of your tracking setup with zero obligation</p>
+            <button class="gradient-accent px-8 py-3 rounded-lg font-bold hover:shadow-2xl transition w-full md:w-auto">
+                Schedule Free Audit Call
+            </button>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-4 bg-gradient-to-b from-slate-900/50 to-dark-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">Choose Your Tracking Fix Package</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="glass-effect rounded-xl p-8 hover:border-cyan-400 transition">
+                    <h3 class="text-2xl font-bold mb-2">🕵️ Tracking Detective</h3>
+                    <div class="text-3xl font-bold bg-gradient-cool bg-clip-text text-transparent mb-2">$497</div>
+                    <p class="text-slate-400 mb-6">Perfect for DIY businesses</p>
+                    <ul class="space-y-3 mb-8 text-slate-300">
+                        <li>✅ 48-hour automated audit</li>
+                        <li>✅ Comprehensive issues report</li>
+                        <li>✅ Priority-ranked fix list</li>
+                        <li>✅ DIY implementation guide</li>
+                        <li>✅ 1-hour consultation call</li>
+                    </ul>
+                    <button class="w-full gradient-accent px-6 py-3 rounded-lg font-bold hover:shadow-lg glow-blue transition">Choose Plan</button>
+                </div>
+
+                <!-- Premium Plan (Featured) -->
+                <div class="glass-effect rounded-xl p-8 border-2 border-purple-400 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-bold">Most Popular</div>
+                    <h3 class="text-2xl font-bold mb-2">🏥 Tracking Surgeon</h3>
+                    <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">$1,497</div>
+                    <p class="text-slate-400 mb-6">Complete fix service</p>
+                    <ul class="space-y-3 mb-8 text-slate-300">
+                        <li>✅ Everything in Detective</li>
+                        <li>✅ <span class="font-bold">We implement ALL fixes</span></li>
+                        <li>✅ Ralph Wiggum Loop until 100%</li>
+                        <li>✅ Complete e-commerce setup</li>
+                        <li>✅ 30-day monitoring & support</li>
+                        <li>✅ Team training session</li>
+                        <li>✅ 100% success guarantee</li>
+                    </ul>
+                    <button class="w-full gradient-accent px-6 py-3 rounded-lg font-bold hover:shadow-lg glow-blue transition">Choose Plan</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="glass-effect rounded-xl p-8 hover:border-cyan-400 transition">
+                    <h3 class="text-2xl font-bold mb-2">🏗️ Tracking Architect</h3>
+                    <div class="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">$2,997+</div>
+                    <p class="text-slate-400 mb-6">Enterprise solution</p>
+                    <ul class="space-y-3 mb-8 text-slate-300">
+                        <li>✅ Everything in Surgeon</li>
+                        <li>✅ Custom tracking architecture</li>
+                        <li>✅ Multi-property management</li>
+                        <li>✅ Compliance review (GDPR, CCPA)</li>
+                        <li>✅ Server-side tracking setup</li>
+                        <li>✅ Quarterly re-audits (1 year)</li>
+                        <li>✅ Dedicated account manager</li>
+                    </ul>
+                    <button class="w-full gradient-accent px-6 py-3 rounded-lg font-bold hover:shadow-lg glow-blue transition">Choose Plan</button>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center glass-effect rounded-xl p-8">
+                <h3 class="text-2xl font-bold mb-2">🎯 100% Success Guarantee</h3>
+                <p class="text-slate-400">We don't stop working until your tracking is 100% perfect. If we can't fix it, you don't pay.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>🎯 TrackingFix Pro</h3>
-                    <p>Professional tracking audit service using our proprietary Ralph Wiggum Loop methodology</p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Services</h4>
-                        <a href="#services">Tracking Detective</a>
-                        <a href="#services">Tracking Surgeon</a>
-                        <a href="#services">Tracking Architect</a>
-                    </div>
-                    
-                    <div class="link-group">
-                        <h4>Resources</h4>
-                        <a href="#case-study">Case Study</a>
-                        <a href="#process">Our Process</a>
-                        <a href="#audit">Free Audit</a>
-                    </div>
-                    
-                    <div class="link-group">
-                        <h4>Contact</h4>
-                        <a href="mailto:hello@trackingfix.pro">hello@trackingfix.pro</a>
-                        <a href="tel:+1-555-TRACKING">(555) TRACKING</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 TrackingFix Pro. All rights reserved. | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
-            </div>
+    <footer class="border-t border-slate-700 py-8 px-4">
+        <div class="max-w-6xl mx-auto text-center text-slate-500">
+            <p>&copy; 2026 TrackingFix Pro. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
