@@ -1,5 +1,5 @@
 /**
- * TrackingFix Pro - Email Templates
+ * The Forensic Data Lab - Email Templates
  * Automated email templates for all client communications
  */
 
@@ -7,18 +7,18 @@ const EmailTemplates = {
     
     // Welcome email for new clients
     welcome: {
-        subject: "Welcome to TrackingFix Pro - Your {{tier}} Service Begins!",
+        subject: "Welcome to The Forensic Data Lab - Your {{tier}} Service Begins!",
         template: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #ffffff;">
             <div style="background: linear-gradient(135deg, #2563eb, #1e40af); color: white; padding: 2rem; text-align: center;">
-                <h1 style="margin: 0; font-size: 2rem;">🎯 Welcome to TrackingFix Pro!</h1>
+                <h1 style="margin: 0; font-size: 2rem;">🎯 Welcome to The Forensic Data Lab!</h1>
                 <p style="margin: 1rem 0 0; font-size: 1.1rem;">Your {{tier}} service starts now</p>
             </div>
             
             <div style="padding: 2rem;">
                 <h2 style="color: #1f2937;">Hello {{client_name}}!</h2>
                 
-                <p>Thank you for choosing TrackingFix Pro to fix your tracking setup. We're excited to help you achieve <strong>100% tracking accuracy</strong> for {{website_url}}.</p>
+                <p>Thank you for choosing The Forensic Data Lab to fix your tracking setup. We're excited to help you achieve <strong>100% tracking accuracy</strong> for {{website_url}}.</p>
                 
                 <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0;">
                     <h3 style="margin: 0 0 1rem; color: #1e40af;">📋 Your {{tier}} Service Includes:</h3>
@@ -68,7 +68,7 @@ const EmailTemplates = {
             </div>
             
             <div style="background: #f9fafb; padding: 1rem 2rem; text-align: center; color: #6b7280; font-size: 0.875rem;">
-                <p>TrackingFix Pro - We don't stop until your tracking is perfect</p>
+                <p>The Forensic Data Lab - We don't stop until your tracking is perfect</p>
                 <p>{{company_address}} | <a href="{{unsubscribe_url}}">Unsubscribe</a></p>
             </div>
         </div>
@@ -139,7 +139,7 @@ const EmailTemplates = {
             </div>
             
             <div style="background: #f9fafb; padding: 1rem 2rem; text-align: center; color: #6b7280; font-size: 0.875rem;">
-                <p>TrackingFix Pro - Real-time project updates</p>
+                <p>The Forensic Data Lab - Real-time project updates</p>
             </div>
         </div>
         `
@@ -230,7 +230,7 @@ const EmailTemplates = {
             </div>
             
             <div style="background: #f9fafb; padding: 1rem 2rem; text-align: center; color: #6b7280; font-size: 0.875rem;">
-                <p>TrackingFix Pro - Comprehensive tracking audits</p>
+                <p>The Forensic Data Lab - Comprehensive tracking audits</p>
             </div>
         </div>
         `
@@ -316,7 +316,7 @@ const EmailTemplates = {
                 {{#if feedback_request}}
                 <div style="background: #fef3c7; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0;">
                     <h3 style="margin: 0 0 1rem; color: #d97706;">⭐ Help Us Improve:</h3>
-                    <p style="margin: 0;">How was your TrackingFix Pro experience? Your feedback helps us serve future clients better.</p>
+                    <p style="margin: 0;">How was your The Forensic Data Lab experience? Your feedback helps us serve future clients better.</p>
                     <div style="text-align: center; margin-top: 1rem;">
                         <a href="{{feedback_url}}" style="background: #d97706; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 0.5rem; font-weight: 600;">
                             📝 Leave Feedback
@@ -325,13 +325,13 @@ const EmailTemplates = {
                 </div>
                 {{/if}}
                 
-                <p>Thank you for trusting TrackingFix Pro with your analytics. Your tracking is now enterprise-grade and ready to drive better business decisions!</p>
+                <p>Thank you for trusting The Forensic Data Lab with your analytics. Your tracking is now enterprise-grade and ready to drive better business decisions!</p>
                 
                 <p style="color: #6b7280; font-style: italic;">Questions or need assistance? We're always here to help! 🤝</p>
             </div>
             
             <div style="background: #f9fafb; padding: 1rem 2rem; text-align: center; color: #6b7280; font-size: 0.875rem;">
-                <p>TrackingFix Pro - Mission accomplished! 🎯</p>
+                <p>The Forensic Data Lab - Mission accomplished! 🎯</p>
                 <p>{{company_address}} | <a href="{{unsubscribe_url}}">Unsubscribe</a></p>
             </div>
         </div>
@@ -340,7 +340,7 @@ const EmailTemplates = {
 
     // Support and follow-up emails
     consultation_reminder: {
-        subject: "📅 Reminder: Your TrackingFix Pro Consultation Tomorrow",
+        subject: "📅 Reminder: Your The Forensic Data Lab Consultation Tomorrow",
         template: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #ffffff;">
             <div style="background: #f0f9ff; padding: 1.5rem; text-align: center;">
@@ -350,7 +350,7 @@ const EmailTemplates = {
             <div style="padding: 2rem;">
                 <h2 style="color: #1f2937;">Hello {{client_name}},</h2>
                 
-                <p>This is a friendly reminder about your TrackingFix Pro consultation call scheduled for tomorrow:</p>
+                <p>This is a friendly reminder about your The Forensic Data Lab consultation call scheduled for tomorrow:</p>
                 
                 <div style="background: #dbeafe; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0; text-align: center;">
                     <h3 style="margin: 0 0 1rem; color: #1e40af;">📞 Call Details</h3>
@@ -388,7 +388,7 @@ const EmailTemplates = {
 
     // Error notification email
     error_notification: {
-        subject: "🚨 TrackingFix Pro: Issue Detected - Action Required",
+        subject: "🚨 The Forensic Data Lab: Issue Detected - Action Required",
         template: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #ffffff;">
             <div style="background: #fee2e2; color: #dc2626; padding: 1.5rem; text-align: center;">
@@ -504,8 +504,8 @@ if (require.main === module) {
         project_id: "TFP-ABC123",
         start_date: "December 15, 2024",
         completion_date: "December 22, 2024",
-        portal_url: "https://portal.trackingfix.pro/TFP-ABC123",
-        support_email: "support@trackingfix.pro",
+        portal_url: "https://portal.forensicdatalab.com/TFP-ABC123",
+        support_email: "support@forensicdatalab.com",
         is_diy: false,
         service_features: [
             "Complete automated audit",

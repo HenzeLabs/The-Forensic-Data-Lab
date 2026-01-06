@@ -1,5 +1,5 @@
 /**
- * TrackingFix Pro - Email Marketing Sequences
+ * The Forensic Data Lab - Email Marketing Sequences
  * Automated email campaigns for lead nurturing and client conversion
  */
 
@@ -43,7 +43,7 @@ class EmailSequences {
                             },
                             {
                                 type: "social_proof",
-                                testimonial: "TrackingFix Pro found 23 issues we didn't even know existed. Now we can actually see which campaigns are working.",
+                                testimonial: "The Forensic Data Lab found 23 issues we didn't even know existed. Now we can actually see which campaigns are working.",
                                 author: "Sarah Chen, CMO at TechStart"
                             },
                             {
@@ -128,7 +128,7 @@ class EmailSequences {
                             },
                             {
                                 type: "quote",
-                                quote: "TrackingFix Pro didn't just fix our tracking - they gave us back visibility into our entire funnel. Now we can optimize with confidence.",
+                                quote: "The Forensic Data Lab didn't just fix our tracking - they gave us back visibility into our entire funnel. Now we can optimize with confidence.",
                                 author: "Marcus Thompson, TechCorp CEO"
                             }
                         ]
@@ -533,7 +533,7 @@ class EmailSequences {
         </head>
         <body>
             <div class="header">
-                <h1>🎯 TrackingFix Pro</h1>
+                <h1>🎯 The Forensic Data Lab</h1>
             </div>
             <div class="content">
         `;
@@ -546,7 +546,7 @@ class EmailSequences {
         html += `
             </div>
             <div class="footer">
-                <p>TrackingFix Pro - We don't stop until your tracking is perfect</p>
+                <p>The Forensic Data Lab - We don't stop until your tracking is perfect</p>
                 <p><a href="{{unsubscribe_url}}" style="color: #9ca3af;">Unsubscribe</a></p>
             </div>
         </body>

@@ -1,4 +1,4 @@
-// TrackingFix Pro - Landing Page JavaScript
+// The Forensic Data Lab - Landing Page JavaScript
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -164,13 +164,13 @@ function selectPlan(plan) {
     // Redirect to appropriate action based on plan
     switch(plan) {
         case 'detective':
-            window.open('https://calendly.com/trackingfix-pro/detective-consultation', '_blank');
+            window.open('https://calendly.com/forensic-data-lab/detective-consultation', '_blank');
             break;
         case 'surgeon':
-            window.open('https://calendly.com/trackingfix-pro/surgeon-consultation', '_blank');
+            window.open('https://calendly.com/forensic-data-lab/surgeon-consultation', '_blank');
             break;
         case 'architect':
-            window.open('https://calendly.com/trackingfix-pro/architect-consultation', '_blank');
+            window.open('https://calendly.com/forensic-data-lab/architect-consultation', '_blank');
             break;
         default:
             startAudit();

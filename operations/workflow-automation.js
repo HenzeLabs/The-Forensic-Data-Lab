@@ -1,5 +1,5 @@
 /**
- * TrackingFix Pro - Operational Workflow Automation
+ * The Forensic Data Lab - Operational Workflow Automation
  * Complete business process automation from lead to delivery
  */
 
@@ -904,7 +904,7 @@ module.exports = { WorkflowAutomation };
 if (require.main === module) {
     const automation = new WorkflowAutomation();
     
-    console.log('🚀 TrackingFix Pro Workflow Automation Started\n');
+    console.log('🚀 The Forensic Data Lab Workflow Automation Started\n');
     
     // Simulate new lead
     setTimeout(() => {

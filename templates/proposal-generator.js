@@ -1,5 +1,5 @@
 /**
- * TrackingFix Pro - Proposal Generator
+ * The Forensic Data Lab - Proposal Generator
  * Automated proposal generation with dynamic pricing and customization
  */
 
@@ -400,7 +400,7 @@ class ProposalGenerator {
         <!DOCTYPE html>
         <html>
         <head>
-            <title>TrackingFix Pro Proposal - ${proposal.client.company || proposal.client.name}</title>
+            <title>The Forensic Data Lab Proposal - ${proposal.client.company || proposal.client.name}</title>
             <style>
                 body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
                 .header { background: linear-gradient(135deg, #2563eb, #1e40af); color: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 2rem; }
@@ -420,7 +420,7 @@ class ProposalGenerator {
         </head>
         <body>
             <div class="header">
-                <h1>🎯 TrackingFix Pro Proposal</h1>
+                <h1>🎯 The Forensic Data Lab Proposal</h1>
                 <p>Professional Tracking Audit & Implementation</p>
                 <p><strong>Proposal ID:</strong> ${proposal.id}</p>
             </div>
@@ -510,8 +510,8 @@ class ProposalGenerator {
             </div>
 
             <div style="text-align: center; color: #6c757d; font-size: 0.9rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee;">
-                <p>TrackingFix Pro - We don't stop until your tracking is perfect</p>
-                <p>Questions? Email ${proposal.client.contactEmail || 'hello@trackingfix.pro'} | Call (555) TRACKING</p>
+                <p>The Forensic Data Lab - We don't stop until your tracking is perfect</p>
+                <p>Questions? Email ${proposal.client.contactEmail || 'hello@forensicdatalab.com'} | Call (555) TRACKING</p>
                 <p>Proposal valid for 30 days from ${proposal.timestamp.split('T')[0]}</p>
             </div>
         </body>
@@ -598,7 +598,7 @@ class ProposalGenerator {
     }
 
     generateAcceptanceUrl(proposalId) {
-        return `https://trackingfix.pro/accept/${proposalId}`;
+        return `https://forensicdatalab.com/accept/${proposalId}`;
     }
 
     generateProposalId() {

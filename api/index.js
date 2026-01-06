@@ -1,5 +1,5 @@
 /**
- * Vercel Serverless Function for TrackingFix Pro API
+ * Vercel Serverless Function for The Forensic Data Lab API
  */
 
 const express = require('express');
@@ -22,7 +22,7 @@ app.use('/api/', limiter);
 app.get('/api/health', (req, res) => {
     res.json({ 
         status: 'healthy', 
-        service: 'TrackingFix Pro API',
+        service: 'The Forensic Data Lab API',
         timestamp: new Date().toISOString() 
     });
 });
@@ -82,7 +82,7 @@ app.post('/api/contact', (req, res) => {
         success: true,
         message: 'Thank you for your inquiry! We\'ll be in touch within 2 hours.',
         next_steps: {
-            calendar: 'https://calendly.com/trackingfix-pro',
+            calendar: 'https://calendly.com/forensic-data-lab',
             audit: '/api/audit/quick'
         }
     });
@@ -104,7 +104,7 @@ app.post('/api/leads', (req, res) => {
     res.json({
         success: true,
         lead_id: leadId,
-        message: 'Welcome to TrackingFix Pro! Check your email for next steps.',
+        message: 'Welcome to The Forensic Data Lab! Check your email for next steps.',
         redirect: '/sales'
     });
 });

@@ -1,7 +1,7 @@
 {
-  "name": "trackingfix-pro",
+  "name": "forensic-data-lab",
   "version": "1.0.0",
-  "description": "TrackingFix Pro - Tracking Audit as a Service",
+  "description": "The Forensic Data Lab - Tracking Audit as a Service",
   "scripts": {
     "dev": "node platform/api-server.js",
     "build": "echo 'Static site ready'",

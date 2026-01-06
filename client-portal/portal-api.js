@@ -1,5 +1,5 @@
 /**
- * TrackingFix Pro - Client Portal API
+ * The Forensic Data Lab - Client Portal API
  * Real-time project updates, reporting, and client communication
  */
 
@@ -28,7 +28,7 @@ class PortalAPI {
     setupMiddleware() {
         // Security and rate limiting
         this.app.use(cors({
-            origin: ['http://localhost:3000', 'https://trackingfix.pro'],
+            origin: ['http://localhost:3000', 'https://forensicdatalab.com'],
             credentials: true
         }));
         
@@ -432,7 +432,7 @@ class PortalAPI {
             const report = await this.generateProjectReport(projectId);
             
             res.setHeader('Content-Type', 'application/pdf');
-            res.setHeader('Content-Disposition', `attachment; filename="TrackingFix-Report-${projectId}.pdf"`);
+            res.setHeader('Content-Disposition', `attachment; filename="Forensic Data Lab-Report-${projectId}.pdf"`);
             res.send(report);
         } catch (error) {
             res.status(500).json({ error: 'Failed to generate report' });
@@ -566,7 +566,7 @@ class PortalAPI {
 
     async start() {
         this.app.listen(this.port, () => {
-            console.log(`🚀 TrackingFix Pro Portal API running on port ${this.port}`);
+            console.log(`🚀 The Forensic Data Lab Portal API running on port ${this.port}`);
             console.log(`📡 WebSocket server running on port ${this.wsPort}`);
             console.log(`🔗 Dashboard: http://localhost:${this.port}/api/health`);
         });

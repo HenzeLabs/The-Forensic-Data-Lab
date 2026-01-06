@@ -1,5 +1,5 @@
 /**
- * TrackingFix Pro - Live Dashboard Client
+ * The Forensic Data Lab - Live Dashboard Client
  * Real-time dashboard with WebSocket connections and interactive features
  */
 
@@ -31,7 +31,7 @@ class LiveDashboard {
             this.setupEventListeners();
             this.startPeriodicUpdates();
             
-            console.log('🎯 TrackingFix Pro Dashboard initialized');
+            console.log('🎯 The Forensic Data Lab Dashboard initialized');
         } catch (error) {
             console.error('Failed to initialize dashboard:', error);
             this.showError('Failed to load dashboard. Please refresh the page.');
@@ -502,7 +502,7 @@ class LiveDashboard {
                 const url = window.URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = `TrackingFix-Report-${this.projectId}.pdf`;
+                a.download = `Forensic Data Lab-Report-${this.projectId}.pdf`;
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);

@@ -1,5 +1,5 @@
 /**
- * TrackingFix Pro - Client Onboarding System
+ * The Forensic Data Lab - Client Onboarding System
  * Automated onboarding workflow for all service tiers
  */
 
@@ -520,7 +520,7 @@ class ClientOnboardingSystem {
         
         client.communications.push({
             type: 'email',
-            subject: 'Welcome to TrackingFix Pro!',
+            subject: 'Welcome to The Forensic Data Lab!',
             content: emailContent,
             timestamp: new Date().toISOString()
         });
@@ -579,7 +579,7 @@ class ClientOnboardingSystem {
 
     generateWelcomeEmail(client) {
         return `
-        <h1>Welcome to TrackingFix Pro, ${client.name}!</h1>
+        <h1>Welcome to The Forensic Data Lab, ${client.name}!</h1>
         
         <p>Thank you for choosing our <strong>${client.tier.toUpperCase()}</strong> service package. We're excited to help you achieve 100% tracking accuracy.</p>
         
@@ -595,7 +595,7 @@ class ClientOnboardingSystem {
         
         <p>Questions? Reply to this email or call us at (555) TRACKING.</p>
         
-        <p>Best regards,<br>The TrackingFix Pro Team</p>
+        <p>Best regards,<br>The The Forensic Data Lab Team</p>
         `;
     }
 

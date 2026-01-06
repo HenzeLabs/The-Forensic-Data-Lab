@@ -1,5 +1,5 @@
 /**
- * TrackingFix Pro - Social Media Campaign Content
+ * The Forensic Data Lab - Social Media Campaign Content
  * Ready-to-use social media posts, ads, and campaign content for multiple platforms
  */
 
@@ -98,7 +98,7 @@ The solution: Our "Ralph Wiggum Loop" methodology that doesn't stop until tracki
 
 The result: 22% → 100% tracking accuracy in less than a week.
 
-"TrackingFix Pro didn't just fix our tracking - they gave us back visibility into our entire funnel." - Marcus Thompson, CEO
+"The Forensic Data Lab didn't just fix our tracking - they gave us back visibility into our entire funnel." - Marcus Thompson, CEO
 
 Ready to fix your tracking?
 
@@ -108,7 +108,7 @@ Ready to fix your tracking?
                                 "Problem: Show broken GA4 dashboard with missing data",
                                 "Solution: Quick overview of our audit process", 
                                 "Results: Before/after comparison of tracking accuracy",
-                                "CTA: Get your free audit at TrackingFix.pro"
+                                "CTA: Get your free audit at Forensic Data Lab.pro"
                             ]
                         }
                     ]
@@ -316,7 +316,7 @@ Which camp are you in?
                     {
                         type: "carousel_post",
                         theme: "behind_the_scenes",
-                        content: "Behind the scenes: Fixing a $2M company's broken tracking 🛠️\n\nSlide 1: The problem (22% tracking accuracy)\nSlide 2: Our team diving deep into GA4\nSlide 3: Testing every single event\nSlide 4: The result (100% accuracy) \nSlide 5: Happy client testimonial\n\nThis is what the Ralph Wiggum Loop looks like in action.\n\nReady to fix yours? Link in bio 🎯\n\n#TrackingFix #GA4 #MarketingAnalytics #SmallBusiness #Entrepreneur",
+                        content: "Behind the scenes: Fixing a $2M company's broken tracking 🛠️\n\nSlide 1: The problem (22% tracking accuracy)\nSlide 2: Our team diving deep into GA4\nSlide 3: Testing every single event\nSlide 4: The result (100% accuracy) \nSlide 5: Happy client testimonial\n\nThis is what the Ralph Wiggum Loop looks like in action.\n\nReady to fix yours? Link in bio 🎯\n\n#Forensic Data Lab #GA4 #MarketingAnalytics #SmallBusiness #Entrepreneur",
                         visual_concept: "Behind-the-scenes photos of team working, screenshots of process"
                     },
                     {

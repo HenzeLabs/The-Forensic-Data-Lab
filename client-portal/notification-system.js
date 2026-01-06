@@ -1,5 +1,5 @@
 /**
- * TrackingFix Pro - Real-time Notification System
+ * The Forensic Data Lab - Real-time Notification System
  * Handles all client notifications, updates, and communication workflows
  */
 
@@ -86,7 +86,7 @@ class NotificationSystem extends EventEmitter {
                 tier: project.tier,
                 start_date: project.startDate,
                 estimated_completion: project.estimatedCompletion,
-                portal_url: `https://portal.trackingfix.pro/${project.id}`
+                portal_url: `https://portal.forensicdatalab.com/${project.id}`
             },
             priority: 'high',
             channels: ['email', 'websocket']
@@ -111,7 +111,7 @@ class NotificationSystem extends EventEmitter {
                 next_step_name: nextStep?.name || 'Project Completion',
                 next_step_description: nextStep?.description || 'Final review and handoff',
                 next_step_eta: nextStep?.estimatedCompletion || 'TBD',
-                portal_url: `https://portal.trackingfix.pro/${project.id}`
+                portal_url: `https://portal.forensicdatalab.com/${project.id}`
             },
             priority: 'medium',
             channels: ['email', 'websocket', 'webPush']
@@ -145,7 +145,7 @@ class NotificationSystem extends EventEmitter {
                     milestone_name: update.milestoneName,
                     current_phase: update.currentPhase,
                     estimated_completion: project.estimatedCompletion,
-                    portal_url: `https://portal.trackingfix.pro/${project.id}`
+                    portal_url: `https://portal.forensicdatalab.com/${project.id}`
                 },
                 priority: 'low',
                 channels: channels
@@ -189,8 +189,8 @@ class NotificationSystem extends EventEmitter {
                     title: issue.title,
                     description: issue.description
                 })),
-                report_download_url: `https://portal.trackingfix.pro/download/report/${project.id}`,
-                portal_url: `https://portal.trackingfix.pro/${project.id}`
+                report_download_url: `https://portal.forensicdatalab.com/download/report/${project.id}`,
+                portal_url: `https://portal.forensicdatalab.com/${project.id}`
             },
             priority: urgency,
             channels: ['email', 'websocket', 'webPush']
@@ -211,7 +211,7 @@ class NotificationSystem extends EventEmitter {
                 issue_description: issue.description,
                 business_impact: issue.businessImpact,
                 recommended_action: issue.recommendedAction,
-                portal_url: `https://portal.trackingfix.pro/${project.id}`
+                portal_url: `https://portal.forensicdatalab.com/${project.id}`
             },
             priority: 'urgent',
             channels: ['email', 'sms', 'websocket', 'webPush'],
@@ -240,9 +240,9 @@ class NotificationSystem extends EventEmitter {
                 data_quality_score: results.dataQualityScore,
                 estimated_monthly_savings: results.estimatedMonthlySavings,
                 support_duration: '30 days',
-                final_report_url: `https://portal.trackingfix.pro/download/final-report/${project.id}`,
-                monitoring_dashboard_url: `https://portal.trackingfix.pro/monitoring/${project.id}`,
-                feedback_url: `https://trackingfix.pro/feedback/${project.id}`
+                final_report_url: `https://portal.forensicdatalab.com/download/final-report/${project.id}`,
+                monitoring_dashboard_url: `https://portal.forensicdatalab.com/monitoring/${project.id}`,
+                feedback_url: `https://forensicdatalab.com/feedback/${project.id}`
             },
             priority: 'high',
             channels: ['email', 'websocket', 'webPush']
@@ -267,7 +267,7 @@ class NotificationSystem extends EventEmitter {
                 error_impact: error.impact || 'Minimal impact on timeline',
                 requires_client_action: error.requiresClientAction || false,
                 required_action: error.requiredAction || null,
-                support_email: 'support@trackingfix.pro'
+                support_email: 'support@forensicdatalab.com'
             },
             priority: 'high',
             channels: ['email', 'websocket', 'webPush'],
@@ -384,7 +384,7 @@ class NotificationSystem extends EventEmitter {
             icon: '/icons/trackingfix-icon-192.png',
             badge: '/icons/trackingfix-badge-72.png',
             data: {
-                url: message.data.portal_url || 'https://portal.trackingfix.pro',
+                url: message.data.portal_url || 'https://portal.forensicdatalab.com',
                 messageId: message.id
             }
         };
@@ -406,7 +406,7 @@ class NotificationSystem extends EventEmitter {
             case 'critical_issue':
                 return `🚨 Critical Issue Detected`;
             default:
-                return '🎯 TrackingFix Pro Update';
+                return '🎯 The Forensic Data Lab Update';
         }
     }
 

@@ -1,5 +1,5 @@
 /**
- * TrackingFix Pro - Automated Audit Engine
+ * The Forensic Data Lab - Automated Audit Engine
  * Core platform for performing comprehensive tracking audits
  */
 
@@ -781,7 +781,7 @@ class TrackingAuditEngine {
         </head>
         <body>
             <div class="header">
-                <h1>🎯 TrackingFix Pro Audit Report</h1>
+                <h1>🎯 The Forensic Data Lab Audit Report</h1>
                 <p><strong>URL:</strong> ${this.auditResults.url}</p>
                 <p><strong>Date:</strong> ${new Date(this.auditResults.timestamp).toLocaleString()}</p>
                 <div class="score">${this.auditResults.overallScore}%</div>

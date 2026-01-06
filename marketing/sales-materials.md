@@ -1,9 +1,9 @@
-# TrackingFix Pro - Sales Materials & Call Scripts
+# The Forensic Data Lab - Sales Materials & Call Scripts
 
 ## 📞 Discovery Call Script
 
 ### Opening (2 minutes)
-**"Hi [Name], thanks for booking this call. I'm [Your Name] from TrackingFix Pro. I saw that you requested a tracking audit for [website] - what made you reach out to us?"**
+**"Hi [Name], thanks for booking this call. I'm [Your Name] from The Forensic Data Lab. I saw that you requested a tracking audit for [website] - what made you reach out to us?"**
 
 *Listen actively. Common responses:*
 - "Our Facebook ads aren't showing conversions"
@@ -346,4 +346,4 @@ Remove all risk from their decision with guarantees and proof.
 
 ---
 
-This sales framework has generated $2M+ in revenue for TrackingFix Pro using the principles of problem-focused selling, risk reversal, and social proof.
+This sales framework has generated $2M+ in revenue for The Forensic Data Lab using the principles of problem-focused selling, risk reversal, and social proof.

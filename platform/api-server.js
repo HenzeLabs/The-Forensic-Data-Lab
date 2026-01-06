@@ -1,5 +1,5 @@
 /**
- * TrackingFix Pro - API Server
+ * The Forensic Data Lab - API Server
  * RESTful API for the audit platform
  */
 
@@ -251,9 +251,9 @@ app.post('/api/book-consultation', (req, res) => {
         
         // Generate calendar links based on plan
         const calendarLinks = {
-            detective: 'https://calendly.com/trackingfix-pro/detective-consultation',
-            surgeon: 'https://calendly.com/trackingfix-pro/surgeon-consultation',
-            architect: 'https://calendly.com/trackingfix-pro/architect-consultation'
+            detective: 'https://calendly.com/forensic-data-lab/detective-consultation',
+            surgeon: 'https://calendly.com/forensic-data-lab/surgeon-consultation',
+            architect: 'https://calendly.com/forensic-data-lab/architect-consultation'
         };
         
         res.json({ 
@@ -428,7 +428,7 @@ app.use((req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-    console.log(`🚀 TrackingFix Pro API server running on port ${PORT}`);
+    console.log(`🚀 The Forensic Data Lab API server running on port ${PORT}`);
     console.log(`📊 Dashboard: http://localhost:${PORT}`);
     console.log(`🔍 API docs: http://localhost:${PORT}/api/health`);
 });

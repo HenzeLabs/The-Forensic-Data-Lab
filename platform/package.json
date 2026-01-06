@@ -1,7 +1,7 @@
 {
-  "name": "trackingfix-pro-platform",
+  "name": "forensic-data-lab-platform",
   "version": "1.0.0",
-  "description": "TrackingFix Pro - Professional tracking audit platform",
+  "description": "The Forensic Data Lab - Professional tracking audit platform",
   "main": "api-server.js",
   "scripts": {
     "start": "node api-server.js",
@@ -19,7 +19,7 @@
     "gtm",
     "ecommerce"
   ],
-  "author": "TrackingFix Pro",
+  "author": "The Forensic Data Lab",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
