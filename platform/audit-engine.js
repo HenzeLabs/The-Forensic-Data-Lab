@@ -33,7 +33,7 @@ class TrackingAuditEngine {
     }
 
     async performFullAudit(url, options = {}) {
-        console.log(`🔄 Starting Ralph Wiggum Loop Audit for: ${url}`);
+        console.log(`🔄 Starting Automated Verification Loop Audit for: ${url}`);
         this.auditResults.url = url;
         
         try {
@@ -49,15 +49,15 @@ class TrackingAuditEngine {
             await this.setupNetworkMonitoring(page);
             await this.setupConsoleMonitoring(page);
             
-            // Ralph Wiggum Loop: AUDIT
+            // Automated Verification Loop: AUDIT
             await this.auditPhase(page, url);
             
-            // Ralph Wiggum Loop: DIAGNOSE
+            // Automated Verification Loop: DIAGNOSE
             await this.diagnosePhase();
             
             await browser.close();
             
-            // Ralph Wiggum Loop: REPAIR (recommendations)
+            // Automated Verification Loop: REPAIR (recommendations)
             await this.repairPhase();
             
             // Calculate overall score

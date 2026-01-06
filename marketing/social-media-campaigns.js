@@ -94,7 +94,7 @@ Don't let broken tracking kill your growth.
 
 The problem: Their tracking was so broken, they couldn't tell which marketing channels were working.
 
-The solution: Our "Ralph Wiggum Loop" methodology that doesn't stop until tracking is 100% perfect.
+The solution: Our "Automated Verification Loop" methodology that doesn't stop until tracking is 100% perfect.
 
 The result: 22% → 100% tracking accuracy in less than a week.
 
@@ -195,14 +195,14 @@ Which camp are you in?
                                 "2/ We audited 500+ businesses this year. Average tracking accuracy: 34%. That means 66% of conversions are invisible.",
                                 "3/ The worst part? Most tracking breaks during the GA4 migration and never gets fixed.",
                                 "4/ Red flags your tracking is broken:\n→ Facebook shows 'no conversions'\n→ Best traffic source is 'direct' \n→ GA4 ≠ Shopify numbers\n→ E-commerce events at 0%",
-                                "5/ Good news: It's fixable. We use the 'Ralph Wiggum Loop' - audit, diagnose, repair, verify, repeat until perfect.",
+                                "5/ Good news: It's fixable. We use the 'Automated Verification Loop' - audit, diagnose, repair, verify, repeat until perfect.",
                                 "6/ Ready to see what's broken? Free 5-minute audit: [link]"
                             ]
                         },
                         {
                             type: "single_tweet",
                             theme: "social_proof", 
-                            content: "Client just texted: 'Holy crap, we can finally see which ads are working'\n\n22% → 100% tracking accuracy in 4 days.\n\nThe Ralph Wiggum Loop strikes again 🎯\n\nWhat's your tracking health score? Find out: [link]"
+                            content: "Client just texted: 'Holy crap, we can finally see which ads are working'\n\n22% → 100% tracking accuracy in 4 days.\n\nThe Automated Verification Loop strikes again 🎯\n\nWhat's your tracking health score? Find out: [link]"
                         },
                         {
                             type: "single_tweet",
@@ -316,7 +316,7 @@ Which camp are you in?
                     {
                         type: "carousel_post",
                         theme: "behind_the_scenes",
-                        content: "Behind the scenes: Fixing a $2M company's broken tracking 🛠️\n\nSlide 1: The problem (22% tracking accuracy)\nSlide 2: Our team diving deep into GA4\nSlide 3: Testing every single event\nSlide 4: The result (100% accuracy) \nSlide 5: Happy client testimonial\n\nThis is what the Ralph Wiggum Loop looks like in action.\n\nReady to fix yours? Link in bio 🎯\n\n#Forensic Data Lab #GA4 #MarketingAnalytics #SmallBusiness #Entrepreneur",
+                        content: "Behind the scenes: Fixing a $2M company's broken tracking 🛠️\n\nSlide 1: The problem (22% tracking accuracy)\nSlide 2: Our team diving deep into GA4\nSlide 3: Testing every single event\nSlide 4: The result (100% accuracy) \nSlide 5: Happy client testimonial\n\nThis is what the Automated Verification Loop looks like in action.\n\nReady to fix yours? Link in bio 🎯\n\n#Forensic Data Lab #GA4 #MarketingAnalytics #SmallBusiness #Entrepreneur",
                         visual_concept: "Behind-the-scenes photos of team working, screenshots of process"
                     },
                     {

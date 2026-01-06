@@ -130,7 +130,7 @@ function displayAuditResults(results, container) {
         
         <div class="next-steps">
             <h4>🎯 Get Complete Fix</h4>
-            <p>This quick scan found ${results.issues.length} issues. Our full Ralph Wiggum Loop audit finds 10-15+ issues on average and fixes them all.</p>
+            <p>This quick scan found ${results.issues.length} issues. Our full Automated Verification Loop audit finds 10-15+ issues on average and fixes them all.</p>
             <div class="cta-buttons">
                 <button class="cta-primary" onclick="selectPlan('surgeon')">
                     🏥 Get Complete Fix ($1,497)

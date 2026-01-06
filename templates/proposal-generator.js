@@ -6,15 +6,15 @@
 class ProposalGenerator {
     constructor() {
         this.serviceTiers = {
-            detective: {
-                name: "Tracking Detective",
-                basePrice: 497,
-                description: "Perfect for DIY businesses and agencies",
+            forensicDiagnostic: {
+                name: "Forensic Diagnostic",
+                basePrice: 1450,
+                description: "Diagnostic scan for revenue leakage",
                 deliveryTime: "48 hours",
                 features: [
-                    "48-hour automated audit",
-                    "Comprehensive issues report", 
-                    "Priority-ranked fix list",
+                    "48-hour automated diagnostic scan",
+                    "Comprehensive revenue leakage report", 
+                    "Priority-ranked signal restoration roadmap",
                     "DIY implementation guide",
                     "1-hour consultation call",
                     "Network request analysis",
@@ -27,15 +27,15 @@ class ProposalGenerator {
                     "No team training included"
                 ]
             },
-            surgeon: {
-                name: "Tracking Surgeon", 
-                basePrice: 1497,
-                description: "Complete fix service - we do everything",
+            signalRestoration: {
+                name: "Signal Restoration", 
+                basePrice: 2950,
+                description: "Comprehensive forensic repair",
                 deliveryTime: "1 week",
                 features: [
-                    "Everything in Detective",
+                    "Everything in Forensic Diagnostic",
                     "Complete professional implementation",
-                    "Ralph Wiggum Loop until 100% success",
+                    "Automated Verification Loop until 100% success",
                     "All e-commerce events setup", 
                     "30-day monitoring & adjustments",
                     "Team training session (1 hour)",
@@ -48,13 +48,13 @@ class ProposalGenerator {
                     "Standard compliance review"
                 ]
             },
-            architect: {
-                name: "Tracking Architect",
-                basePrice: 2997,
-                description: "Enterprise solution with ongoing support",
-                deliveryTime: "2-4 weeks", 
+            agencyAssurance: {
+                name: "Agency Assurance",
+                basePrice: "Custom",
+                description: "White-label data integrity for SEO/CRO firms",
+                deliveryTime: "Varies", 
                 features: [
-                    "Everything in Surgeon",
+                    "Everything in Signal Restoration",
                     "Custom tracking architecture design",
                     "Multi-property management setup",
                     "Compliance review (GDPR, CCPA)",
@@ -66,6 +66,21 @@ class ProposalGenerator {
                     "Team training (multiple sessions)"
                 ],
                 limitations: []
+            },
+            shadowMonitoring: {
+                name: "Shadow Monitoring",
+                basePrice: 350,
+                description: "Automated health alerts and signal maintenance",
+                deliveryTime: "Ongoing",
+                recurring: true,
+                features: [
+                    "Automated health alerts",
+                    "Signal degradation detection",
+                    "Monthly performance reports",
+                    "Theme update monitoring",
+                    "Email support"
+                ],
+                limitations: []
             }
         };
 
@@ -73,38 +88,32 @@ class ProposalGenerator {
             rush_delivery: {
                 name: "Rush Delivery (24-48h)",
                 price: 500,
-                applicableTiers: ["detective", "surgeon"]
+                applicableTiers: ["forensicDiagnostic", "signalRestoration"]
             },
             additional_sites: {
                 name: "Additional Website",
                 price: 750,
-                applicableTiers: ["surgeon", "architect"]
+                applicableTiers: ["signalRestoration", "agencyAssurance"]
             },
             mobile_app_tracking: {
                 name: "Mobile App Tracking Setup",
                 price: 1200,
-                applicableTiers: ["surgeon", "architect"]
+                applicableTiers: ["signalRestoration", "agencyAssurance"]
             },
             server_side_tracking: {
                 name: "Server-Side Tracking Setup",
                 price: 800,
-                applicableTiers: ["detective", "surgeon"]
+                applicableTiers: ["forensicDiagnostic", "signalRestoration"]
             },
             compliance_audit: {
                 name: "GDPR/CCPA Compliance Audit",
                 price: 600,
-                applicableTiers: ["detective", "surgeon"]
-            },
-            monthly_monitoring: {
-                name: "Monthly Monitoring & Reports",
-                price: 297,
-                recurring: true,
-                applicableTiers: ["detective", "surgeon"]
+                applicableTiers: ["forensicDiagnostic", "signalRestoration"]
             },
             team_training: {
                 name: "Extended Team Training (3 hours)",
                 price: 450,
-                applicableTiers: ["detective", "surgeon"]
+                applicableTiers: ["forensicDiagnostic", "signalRestoration"]
             }
         };
 

@@ -118,7 +118,7 @@ class EmailSequences {
                             },
                             {
                                 type: "process_breakdown",
-                                title: "How We Did It (Ralph Wiggum Loop)",
+                                title: "How We Did It (Automated Verification Loop)",
                                 steps: [
                                     "Day 1: Comprehensive audit revealed 47 critical issues",
                                     "Day 2-3: Fixed GA4 property configuration and GTM setup", 
@@ -136,7 +136,7 @@ class EmailSequences {
                 },
                 {
                     day: 6,
-                    subject: "The \"Ralph Wiggum Loop\" that guarantees success",
+                    subject: "The \"Automated Verification Loop\" that guarantees success",
                     template: "lead_nurture_4_methodology",
                     type: "educational",
                     data: {
@@ -145,7 +145,7 @@ class EmailSequences {
                             {
                                 type: "methodology_intro",
                                 title: "Why We're Different",
-                                description: "Most agencies 'fix' tracking once and call it done. We use the 'Ralph Wiggum Loop' - named after the Simpsons character who never gives up - that keeps testing until everything is perfect."
+                                description: "Most agencies 'fix' tracking once and call it done. We use the 'Automated Verification Loop' - named after the Simpsons character who never gives up - that keeps testing until everything is perfect."
                             },
                             {
                                 type: "loop_visualization",

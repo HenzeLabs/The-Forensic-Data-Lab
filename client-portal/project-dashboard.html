@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="logo">🎯 The Forensic Data Lab</div>
+        <div class="logo">The Forensic Data Lab</div>
         <div class="header-actions">
             <div class="connection-status status-connected">🟢 Live</div>
             <div class="user-info">
@@ -164,7 +164,7 @@
                 <!-- Audit Results -->
                 <div class="card">
                     <div class="card-header">
-                        <h2 class="card-title">📊 Audit Results</h2>
+                        <h2 class="card-title">Audit Results</h2>
                     </div>
                     
                     <div class="audit-summary">
@@ -288,8 +288,8 @@
                         <h2 class="card-title">⚡ Quick Actions</h2>
                     </div>
                     
-                    <button class="action-button">📊 Download Report</button>
-                    <button class="action-button secondary">🔍 View Live Site</button>
+                    <button class="action-button">Download Report</button>
+                    <button class="action-button secondary">View Live Site</button>
                     <button class="action-button secondary">📋 Implementation Guide</button>
                 </div>
                 
@@ -484,13 +484,13 @@
                         document.getElementById('messageModal').style.display = 'flex';
                         setTimeout(() => document.getElementById('messageInput').focus(), 100);
                         break;
-                    case '📊 Download Report':
+                    case 'Download Report':
                         showNotification('Download Started', 'Your audit report is downloading...', 'success');
                         break;
                     case '📅 Schedule Call':
                         showNotification('Redirect', 'Opening calendar booking...', 'info');
                         break;
-                    case '🔍 View Live Site':
+                    case 'View Live Site':
                         window.open('https://example.com', '_blank');
                         break;
                     default:

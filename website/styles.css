@@ -1,7 +1,8 @@
 /* The Forensic Data Lab - Landing Page Styles */
 :root {
-    --primary-color: #2563eb;
-    --primary-dark: #1e40af;
+    --primary-color: #0f172a;
+    --primary-dark: #020617;
+    --accent-color: #64748b;
     --success-color: #10b981;
     --warning-color: #f59e0b;
     --error-color: #ef4444;
