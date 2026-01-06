@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TrackingFix Pro - Stop Losing Revenue to Broken Analytics</title>
-    <meta name="description" content="Professional tracking audit service using the Ralph Wiggum Loop methodology. Guaranteed 100% tracking accuracy for e-commerce businesses.">
-    
+    <meta
+      name="description"
+      content="Professional tracking audit service using the Ralph Wiggum Loop methodology. Guaranteed 100% tracking accuracy for e-commerce businesses."
+    />
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -13,314 +16,488 @@
         theme: {
           extend: {
             colors: {
-              'glass': 'rgba(255, 255, 255, 0.1)',
+              glass: "rgba(255, 255, 255, 0.1)",
             },
             backdropBlur: {
-              'xl': '20px',
+              xl: "20px",
             },
-          }
-        }
-      }
+          },
+        },
+      };
     </script>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-      
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
       * {
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
       }
-      
+
       body {
         background: linear-gradient(135deg, #0d1117 0%, #1a1f26 100%);
         color: #e9ecef;
       }
-      
+
       .glass-effect {
         background: rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
-      
+
       .glow-blue {
         box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
       }
-      
+
       .gradient-accent {
         background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
       }
-      
+
       .gradient-cool {
         background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
       }
-      
+
       @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
       }
-      
+
       .float {
         animation: float 3s ease-in-out infinite;
       }
     </style>
-</head>
-<body class="overflow-x-hidden">
+  </head>
+  <body class="overflow-x-hidden">
     <!-- Navigation -->
     <nav class="fixed w-full top-0 z-50 glass-effect border-b border-slate-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                    <span class="text-2xl">🎯</span>
-                    <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">TrackingFix Pro</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#services" class="hover:text-blue-400 transition">Services</a>
-                    <a href="#how-it-works" class="hover:text-blue-400 transition">How It Works</a>
-                    <a href="#pricing" class="hover:text-blue-400 transition">Pricing</a>
-                    <button class="gradient-accent px-6 py-2 rounded-lg font-semibold hover:shadow-lg glow-blue transition">
-                        Free Audit
-                    </button>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-2">
+            <span class="text-2xl">🎯</span>
+            <span
+              class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+              >TrackingFix Pro</span
+            >
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#services" class="hover:text-blue-400 transition"
+              >Services</a
+            >
+            <a href="#how-it-works" class="hover:text-blue-400 transition"
+              >How It Works</a
+            >
+            <a href="#pricing" class="hover:text-blue-400 transition"
+              >Pricing</a
+            >
+            <button
+              class="gradient-accent px-6 py-2 rounded-lg font-semibold hover:shadow-lg glow-blue transition"
+            >
+              Free Audit
+            </button>
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="min-h-screen flex items-center justify-center pt-20 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="space-y-6 animate-fadeIn">
-                <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-                    Is Your GA4
-                    <span class="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                        Stealing Your Revenue?
-                    </span>
-                </h1>
-                
-                <p class="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-                    80% of businesses have broken tracking setups. We find every issue and fix them all. Guaranteed.
-                </p>
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="space-y-6 animate-fadeIn">
+          <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+            Is Your GA4
+            <span
+              class="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
+            >
+              Stealing Your Revenue?
+            </span>
+          </h1>
 
-                <!-- Stats Row -->
-                <div class="grid md:grid-cols-3 gap-4 mt-12 pb-12">
-                    <div class="glass-effect rounded-xl p-6 hover:border-blue-400 transition">
-                        <div class="text-3xl font-bold bg-gradient-cool bg-clip-text text-transparent">80%</div>
-                        <div class="text-sm text-slate-400 mt-2">Have Wrong GA4 Setup</div>
-                    </div>
-                    <div class="glass-effect rounded-xl p-6 hover:border-purple-400 transition">
-                        <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">$50K+</div>
-                        <div class="text-sm text-slate-400 mt-2">Revenue Loss Per Year</div>
-                    </div>
-                    <div class="glass-effect rounded-xl p-6 hover:border-cyan-400 transition">
-                        <div class="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">100%</div>
-                        <div class="text-sm text-slate-400 mt-2">Tracking Accuracy</div>
-                    </div>
-                </div>
+          <p
+            class="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed"
+          >
+            80% of businesses have broken tracking setups. We find every issue
+            and fix them all. Guaranteed.
+          </p>
 
-                <button class="gradient-accent px-8 py-4 rounded-lg font-bold text-lg glow-blue hover:shadow-2xl transition transform hover:scale-105">
-                    Get Your Free Audit →
-                </button>
+          <!-- Stats Row -->
+          <div class="grid md:grid-cols-3 gap-4 mt-12 pb-12">
+            <div
+              class="glass-effect rounded-xl p-6 hover:border-blue-400 transition"
+            >
+              <div
+                class="text-3xl font-bold bg-gradient-cool bg-clip-text text-transparent"
+              >
+                80%
+              </div>
+              <div class="text-sm text-slate-400 mt-2">
+                Have Wrong GA4 Setup
+              </div>
             </div>
+            <div
+              class="glass-effect rounded-xl p-6 hover:border-purple-400 transition"
+            >
+              <div
+                class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+              >
+                $50K+
+              </div>
+              <div class="text-sm text-slate-400 mt-2">
+                Revenue Loss Per Year
+              </div>
+            </div>
+            <div
+              class="glass-effect rounded-xl p-6 hover:border-cyan-400 transition"
+            >
+              <div
+                class="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
+              >
+                100%
+              </div>
+              <div class="text-sm text-slate-400 mt-2">Tracking Accuracy</div>
+            </div>
+          </div>
+
+          <button
+            class="gradient-accent px-8 py-4 rounded-lg font-bold text-lg glow-blue hover:shadow-2xl transition transform hover:scale-105"
+          >
+            Get Your Free Audit →
+          </button>
         </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="py-20 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16">What We Fix</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="glass-effect rounded-xl p-8 hover:border-blue-400 transition group">
-                    <div class="text-4xl mb-4">📊</div>
-                    <h3 class="text-xl font-bold mb-3 group-hover:text-blue-400 transition">Event Tracking</h3>
-                    <p class="text-slate-400">Fix missing or misconfigured events that hide your real customer behavior</p>
-                </div>
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-16">What We Fix</h2>
 
-                <!-- Card 2 -->
-                <div class="glass-effect rounded-xl p-8 hover:border-purple-400 transition group">
-                    <div class="text-4xl mb-4">🔗</div>
-                    <h3 class="text-xl font-bold mb-3 group-hover:text-purple-400 transition">Conversion Tracking</h3>
-                    <p class="text-slate-400">Identify lost conversions and revenue leaks in your sales funnel</p>
-                </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="glass-effect rounded-xl p-8 hover:border-blue-400 transition group"
+          >
+            <div class="text-4xl mb-4">📊</div>
+            <h3
+              class="text-xl font-bold mb-3 group-hover:text-blue-400 transition"
+            >
+              Event Tracking
+            </h3>
+            <p class="text-slate-400">
+              Fix missing or misconfigured events that hide your real customer
+              behavior
+            </p>
+          </div>
 
-                <!-- Card 3 -->
-                <div class="glass-effect rounded-xl p-8 hover:border-cyan-400 transition group">
-                    <div class="text-4xl mb-4">🧪</div>
-                    <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition">A/B Test Tracking</h3>
-                    <p class="text-slate-400">Ensure experiment tracking doesn't skew your results and decisions</p>
-                </div>
+          <!-- Card 2 -->
+          <div
+            class="glass-effect rounded-xl p-8 hover:border-purple-400 transition group"
+          >
+            <div class="text-4xl mb-4">🔗</div>
+            <h3
+              class="text-xl font-bold mb-3 group-hover:text-purple-400 transition"
+            >
+              Conversion Tracking
+            </h3>
+            <p class="text-slate-400">
+              Identify lost conversions and revenue leaks in your sales funnel
+            </p>
+          </div>
 
-                <!-- Card 4 -->
-                <div class="glass-effect rounded-xl p-8 hover:border-blue-400 transition group">
-                    <div class="text-4xl mb-4">📱</div>
-                    <h3 class="text-xl font-bold mb-3 group-hover:text-blue-400 transition">Cross-Device Tracking</h3>
-                    <p class="text-slate-400">Track customers across all devices and touchpoints accurately</p>
-                </div>
+          <!-- Card 3 -->
+          <div
+            class="glass-effect rounded-xl p-8 hover:border-cyan-400 transition group"
+          >
+            <div class="text-4xl mb-4">🧪</div>
+            <h3
+              class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition"
+            >
+              A/B Test Tracking
+            </h3>
+            <p class="text-slate-400">
+              Ensure experiment tracking doesn't skew your results and decisions
+            </p>
+          </div>
 
-                <!-- Card 5 -->
-                <div class="glass-effect rounded-xl p-8 hover:border-purple-400 transition group">
-                    <div class="text-4xl mb-4">🔐</div>
-                    <h3 class="text-xl font-bold mb-3 group-hover:text-purple-400 transition">Data Quality</h3>
-                    <p class="text-slate-400">Remove duplicates, spam, and bad data poisoning your analytics</p>
-                </div>
+          <!-- Card 4 -->
+          <div
+            class="glass-effect rounded-xl p-8 hover:border-blue-400 transition group"
+          >
+            <div class="text-4xl mb-4">📱</div>
+            <h3
+              class="text-xl font-bold mb-3 group-hover:text-blue-400 transition"
+            >
+              Cross-Device Tracking
+            </h3>
+            <p class="text-slate-400">
+              Track customers across all devices and touchpoints accurately
+            </p>
+          </div>
 
-                <!-- Card 6 -->
-                <div class="glass-effect rounded-xl p-8 hover:border-cyan-400 transition group">
-                    <div class="text-4xl mb-4">⚙️</div>
-                    <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition">Custom Implementation</h3>
-                    <p class="text-slate-400">Build tracking for unique business requirements and workflows</p>
-                </div>
-            </div>
+          <!-- Card 5 -->
+          <div
+            class="glass-effect rounded-xl p-8 hover:border-purple-400 transition group"
+          >
+            <div class="text-4xl mb-4">🔐</div>
+            <h3
+              class="text-xl font-bold mb-3 group-hover:text-purple-400 transition"
+            >
+              Data Quality
+            </h3>
+            <p class="text-slate-400">
+              Remove duplicates, spam, and bad data poisoning your analytics
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="glass-effect rounded-xl p-8 hover:border-cyan-400 transition group"
+          >
+            <div class="text-4xl mb-4">⚙️</div>
+            <h3
+              class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition"
+            >
+              Custom Implementation
+            </h3>
+            <p class="text-slate-400">
+              Build tracking for unique business requirements and workflows
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- How It Works -->
-    <section id="how-it-works" class="py-20 px-4 bg-gradient-to-b from-slate-900/50 to-dark-900">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16">The Ralph Wiggum Loop Process</h2>
-            
-            <div class="space-y-8">
-                <!-- Step 1 -->
-                <div class="glass-effect rounded-xl p-8 border-l-4 border-cyan-400">
-                    <div class="flex items-start space-x-4">
-                        <div class="gradient-cool text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0">1</div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2">Audit & Discover</h3>
-                            <p class="text-slate-400">We deeply analyze your entire tracking setup using our proprietary methodology</p>
-                        </div>
-                    </div>
-                </div>
+    <section
+      id="how-it-works"
+      class="py-20 px-4 bg-gradient-to-b from-slate-900/50 to-dark-900"
+    >
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-16">
+          The Ralph Wiggum Loop Process
+        </h2>
 
-                <!-- Step 2 -->
-                <div class="glass-effect rounded-xl p-8 border-l-4 border-blue-400">
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0">2</div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2">Identify Issues</h3>
-                            <p class="text-slate-400">Find hidden tracking failures, configuration mistakes, and revenue leaks</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="glass-effect rounded-xl p-8 border-l-4 border-purple-400">
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0">3</div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2">Implement Fixes</h3>
-                            <p class="text-slate-400">We don't just report—we implement fixes and validate everything works perfectly</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="glass-effect rounded-xl p-8 border-l-4 border-pink-400">
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-gradient-to-r from-pink-500 to-pink-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0">4</div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2">Train & Support</h3>
-                            <p class="text-slate-400">Teach your team how to maintain perfect tracking going forward</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="space-y-8">
+          <!-- Step 1 -->
+          <div class="glass-effect rounded-xl p-8 border-l-4 border-cyan-400">
+            <div class="flex items-start space-x-4">
+              <div
+                class="gradient-cool text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0"
+              >
+                1
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Audit & Discover</h3>
+                <p class="text-slate-400">
+                  We deeply analyze your entire tracking setup using our
+                  proprietary methodology
+                </p>
+              </div>
             </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="glass-effect rounded-xl p-8 border-l-4 border-blue-400">
+            <div class="flex items-start space-x-4">
+              <div
+                class="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0"
+              >
+                2
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Identify Issues</h3>
+                <p class="text-slate-400">
+                  Find hidden tracking failures, configuration mistakes, and
+                  revenue leaks
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-effect rounded-xl p-8 border-l-4 border-purple-400">
+            <div class="flex items-start space-x-4">
+              <div
+                class="bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0"
+              >
+                3
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Implement Fixes</h3>
+                <p class="text-slate-400">
+                  We don't just report—we implement fixes and validate
+                  everything works perfectly
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="glass-effect rounded-xl p-8 border-l-4 border-pink-400">
+            <div class="flex items-start space-x-4">
+              <div
+                class="bg-gradient-to-r from-pink-500 to-pink-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold flex-shrink-0"
+              >
+                4
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Train & Support</h3>
+                <p class="text-slate-400">
+                  Teach your team how to maintain perfect tracking going forward
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
     <section class="py-20 px-4">
-        <div class="max-w-2xl mx-auto text-center glass-effect rounded-2xl p-12 glow-blue">
-            <h2 class="text-3xl font-bold mb-4">Stop Guessing. Start Knowing.</h2>
-            <p class="text-slate-300 mb-8 text-lg">Get a detailed audit of your tracking setup with zero obligation</p>
-            <button class="gradient-accent px-8 py-3 rounded-lg font-bold hover:shadow-2xl transition w-full md:w-auto">
-                Schedule Free Audit Call
-            </button>
-        </div>
+      <div
+        class="max-w-2xl mx-auto text-center glass-effect rounded-2xl p-12 glow-blue"
+      >
+        <h2 class="text-3xl font-bold mb-4">Stop Guessing. Start Knowing.</h2>
+        <p class="text-slate-300 mb-8 text-lg">
+          Get a detailed audit of your tracking setup with zero obligation
+        </p>
+        <button
+          class="gradient-accent px-8 py-3 rounded-lg font-bold hover:shadow-2xl transition w-full md:w-auto"
+        >
+          Schedule Free Audit Call
+        </button>
+      </div>
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-20 px-4 bg-gradient-to-b from-slate-900/50 to-dark-900">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16">Choose Your Tracking Fix Package</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Basic Plan -->
-                <div class="glass-effect rounded-xl p-8 hover:border-cyan-400 transition">
-                    <h3 class="text-2xl font-bold mb-2">🕵️ Tracking Detective</h3>
-                    <div class="text-3xl font-bold bg-gradient-cool bg-clip-text text-transparent mb-2">$497</div>
-                    <p class="text-slate-400 mb-6">Perfect for DIY businesses</p>
-                    <ul class="space-y-3 mb-8 text-slate-300">
-                        <li>✅ 48-hour automated audit</li>
-                        <li>✅ Comprehensive issues report</li>
-                        <li>✅ Priority-ranked fix list</li>
-                        <li>✅ DIY implementation guide</li>
-                        <li>✅ 1-hour consultation call</li>
-                    </ul>
-                    <button class="w-full gradient-accent px-6 py-3 rounded-lg font-bold hover:shadow-lg glow-blue transition">Choose Plan</button>
-                </div>
+    <section
+      id="pricing"
+      class="py-20 px-4 bg-gradient-to-b from-slate-900/50 to-dark-900"
+    >
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-16">
+          Choose Your Tracking Fix Package
+        </h2>
 
-                <!-- Premium Plan (Featured) -->
-                <div class="glass-effect rounded-xl p-8 border-2 border-purple-400 relative">
-                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-bold">Most Popular</div>
-                    <h3 class="text-2xl font-bold mb-2">🏥 Tracking Surgeon</h3>
-                    <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">$1,497</div>
-                    <p class="text-slate-400 mb-6">Complete fix service</p>
-                    <ul class="space-y-3 mb-8 text-slate-300">
-                        <li>✅ Everything in Detective</li>
-                        <li>✅ <span class="font-bold">We implement ALL fixes</span></li>
-                        <li>✅ Ralph Wiggum Loop until 100%</li>
-                        <li>✅ Complete e-commerce setup</li>
-                        <li>✅ 30-day monitoring & support</li>
-                        <li>✅ Team training session</li>
-                        <li>✅ 100% success guarantee</li>
-                    </ul>
-                    <button class="w-full gradient-accent px-6 py-3 rounded-lg font-bold hover:shadow-lg glow-blue transition">Choose Plan</button>
-                </div>
-
-                <!-- Enterprise Plan -->
-                <div class="glass-effect rounded-xl p-8 hover:border-cyan-400 transition">
-                    <h3 class="text-2xl font-bold mb-2">🏗️ Tracking Architect</h3>
-                    <div class="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">$2,997+</div>
-                    <p class="text-slate-400 mb-6">Enterprise solution</p>
-                    <ul class="space-y-3 mb-8 text-slate-300">
-                        <li>✅ Everything in Surgeon</li>
-                        <li>✅ Custom tracking architecture</li>
-                        <li>✅ Multi-property management</li>
-                        <li>✅ Compliance review (GDPR, CCPA)</li>
-                        <li>✅ Server-side tracking setup</li>
-                        <li>✅ Quarterly re-audits (1 year)</li>
-                        <li>✅ Dedicated account manager</li>
-                    </ul>
-                    <button class="w-full gradient-accent px-6 py-3 rounded-lg font-bold hover:shadow-lg glow-blue transition">Choose Plan</button>
-                </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Basic Plan -->
+          <div
+            class="glass-effect rounded-xl p-8 hover:border-cyan-400 transition"
+          >
+            <h3 class="text-2xl font-bold mb-2">🕵️ Tracking Detective</h3>
+            <div
+              class="text-3xl font-bold bg-gradient-cool bg-clip-text text-transparent mb-2"
+            >
+              $497
             </div>
+            <p class="text-slate-400 mb-6">Perfect for DIY businesses</p>
+            <ul class="space-y-3 mb-8 text-slate-300">
+              <li>✅ 48-hour automated audit</li>
+              <li>✅ Comprehensive issues report</li>
+              <li>✅ Priority-ranked fix list</li>
+              <li>✅ DIY implementation guide</li>
+              <li>✅ 1-hour consultation call</li>
+            </ul>
+            <button
+              class="w-full gradient-accent px-6 py-3 rounded-lg font-bold hover:shadow-lg glow-blue transition"
+            >
+              Choose Plan
+            </button>
+          </div>
 
-            <div class="mt-12 text-center glass-effect rounded-xl p-8">
-                <h3 class="text-2xl font-bold mb-2">🎯 100% Success Guarantee</h3>
-                <p class="text-slate-400">We don't stop working until your tracking is 100% perfect. If we can't fix it, you don't pay.</p>
+          <!-- Premium Plan (Featured) -->
+          <div
+            class="glass-effect rounded-xl p-8 border-2 border-purple-400 relative"
+          >
+            <div
+              class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-bold"
+            >
+              Most Popular
             </div>
+            <h3 class="text-2xl font-bold mb-2">🏥 Tracking Surgeon</h3>
+            <div
+              class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2"
+            >
+              $1,497
+            </div>
+            <p class="text-slate-400 mb-6">Complete fix service</p>
+            <ul class="space-y-3 mb-8 text-slate-300">
+              <li>✅ Everything in Detective</li>
+              <li>✅ <span class="font-bold">We implement ALL fixes</span></li>
+              <li>✅ Ralph Wiggum Loop until 100%</li>
+              <li>✅ Complete e-commerce setup</li>
+              <li>✅ 30-day monitoring & support</li>
+              <li>✅ Team training session</li>
+              <li>✅ 100% success guarantee</li>
+            </ul>
+            <button
+              class="w-full gradient-accent px-6 py-3 rounded-lg font-bold hover:shadow-lg glow-blue transition"
+            >
+              Choose Plan
+            </button>
+          </div>
+
+          <!-- Enterprise Plan -->
+          <div
+            class="glass-effect rounded-xl p-8 hover:border-cyan-400 transition"
+          >
+            <h3 class="text-2xl font-bold mb-2">🏗️ Tracking Architect</h3>
+            <div
+              class="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2"
+            >
+              $2,997+
+            </div>
+            <p class="text-slate-400 mb-6">Enterprise solution</p>
+            <ul class="space-y-3 mb-8 text-slate-300">
+              <li>✅ Everything in Surgeon</li>
+              <li>✅ Custom tracking architecture</li>
+              <li>✅ Multi-property management</li>
+              <li>✅ Compliance review (GDPR, CCPA)</li>
+              <li>✅ Server-side tracking setup</li>
+              <li>✅ Quarterly re-audits (1 year)</li>
+              <li>✅ Dedicated account manager</li>
+            </ul>
+            <button
+              class="w-full gradient-accent px-6 py-3 rounded-lg font-bold hover:shadow-lg glow-blue transition"
+            >
+              Choose Plan
+            </button>
+          </div>
         </div>
+
+        <div class="mt-12 text-center glass-effect rounded-xl p-8">
+          <h3 class="text-2xl font-bold mb-2">🎯 100% Success Guarantee</h3>
+          <p class="text-slate-400">
+            We don't stop working until your tracking is 100% perfect. If we
+            can't fix it, you don't pay.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="border-t border-slate-700 py-8 px-4">
-        <div class="max-w-6xl mx-auto text-center text-slate-500">
-            <p>&copy; 2026 TrackingFix Pro. All rights reserved.</p>
-        </div>
+      <div class="max-w-6xl mx-auto text-center text-slate-500">
+        <p>&copy; 2026 TrackingFix Pro. All rights reserved.</p>
+      </div>
     </footer>
 
     <script>
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
             });
+          }
         });
+      });
     </script>
-</body>
+  </body>
 </html>
