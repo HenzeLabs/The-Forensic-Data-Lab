@@ -1,0 +1,8 @@
+# Generated snapshots and local artifacts
+.playwright-mcp/
+*.png
+# Node/Vercel typical ignores
+node_modules/
+.DS_Store
+.env
+.vercel
