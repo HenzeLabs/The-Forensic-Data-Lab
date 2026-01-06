@@ -54,7 +54,7 @@ async function handleFreeAudit(event) {
     }
     
     // Show loading state
-    submitButton.innerHTML = '🔄 Scanning...';
+    submitButton.innerHTML = 'Scanning...';
     submitButton.disabled = true;
     
     try {
@@ -66,7 +66,7 @@ async function handleFreeAudit(event) {
         showError('Unable to scan website. Please try again or contact support.');
     } finally {
         // Reset button
-        submitButton.innerHTML = '🔍 Scan My Tracking';
+        submitButton.innerHTML = 'Scan My Tracking';
         submitButton.disabled = false;
     }
 }
@@ -105,7 +105,7 @@ function displayAuditResults(results, container) {
     
     container.innerHTML = `
         <div class="scan-results-header">
-            <h3>📊 Quick Audit Results for ${results.url}</h3>
+            <h3>Quick Audit Results for ${results.url}</h3>
             <div class="score-display">
                 <div class="score-circle text-${scoreColor}">
                     <span class="score-number">${results.score}%</span>
@@ -115,28 +115,28 @@ function displayAuditResults(results, container) {
         </div>
         
         <div class="issues-found">
-            <h4>🚨 Issues Found (${results.issues.length})</h4>
+            <h4>Issues Found (${results.issues.length})</h4>
             <ul class="issues-list">
-                ${results.issues.map(issue => `<li>❌ ${issue}</li>`).join('')}
+                ${results.issues.map(issue => `<li>- ${issue}</li>`).join('')}
             </ul>
         </div>
         
         <div class="recommendations">
-            <h4>💡 Quick Recommendations</h4>
+            <h4>Quick Recommendations</h4>
             <ul class="recommendations-list">
-                ${results.recommendations.slice(0, 3).map(rec => `<li>✅ ${rec}</li>`).join('')}
+                ${results.recommendations.slice(0, 3).map(rec => `<li>- ${rec}</li>`).join('')}
             </ul>
         </div>
         
         <div class="next-steps">
-            <h4>🎯 Get Complete Fix</h4>
+            <h4>Get Complete Fix</h4>
             <p>This quick scan found ${results.issues.length} issues. Our full Automated Verification Loop audit finds 10-15+ issues on average and fixes them all.</p>
             <div class="cta-buttons">
                 <button class="cta-primary" onclick="selectPlan('surgeon')">
-                    🏥 Get Complete Fix ($1,497)
+                    Get Complete Fix ($1,497)
                 </button>
                 <button class="cta-secondary" onclick="selectPlan('detective')">
-                    🕵️ DIY Guide ($497)
+                    DIY Guide ($497)
                 </button>
             </div>
         </div>
@@ -194,14 +194,14 @@ function calculateLoss() {
     const annualLoss = totalMonthlyLoss * 12;
     
     resultDiv.innerHTML = `
-        <h4>💸 Your Estimated Revenue Loss</h4>
+        <h4>Your Estimated Revenue Loss</h4>
         <div class="loss-breakdown">
             <p><strong>Monthly Loss:</strong> $${totalMonthlyLoss.toLocaleString()}</p>
             <p><strong>Annual Loss:</strong> $${annualLoss.toLocaleString()}</p>
             <p class="loss-note">Based on 20% optimization loss + 15% attribution loss from broken tracking</p>
         </div>
         <button class="cta-primary" onclick="startAudit()" style="margin-top: 1rem;">
-            🎯 Stop Losing Money - Get Audit
+            Stop Losing Money - Get Audit
         </button>
     `;
 }
@@ -290,7 +290,7 @@ function showError(message) {
     errorDiv.className = 'error-message';
     errorDiv.innerHTML = `
         <div style="background: #fef2f2; border: 1px solid #fecaca; color: #dc2626; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
-            ❌ ${message}
+            ${message}
         </div>
     `;
     
@@ -360,10 +360,10 @@ function showExitIntentModal() {
     modal.innerHTML = `
         <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; display: flex; align-items: center; justify-content: center;">
             <div style="background: white; padding: 2rem; border-radius: 1rem; max-width: 500px; text-align: center;">
-                <h3>⚠️ Wait! Is Your Tracking Broken?</h3>
+                <h3>Wait! Is Your Tracking Broken?</h3>
                 <p>Get a free 5-minute audit before you leave. Most sites have 5+ critical tracking issues.</p>
                 <button onclick="this.closest('div').remove(); startAudit();" style="background: #2563eb; color: white; border: none; padding: 1rem 2rem; border-radius: 0.5rem; margin: 0.5rem; cursor: pointer;">
-                    🔍 Get Free Audit
+                    Get Free Audit
                 </button>
                 <button onclick="this.closest('div').remove();" style="background: #6b7280; color: white; border: none; padding: 1rem 2rem; border-radius: 0.5rem; margin: 0.5rem; cursor: pointer;">
                     No Thanks
