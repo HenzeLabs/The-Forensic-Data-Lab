@@ -47,10 +47,5 @@
       "src": "/(.+\\.(css|js|png|jpg|jpeg|gif|ico|svg))",
       "dest": "/$1"
     }
-  ],
-  "functions": {
-    "platform/api-server.js": {
-      "maxDuration": 30
-    }
-  }
+  ]
 }
