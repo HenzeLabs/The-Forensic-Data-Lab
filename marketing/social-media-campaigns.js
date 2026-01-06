@@ -37,7 +37,7 @@ class SocialMediaCampaigns {
                         {
                             type: "text_post",
                             theme: "problem_awareness",
-                            content: `🚨 REALITY CHECK: 80% of businesses have broken GA4 tracking.
+                            content: `REALITY CHECK: 80% of businesses have broken GA4 tracking.
 
 That means 4 out of 5 companies are making marketing decisions based on incomplete (or wrong) data.
 
@@ -121,15 +121,15 @@ Ready to fix your tracking?
                         {
                             type: "text_post",
                             theme: "urgency",
-                            content: `⏰ Free audit spots for this week: 3 remaining
+                            content: `Free audit spots for this week: 3 remaining
 
 I'm personally reviewing tracking setups for the next 3 businesses that book a free audit.
 
 What you'll get:
-✅ Complete tracking health score
-✅ List of all issues found (usually 10-20)
-✅ Estimated monthly revenue impact
-✅ Priority-ranked fix roadmap
+✓ Complete tracking health score
+✓ List of all issues found (usually 10-20)
+✓ Estimated monthly revenue impact
+✓ Priority-ranked fix roadmap
 
 Takes 5 minutes to book, 48 hours to complete.
 
@@ -202,12 +202,12 @@ Which camp are you in?
                         {
                             type: "single_tweet",
                             theme: "social_proof", 
-                            content: "Client just texted: 'Holy crap, we can finally see which ads are working'\n\n22% → 100% tracking accuracy in 4 days.\n\nThe Automated Verification Loop strikes again 🎯\n\nWhat's your tracking health score? Find out: [link]"
+                            content: "Client just texted: 'Holy crap, we can finally see which ads are working'\n\n22% → 100% tracking accuracy in 4 days.\n\nThe Automated Verification Loop strikes again.\n\nWhat's your tracking health score? Find out: [link]"
                         },
                         {
                             type: "single_tweet",
                             theme: "urgency",
-                            content: "🚨 Your tracking is bleeding money while you sleep\n\nEvery broken event = lost attribution = bad decisions = wasted budget\n\nStop the bleeding. Free audit: [link]"
+                            content: "Your tracking is bleeding money while you sleep\n\nEvery broken event = lost attribution = bad decisions = wasted budget\n\nStop the bleeding. Free audit: [link]"
                         }
                     ]
                 },
@@ -223,7 +223,7 @@ Which camp are you in?
                         {
                             type: "single_tweet", 
                             theme: "educational",
-                            content: "Quick test: Go to your GA4 → Events → See if these fire:\n\n✅ view_item\n✅ add_to_cart  \n✅ begin_checkout\n✅ purchase\n\nIf any are missing/broken, you're flying blind.\n\nNeed help? Free audit: [link]"
+                            content: "Quick test: Go to your GA4 → Events → See if these fire:\n\n✓ view_item\n✓ add_to_cart  \n✓ begin_checkout\n✓ purchase\n\nIf any are missing/broken, you're flying blind.\n\nNeed help? Free audit: [link]"
                         }
                     ]
                 }

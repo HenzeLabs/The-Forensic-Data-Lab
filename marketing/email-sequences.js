@@ -24,7 +24,7 @@ class EmailSequences {
             emails: [
                 {
                     day: 0,
-                    subject: "🚨 Your GA4 audit results are ready (and it's not good news...)",
+                    subject: "Your GA4 audit results are ready (and it's not good news...)",
                     template: "lead_nurture_1_audit_results",
                     type: "educational",
                     data: {
@@ -88,7 +88,7 @@ class EmailSequences {
                 },
                 {
                     day: 4,
-                    subject: "🔍 Case study: How we saved TechCorp $89K/month",
+                    subject: "Case study: How we saved TechCorp $89K/month",
                     template: "lead_nurture_3_case_study",
                     type: "social_proof",
                     data: {
@@ -153,27 +153,27 @@ class EmailSequences {
                                     {
                                         name: "AUDIT",
                                         description: "Scan every tracking event automatically",
-                                        icon: "🔍"
+                                        icon: "search"
                                     },
                                     {
                                         name: "DIAGNOSE", 
                                         description: "Identify root causes, not symptoms",
-                                        icon: "🩺"
+                                        icon: "diagnose"
                                     },
                                     {
                                         name: "REPAIR",
                                         description: "Implement enterprise-grade fixes",
-                                        icon: "🔧"
+                                        icon: "repair"
                                     },
                                     {
                                         name: "VERIFY",
                                         description: "Test every single event works perfectly",
-                                        icon: "✅"
+                                        icon: "verify"
                                     },
                                     {
                                         name: "REPEAT",
                                         description: "Loop until 100% success achieved",
-                                        icon: "🔄"
+                                        icon: "repeat"
                                     }
                                 ]
                             },
@@ -187,7 +187,7 @@ class EmailSequences {
                 },
                 {
                     day: 7,
-                    subject: "🚨 FINAL NOTICE: Your tracking is bleeding money",
+                    subject: "FINAL NOTICE: Your tracking is bleeding money",
                     template: "lead_nurture_5_urgency",
                     type: "conversion",
                     data: {
@@ -240,7 +240,7 @@ class EmailSequences {
             emails: [
                 {
                     day: 0,
-                    subject: "📊 Your audit results: {{overall_score}}% (Action required)",
+                    subject: "Your audit results: {{overall_score}}% (Action required)",
                     template: "audit_followup_1_results",
                     type: "immediate_conversion",
                     data: {
@@ -428,7 +428,7 @@ class EmailSequences {
                 },
                 {
                     day: 3,
-                    subject: "🚨 Your competitors are fixing their tracking (you should too)",
+                    subject: "Your competitors are fixing their tracking (you should too)",
                     template: "abandoned_audit_2",
                     type: "competitive",
                     data: {
@@ -462,7 +462,7 @@ class EmailSequences {
             emails: [
                 {
                     day: 30,
-                    subject: "💰 Earn $500 for each business you refer",
+                    subject: "Earn $500 for each business you refer",
                     template: "referral_invite",
                     type: "referral",
                     data: {
