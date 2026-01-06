@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Onboarding - The Forensic Data Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0d1117 0%, #1a1f26 100%); }
+        .glass-effect { 
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .section-complete {
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+        }
+        .progress-step {
+            transition: all 0.3s ease;
+        }
+        .progress-step.active {
+            background: #2563eb;
+            color: white;
+        }
+        .progress-step.completed {
+            background: #10b981;
+            color: white;
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white min-h-screen">
+    <!-- Header -->
+    <header class="py-6 px-8">
+        <div class="flex justify-between items-center max-w-6xl mx-auto">
+            <div class="text-2xl font-bold">The Forensic Data Lab</div>
+            <div class="text-green-400 font-medium">Project Onboarding</div>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="px-8 pb-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="progress-step active w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">1</div>
+                <div class="flex-1 h-1 bg-gray-700 rounded">
+                    <div class="h-1 bg-blue-500 rounded transition-all duration-500" id="progress-bar" style="width: 0%"></div>
+                </div>
+                <div class="progress-step w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold bg-gray-700">2</div>
+                <div class="flex-1 h-1 bg-gray-700 rounded"></div>
+                <div class="progress-step w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold bg-gray-700">3</div>
+                <div class="flex-1 h-1 bg-gray-700 rounded"></div>
+                <div class="progress-step w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold bg-gray-700">4</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="px-8 py-6">
+        <div class="max-w-6xl mx-auto">
+            <!-- Welcome Message -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold mb-4">Welcome to Revenue Recovery</h1>
+                <p class="text-xl text-gray-300 mb-2">Thank you for choosing our <span id="service-name">Forensic Diagnostic</span> service!</p>
+                <p class="text-lg text-gray-400">To begin your signal restoration, we need access to your technical systems. This process takes 5-10 minutes and ensures we can start immediately.</p>
+            </div>
+
+            <!-- Onboarding Form -->
+            <form id="onboarding-form" class="space-y-8">
+                <!-- Section 1: Project Information -->
+                <div class="glass-effect rounded-xl p-8" id="section-1">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-bold">1. Project Information</h2>
+                        <div class="text-sm text-green-400 hidden" id="section-1-complete">✓ Complete</div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Project Name</label>
+                            <input 
+                                type="text" 
+                                id="project-name"
+                                placeholder="e.g., ACME Store Signal Restoration"
+                                required
+                                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            >
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Primary Contact for Technical Questions</label>
+                            <input 
+                                type="email" 
+                                id="technical-contact"
+                                placeholder="tech@yourcompany.com"
+                                required
+                                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            >
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Preferred Communication Method</label>
+                            <select 
+                                id="communication-method"
+                                required
+                                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            >
+                                <option value="">Select method</option>
+                                <option value="email">Email updates</option>
+                                <option value="slack">Slack notifications</option>
+                                <option value="both">Both email and Slack</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Timezone</label>
+                            <select 
+                                id="timezone"
+                                required
+                                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            >
+                                <option value="">Select timezone</option>
+                                <option value="America/New_York">Eastern Time (ET)</option>
+                                <option value="America/Chicago">Central Time (CT)</option>
+                                <option value="America/Denver">Mountain Time (MT)</option>
+                                <option value="America/Los_Angeles">Pacific Time (PT)</option>
+                                <option value="UTC">UTC</option>
+                                <option value="Europe/London">London (GMT)</option>
+                                <option value="other">Other (specify in notes)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Shopify Store Access -->
+                <div class="glass-effect rounded-xl p-8" id="section-2">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-bold">2. Shopify Store Access</h2>
+                        <div class="text-sm text-green-400 hidden" id="section-2-complete">✓ Complete</div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Store URL</label>
+                                <input 
+                                    type="url" 
+                                    id="store-url"
+                                    placeholder="https://yourstore.myshopify.com"
+                                    required
+                                    class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                >
+                                <p class="text-xs text-gray-400 mt-1">Your main Shopify admin URL</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Public Store URL</label>
+                                <input 
+                                    type="url" 
+                                    id="public-url"
+                                    placeholder="https://www.yourstore.com"
+                                    required
+                                    class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                >
+                                <p class="text-xs text-gray-400 mt-1">Your customer-facing website</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-yellow-900 bg-opacity-50 rounded-lg p-4">
+                            <h3 class="font-semibold mb-2">Shopify Admin Access Required</h3>
+                            <p class="text-sm text-gray-300 mb-3">We need admin access to audit and fix your tracking setup. Please add our team as a collaborator:</p>
+                            <div class="bg-gray-800 p-3 rounded font-mono text-sm">
+                                Email: <span class="text-green-400">team@forensicdatalab.com</span><br>
+                                Permissions: <span class="text-blue-400">Apps, Analytics, Settings, Online Store</span>
+                            </div>
+                            <p class="text-xs text-gray-400 mt-2">
+                                <a href="https://help.shopify.com/en/manual/your-account/staff-accounts" target="_blank" class="text-blue-400 hover:underline">
+                                    How to add collaborator access →
+                                </a>
+                            </p>
+                        </div>
+
+                        <div>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" id="shopify-access-granted" required class="rounded bg-gray-800 border-gray-700 text-blue-600 focus:ring-blue-500">
+                                <span>I have granted admin access to team@forensicdatalab.com</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Analytics & Tracking Access -->
+                <div class="glass-effect rounded-xl p-8" id="section-3">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-bold">3. Analytics & Tracking Access</h2>
+                        <div class="text-sm text-green-400 hidden" id="section-3-complete">✓ Complete</div>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <!-- Google Analytics -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Google Analytics 4 (GA4)</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">GA4 Property ID</label>
+                                    <input 
+                                        type="text" 
+                                        id="ga4-property-id"
+                                        placeholder="G-XXXXXXXXXX"
+                                        required
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                    <p class="text-xs text-gray-400 mt-1">Found in GA4 Admin > Property > Property Details</p>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Google Analytics Account Email</label>
+                                    <input 
+                                        type="email" 
+                                        id="ga4-email"
+                                        placeholder="youranalytics@gmail.com"
+                                        required
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                    <p class="text-xs text-gray-400 mt-1">Account with GA4 admin access</p>
+                                </div>
+                            </div>
+                            <div class="bg-blue-900 bg-opacity-50 rounded-lg p-4 mt-4">
+                                <h4 class="font-semibold mb-2">GA4 Access Required</h4>
+                                <p class="text-sm text-gray-300 mb-3">Grant Editor access to our team:</p>
+                                <div class="bg-gray-800 p-3 rounded font-mono text-sm">
+                                    Email: <span class="text-green-400">analytics@forensicdatalab.com</span><br>
+                                    Role: <span class="text-blue-400">Editor</span>
+                                </div>
+                                <p class="text-xs text-gray-400 mt-2">
+                                    <a href="https://support.google.com/analytics/answer/1009702" target="_blank" class="text-blue-400 hover:underline">
+                                        How to add GA4 users →
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Google Tag Manager -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Google Tag Manager</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">GTM Container ID (Web)</label>
+                                    <input 
+                                        type="text" 
+                                        id="gtm-web-id"
+                                        placeholder="GTM-XXXXXXX"
+                                        required
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                    <p class="text-xs text-gray-400 mt-1">Your website GTM container</p>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">GTM Container ID (Server) - Optional</label>
+                                    <input 
+                                        type="text" 
+                                        id="gtm-server-id"
+                                        placeholder="GTM-XXXXXXX"
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                    <p class="text-xs text-gray-400 mt-1">Server-side container (if using)</p>
+                                </div>
+                            </div>
+                            <div class="bg-blue-900 bg-opacity-50 rounded-lg p-4 mt-4">
+                                <h4 class="font-semibold mb-2">GTM Access Required</h4>
+                                <p class="text-sm text-gray-300 mb-3">Grant Publish access to our team:</p>
+                                <div class="bg-gray-800 p-3 rounded font-mono text-sm">
+                                    Email: <span class="text-green-400">gtm@forensicdatalab.com</span><br>
+                                    Permission: <span class="text-blue-400">Publish</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Facebook/Meta Ads -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Meta Ads (Facebook/Instagram)</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Meta Pixel ID</label>
+                                    <input 
+                                        type="text" 
+                                        id="meta-pixel-id"
+                                        placeholder="123456789012345"
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                    <p class="text-xs text-gray-400 mt-1">Found in Meta Events Manager</p>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Ad Account ID</label>
+                                    <input 
+                                        type="text" 
+                                        id="meta-ad-account"
+                                        placeholder="123456789012345"
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                </div>
+                            </div>
+                            <div class="bg-blue-900 bg-opacity-50 rounded-lg p-4 mt-4">
+                                <h4 class="font-semibold mb-2">Meta Pixel Access (Optional but Recommended)</h4>
+                                <p class="text-sm text-gray-300 mb-3">Grant Admin access for pixel optimization:</p>
+                                <div class="bg-gray-800 p-3 rounded font-mono text-sm">
+                                    Email: <span class="text-green-400">pixel@forensicdatalab.com</span><br>
+                                    Role: <span class="text-blue-400">Admin</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" id="analytics-access-granted" required class="rounded bg-gray-800 border-gray-700 text-blue-600 focus:ring-blue-500">
+                                <span>I have granted the required analytics access permissions</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Additional Information -->
+                <div class="glass-effect rounded-xl p-8" id="section-4">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-bold">4. Additional Information</h2>
+                        <div class="text-sm text-green-400 hidden" id="section-4-complete">✓ Complete</div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <!-- Current Tracking Setup -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Current Tracking Setup</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Who set up your current tracking?</label>
+                                    <select 
+                                        id="tracking-setup-by"
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                        <option value="">Select option</option>
+                                        <option value="agency">Marketing agency</option>
+                                        <option value="freelancer">Freelancer/contractor</option>
+                                        <option value="internal">Internal team</option>
+                                        <option value="shopify-app">Shopify app (Elevar, DataLayer, etc.)</option>
+                                        <option value="unknown">Not sure / inherited</option>
+                                        <option value="none">No tracking currently set up</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Are you using any tracking apps?</label>
+                                    <select 
+                                        id="tracking-apps"
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                        <option value="">Select if applicable</option>
+                                        <option value="elevar">Elevar (DataLayer)</option>
+                                        <option value="stape">Stape (Server-side)</option>
+                                        <option value="northbeam">Northbeam</option>
+                                        <option value="triplewhale">Triple Whale</option>
+                                        <option value="bento">Bento</option>
+                                        <option value="other">Other (specify in notes)</option>
+                                        <option value="none">No tracking apps</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Business Context -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Business Context</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Primary Traffic Sources</label>
+                                    <div class="space-y-2">
+                                        <label class="flex items-center space-x-2">
+                                            <input type="checkbox" name="traffic-sources" value="meta-ads" class="rounded bg-gray-800 border-gray-700 text-blue-600 focus:ring-blue-500">
+                                            <span>Meta Ads (Facebook/Instagram)</span>
+                                        </label>
+                                        <label class="flex items-center space-x-2">
+                                            <input type="checkbox" name="traffic-sources" value="google-ads" class="rounded bg-gray-800 border-gray-700 text-blue-600 focus:ring-blue-500">
+                                            <span>Google Ads</span>
+                                        </label>
+                                        <label class="flex items-center space-x-2">
+                                            <input type="checkbox" name="traffic-sources" value="tiktok-ads" class="rounded bg-gray-800 border-gray-700 text-blue-600 focus:ring-blue-500">
+                                            <span>TikTok Ads</span>
+                                        </label>
+                                        <label class="flex items-center space-x-2">
+                                            <input type="checkbox" name="traffic-sources" value="email" class="rounded bg-gray-800 border-gray-700 text-blue-600 focus:ring-blue-500">
+                                            <span>Email Marketing</span>
+                                        </label>
+                                        <label class="flex items-center space-x-2">
+                                            <input type="checkbox" name="traffic-sources" value="organic-search" class="rounded bg-gray-800 border-gray-700 text-blue-600 focus:ring-blue-500">
+                                            <span>Organic Search (SEO)</span>
+                                        </label>
+                                        <label class="flex items-center space-x-2">
+                                            <input type="checkbox" name="traffic-sources" value="influencer" class="rounded bg-gray-800 border-gray-700 text-blue-600 focus:ring-blue-500">
+                                            <span>Influencer/Affiliate</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Monthly Ad Spend</label>
+                                    <select 
+                                        id="monthly-ad-spend"
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                        <option value="">Select range</option>
+                                        <option value="0-10k">$0 - $10K</option>
+                                        <option value="10k-25k">$10K - $25K</option>
+                                        <option value="25k-50k">$25K - $50K</option>
+                                        <option value="50k-100k">$50K - $100K</option>
+                                        <option value="100k-250k">$100K - $250K</option>
+                                        <option value="250k+">$250K+</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Specific Issues -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Known Issues or Concerns</h3>
+                            <textarea 
+                                id="known-issues"
+                                placeholder="Tell us about any specific tracking issues you've noticed, discrepancies between platforms, or areas you'd like us to focus on..."
+                                rows="4"
+                                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            ></textarea>
+                        </div>
+
+                        <!-- Project Timeline -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Project Preferences</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Preferred Start Date</label>
+                                    <select 
+                                        id="preferred-start"
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                        <option value="">Select timing</option>
+                                        <option value="asap">ASAP - Start immediately</option>
+                                        <option value="this-week">Within this week</option>
+                                        <option value="next-week">Next week</option>
+                                        <option value="within-month">Within this month</option>
+                                        <option value="flexible">Flexible - when convenient</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Implementation Window Preference</label>
+                                    <select 
+                                        id="implementation-window"
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                        <option value="">Select preference</option>
+                                        <option value="business-hours">Business hours only (9-5 in my timezone)</option>
+                                        <option value="off-hours">Off-hours preferred (minimal site impact)</option>
+                                        <option value="weekend">Weekend preferred</option>
+                                        <option value="no-preference">No preference - anytime</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" id="information-complete" required class="rounded bg-gray-800 border-gray-700 text-blue-600 focus:ring-blue-500">
+                                <span>All information provided is accurate and complete</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Section -->
+                <div class="glass-effect rounded-xl p-8 text-center">
+                    <h2 class="text-2xl font-bold mb-4">Ready to Begin Signal Restoration</h2>
+                    <p class="text-gray-300 mb-6">
+                        Once you submit this form, our team will begin your project within 24 hours. 
+                        You'll receive email updates and can track progress in your client portal.
+                    </p>
+                    
+                    <button 
+                        type="submit" 
+                        id="submit-button"
+                        class="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold py-4 px-12 rounded-lg transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-lg"
+                    >
+                        <span id="button-text">Start My Revenue Recovery Project</span>
+                        <div id="spinner" class="hidden inline-block animate-spin rounded-full h-5 w-5 border-b-2 border-white ml-3"></div>
+                    </button>
+
+                    <p class="text-sm text-gray-400 mt-4">
+                        Questions? Email us at <a href="mailto:support@forensicdatalab.com" class="text-blue-400 hover:underline">support@forensicdatalab.com</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Get service information from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const service = urlParams.get('service') || 'forensicDiagnostic';
+        const paymentIntentId = urlParams.get('payment_intent');
+
+        // Service configuration
+        const serviceNames = {
+            forensicDiagnostic: 'Forensic Diagnostic',
+            signalRestoration: 'Signal Restoration'
+        };
+
+        // Update service name
+        document.getElementById('service-name').textContent = serviceNames[service] || 'Forensic Diagnostic';
+
+        // Progress tracking
+        let currentSection = 1;
+        const totalSections = 4;
+
+        function updateProgress() {
+            const progressBar = document.getElementById('progress-bar');
+            const progressSteps = document.querySelectorAll('.progress-step');
+            
+            // Update progress bar
+            const progressPercent = ((currentSection - 1) / totalSections) * 100;
+            progressBar.style.width = progressPercent + '%';
+            
+            // Update step indicators
+            progressSteps.forEach((step, index) => {
+                const stepNumber = index + 1;
+                if (stepNumber < currentSection) {
+                    step.classList.remove('active');
+                    step.classList.add('completed');
+                } else if (stepNumber === currentSection) {
+                    step.classList.remove('completed');
+                    step.classList.add('active');
+                } else {
+                    step.classList.remove('active', 'completed');
+                }
+            });
+        }
+
+        // Form validation and section completion tracking
+        function validateSection(sectionNumber) {
+            const section = document.getElementById(`section-${sectionNumber}`);
+            const requiredFields = section.querySelectorAll('[required]');
+            let isValid = true;
+
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                }
+            });
+
+            // Special validation for checkboxes
+            if (sectionNumber === 2) {
+                const shopifyAccess = document.getElementById('shopify-access-granted');
+                if (!shopifyAccess.checked) isValid = false;
+            }
+
+            if (sectionNumber === 3) {
+                const analyticsAccess = document.getElementById('analytics-access-granted');
+                if (!analyticsAccess.checked) isValid = false;
+            }
+
+            if (sectionNumber === 4) {
+                const infoComplete = document.getElementById('information-complete');
+                if (!infoComplete.checked) isValid = false;
+            }
+
+            // Update section appearance
+            const completeIndicator = document.getElementById(`section-${sectionNumber}-complete`);
+            if (isValid) {
+                section.classList.add('section-complete');
+                completeIndicator.classList.remove('hidden');
+            } else {
+                section.classList.remove('section-complete');
+                completeIndicator.classList.add('hidden');
+            }
+
+            return isValid;
+        }
+
+        // Auto-advance sections
+        function checkSectionCompletion() {
+            const isCurrentSectionValid = validateSection(currentSection);
+            
+            if (isCurrentSectionValid && currentSection < totalSections) {
+                setTimeout(() => {
+                    currentSection++;
+                    updateProgress();
+                    
+                    // Smooth scroll to next section
+                    const nextSection = document.getElementById(`section-${currentSection}`);
+                    if (nextSection) {
+                        nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 500);
+            }
+        }
+
+        // Add event listeners to all form inputs
+        document.getElementById('onboarding-form').addEventListener('input', function(e) {
+            // Validate current section when inputs change
+            setTimeout(() => {
+                for (let i = 1; i <= totalSections; i++) {
+                    validateSection(i);
+                }
+                
+                // Check if we should advance to next section
+                if (e.target.required || e.target.type === 'checkbox') {
+                    checkSectionCompletion();
+                }
+            }, 100);
+        });
+
+        // Handle form submission
+        document.getElementById('onboarding-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitButton = document.getElementById('submit-button');
+            const buttonText = document.getElementById('button-text');
+            const spinner = document.getElementById('spinner');
+            
+            // Disable submit button and show loading
+            submitButton.disabled = true;
+            buttonText.textContent = 'Submitting Project Details...';
+            spinner.classList.remove('hidden');
+
+            // Collect all form data
+            const formData = {
+                // Project Information
+                projectName: document.getElementById('project-name').value,
+                technicalContact: document.getElementById('technical-contact').value,
+                communicationMethod: document.getElementById('communication-method').value,
+                timezone: document.getElementById('timezone').value,
+                
+                // Shopify Access
+                storeUrl: document.getElementById('store-url').value,
+                publicUrl: document.getElementById('public-url').value,
+                shopifyAccessGranted: document.getElementById('shopify-access-granted').checked,
+                
+                // Analytics Access
+                ga4PropertyId: document.getElementById('ga4-property-id').value,
+                ga4Email: document.getElementById('ga4-email').value,
+                gtmWebId: document.getElementById('gtm-web-id').value,
+                gtmServerId: document.getElementById('gtm-server-id').value,
+                metaPixelId: document.getElementById('meta-pixel-id').value,
+                metaAdAccount: document.getElementById('meta-ad-account').value,
+                analyticsAccessGranted: document.getElementById('analytics-access-granted').checked,
+                
+                // Additional Information
+                trackingSetupBy: document.getElementById('tracking-setup-by').value,
+                trackingApps: document.getElementById('tracking-apps').value,
+                trafficSources: Array.from(document.querySelectorAll('input[name="traffic-sources"]:checked')).map(cb => cb.value),
+                monthlyAdSpend: document.getElementById('monthly-ad-spend').value,
+                knownIssues: document.getElementById('known-issues').value,
+                preferredStart: document.getElementById('preferred-start').value,
+                implementationWindow: document.getElementById('implementation-window').value,
+                
+                // Metadata
+                service: service,
+                paymentIntentId: paymentIntentId,
+                submittedAt: new Date().toISOString()
+            };
+
+            // Submit to backend
+            fetch('/api/onboarding', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Redirect to success page or client portal
+                window.location.href = `/portal?project=${data.projectId}`;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your information. Please try again or contact support.');
+                
+                // Re-enable submit button
+                submitButton.disabled = false;
+                buttonText.textContent = 'Start My Revenue Recovery Project';
+                spinner.classList.add('hidden');
+            });
+        });
+
+        // Initialize progress
+        updateProgress();
+
+        // Auto-focus first input
+        document.getElementById('project-name').focus();
+    </script>
+</body>
+</html>
