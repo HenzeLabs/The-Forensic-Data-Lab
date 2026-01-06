@@ -1,11 +1,11 @@
-# 🎨 CLAUDE.md - Design System for The Forensic Data Lab
+# CLAUDE.md - Design System for The Forensic Data Lab
 
 > **Design Inspiration: Renalta.com**
 > This file instructs Claude Code on the exact design language, colors, animations, and component styles to use when building The Forensic Data Lab website.
 
 ---
 
-## 🎯 DESIGN PHILOSOPHY
+## DESIGN PHILOSOPHY
 
 The website should feel:
 - **Premium & Trustworthy** - Like a fintech/SaaS product handling important data
@@ -15,7 +15,7 @@ The website should feel:
 
 ---
 
-## 🎨 COLOR PALETTE
+## COLOR PALETTE
 
 ### Primary Colors
 ```css
@@ -516,7 +516,7 @@ OR for simpler builds:
 
 ---
 
-## ✅ DESIGN CHECKLIST
+## DESIGN CHECKLIST
 
 Before shipping any page, verify:
 
@@ -533,7 +533,7 @@ Before shipping any page, verify:
 
 ---
 
-## 🚀 QUICK START COMMAND
+## QUICK START COMMAND
 
 To build a page with these styles, paste this into Claude Code:
 

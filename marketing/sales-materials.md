@@ -97,9 +97,8 @@
 #### The Urgency Close
 **"I want to be transparent - we only take on a limited number of clients each month to ensure quality. This week I have [number] spots remaining. Would you like to secure one of those?"**
 
----
 
-## 🔥 Email Outreach Templates
+## Objection Handling Cheat Sheet
 
 ### Cold Email - LinkedIn Connection
 ```
@@ -203,15 +202,15 @@ That's it.
 5. REPEAT - Loop until 100% accurate
 
 ### Slide 6: Service Options
-**🔍 Detective ($497)**
+**Detective ($497)**
 - DIY audit + implementation guide
 - Perfect for technical teams
 
-**🏥 Surgeon ($1,497)**  
+**Surgeon ($1,497)**  
 - We do everything for you
 - Most popular option
 
-**🏗️ Architect ($2,997)**
+**Architect ($2,997)**
 - Custom enterprise solution
 - Includes ongoing quarterly audits
 
@@ -227,7 +226,7 @@ That's it.
 
 ---
 
-## 🎯 Objection Handling Cheat Sheet
+## Objection Handling Cheat Sheet
 
 | Objection | Response Framework | Example |
 |-----------|-------------------|---------|
@@ -266,7 +265,7 @@ That's it.
 
 ---
 
-## 🚀 Follow-up Sequences
+## Follow-up Sequences
 
 ### Post-Call Follow-up
 **Same Day Email:**
