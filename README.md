@@ -300,7 +300,7 @@ This is a complete business-in-a-box solution. Use it to build your own tracking
 
 ## Design System Overview
 
-- Palette: Dark gradient background (180deg, #0a0a0f → #121218 → #0a0a0f), accent blue #3b82f6, success green #10b981
+- Palette: Dark gradient background (180deg, #0a0a0f → #121218 → #0a0a0f), accent teal #2dd4bf, success green #10b981
 - Typography: Inter for primary text, JetBrains Mono for data; responsive sizes using clamp() for hero and section titles
 - Components: Glass morphism cards with backdrop blur, pill buttons with glow and hover transforms, featured pricing card with gradient top border
 - Interactions: ROI calculator with slider updates, animated stats counters on scroll, Intersection Observer fade-up + staggered animations

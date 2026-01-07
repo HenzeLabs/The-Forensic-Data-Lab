@@ -1,786 +1,1312 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Forensic Data Lab - We Don't Stop Until Your Tracking is Perfect</title>
-    <meta name="description" content="Stop losing $47K/month to broken analytics. Professional revenue signal restoration for e-commerce. 100% success guarantee.">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      The Forensic Data Lab - We Don't Stop Until Your Tracking is Perfect
+    </title>
+    <meta
+      name="description"
+      content="Shopify brands lose 11-20% revenue visibility to signal degradation. Professional revenue signal restoration for e-commerce."
+    />
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Chart.js for interactive charts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
+
     <style>
-        /* CSS Variables from CLAUDE.md */
-        :root {
-            /* Deep Navy/Black - Primary backgrounds */
-            --color-dark: #0a0a0f;
-            --color-dark-secondary: #121218;
-            --color-dark-tertiary: #1a1a24;
-            
-            /* Accent Blue - CTAs, highlights, interactive elements */
-            --color-accent: #3b82f6;
-            --color-accent-hover: #2563eb;
-            --color-accent-light: #60a5fa;
-            
-            /* Success Green - Positive metrics, checkmarks */
-            --color-success: #10b981;
-            --color-success-light: #34d399;
-            
-            /* Text Colors */
-            --color-text-primary: #ffffff;
-            --color-text-secondary: #a1a1aa;
-            --color-text-muted: #71717a;
-            
-            /* Gradient Accents */
-            --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-            --gradient-success: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
-            --gradient-glow: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+      /* CSS Variables from CLAUDE.md */
+      :root {
+        /* Deep Navy/Black - Primary backgrounds */
+        --color-dark: #0a1419;
+        --color-dark-secondary: #0d1a1f;
+        --color-dark-tertiary: #1a1a24;
 
-            /* Font Stacks */
-            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            --font-display: 'Inter', sans-serif;
-            --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+        /* Accent Blue - CTAs, highlights, interactive elements */
+        --color-accent: #2dd4bf;
+        --color-accent-hover: #14b8a6;
+        --color-accent-light: #5eead4;
+
+        /* Success Green - Positive metrics, checkmarks */
+        --color-success: #10b981;
+        --color-success-light: #34d399;
+
+        /* Text Colors */
+        --color-text-primary: #ffffff;
+        --color-text-secondary: #a1a1aa;
+        --color-text-muted: #71717a;
+
+        /* Gradient Accents */
+        --gradient-primary: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%);
+        --gradient-success: linear-gradient(135deg, #10b981 0%, #2dd4bf 100%);
+        --gradient-glow: radial-gradient(
+          circle at center,
+          rgba(45, 212, 191, 0.15) 0%,
+          transparent 70%
+        );
+
+        /* Font Stacks */
+        --font-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        --font-display: "Inter", sans-serif;
+        --font-mono: "JetBrains Mono", "Fira Code", monospace;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Main page background - subtle gradient */
+      body {
+        background: linear-gradient(
+          180deg,
+          #0a1419 0%,
+          #0d1a1f 50%,
+          #0a1419 100%
+        );
+        font-family: var(--font-primary);
+        color: var(--color-text-primary);
+        line-height: 1.6;
+      }
+
+      /* Section backgrounds with subtle glow */
+      .section-glow {
+        background: radial-gradient(
+          ellipse at top center,
+          rgba(45, 212, 191, 0.08) 0%,
+          transparent 50%
+        );
+      }
+
+      /* Card backgrounds */
+      .card {
+        background: rgba(17, 36, 40, 0.6);
+        border: 1px dashed rgba(45, 212, 191, 0.2);
+        border-radius: 0.75rem;
+        padding: 2rem;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        border-color: rgba(45, 212, 191, 0.4);
+        background: rgba(17, 36, 40, 0.8);
+      }
+
+      /* Corner dots on cards */
+      .card::before,
+      .card::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: rgba(45, 212, 191, 0.3);
+      }
+
+      .card::before {
+        top: -3px;
+        left: -3px;
+      }
+
+      .card::after {
+        top: -3px;
+        right: -3px;
+      }
+
+      /* Typography */
+      .hero-title {
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 2rem;
+      }
+
+      .section-title {
+        font-size: clamp(1.75rem, 4vw, 3rem);
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+
+      .subheadline {
+        font-size: clamp(1.125rem, 2vw, 1.5rem);
+        font-weight: 400;
+        color: var(--color-text-secondary);
+        line-height: 1.5;
+        margin-bottom: 2rem;
+      }
+
+      .body-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--color-text-secondary);
+      }
+
+      .data-number {
+        font-family: var(--font-mono);
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--color-success);
+      }
+
+      /* Buttons */
+      .btn-primary {
+        background: var(--color-accent);
+        color: white;
+        padding: 0.875rem 2rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.2s ease;
+        box-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .btn-primary:hover {
+        background: var(--color-accent-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 0 30px rgba(45, 212, 191, 0.5);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--color-text-primary);
+        padding: 0.875rem 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 9999px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .btn-secondary:hover {
+        border-color: var(--color-accent);
+        color: var(--color-accent);
+      }
+
+      /* Navigation */
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 1rem 2rem;
+        background: rgba(10, 10, 15, 0.8);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        z-index: 100;
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 1.25rem;
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .nav-link {
+        color: var(--color-text-secondary);
+        font-weight: 500;
+        transition: color 0.2s ease;
+        text-decoration: none;
+      }
+
+      .nav-link:hover {
+        color: var(--color-text-primary);
+      }
+
+      /* Animations */
+      .animate-fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .animate-fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .stagger-children > * {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .stagger-children.visible > *:nth-child(1) {
+        transition-delay: 0ms;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .stagger-children.visible > *:nth-child(2) {
+        transition-delay: 100ms;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .stagger-children.visible > *:nth-child(3) {
+        transition-delay: 200ms;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .stagger-children.visible > *:nth-child(4) {
+        transition-delay: 300ms;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes countUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
 
-        /* Main page background - subtle gradient */
-        body {
-            background: linear-gradient(180deg, #0a0a0f 0%, #121218 50%, #0a0a0f 100%);
-            font-family: var(--font-primary);
-            color: var(--color-text-primary);
-            line-height: 1.6;
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
         }
-
-        /* Section backgrounds with subtle glow */
-        .section-glow {
-            background: radial-gradient(ellipse at top center, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
+        50% {
+          transform: translateY(-10px);
         }
+      }
 
-        /* Card backgrounds */
-        .card {
-            background: rgba(26, 26, 36, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 1.5rem;
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
+      .float {
+        animation: float 6s ease-in-out infinite;
+      }
 
-        .card:hover {
-            border-color: rgba(59, 130, 246, 0.3);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
+      /* Pricing Cards */
+      .pricing-card {
+        background: linear-gradient(
+          180deg,
+          rgba(26, 26, 36, 0.8) 0%,
+          rgba(26, 26, 36, 0.4) 100%
+        );
+        border: 1px dashed rgba(45, 212, 191, 0.2);
+        border-radius: 2rem;
+        padding: 2.5rem;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
 
-        /* Typography */
-        .hero-title {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 700;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-            margin-bottom: 2rem;
-        }
+      .pricing-card.featured {
+        border-color: var(--color-accent);
+        box-shadow: 0 0 60px rgba(45, 212, 191, 0.2);
+      }
 
-        .section-title {
-            font-size: clamp(1.75rem, 4vw, 3rem);
-            font-weight: 600;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
+      .pricing-card.featured::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--gradient-primary);
+      }
 
-        .subheadline {
-            font-size: clamp(1.125rem, 2vw, 1.5rem);
-            font-weight: 400;
-            color: var(--color-text-secondary);
-            line-height: 1.5;
-            margin-bottom: 2rem;
-        }
+      /* Layout */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
 
-        .body-text {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: var(--color-text-secondary);
-        }
+      .section {
+        padding: 5rem 0;
+      }
 
-        .data-number {
-            font-family: var(--font-mono);
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--color-success);
-        }
+      .grid {
+        display: grid;
+        gap: 2rem;
+      }
 
-        /* Buttons */
-        .btn-primary {
-            background: var(--color-accent);
-            color: white;
-            padding: 0.875rem 2rem;
-            border-radius: 9999px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.2s ease;
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
+      .grid-cols-3 {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
 
-        .btn-primary:hover {
-            background: var(--color-accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
-        }
+      .grid-cols-4 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
 
-        .btn-secondary {
-            background: transparent;
-            color: var(--color-text-primary);
-            padding: 0.875rem 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 9999px;
-            font-weight: 500;
-            transition: all 0.2s ease;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
+      .text-center {
+        text-align: center;
+      }
 
-        .btn-secondary:hover {
-            border-color: var(--color-accent);
-            color: var(--color-accent);
-        }
+      /* Calculator Styles */
+      .calculator-card {
+        background: rgba(26, 26, 36, 0.6);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        margin: 2rem 0;
+      }
 
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 1rem 2rem;
-            background: rgba(10, 10, 15, 0.8);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            z-index: 100;
-        }
+      .slider-input {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 1rem 0;
+      }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      .slider-input input[type="range"] {
+        flex: 1;
+        height: 8px;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        outline: none;
+        -webkit-appearance: none;
+      }
 
-        .logo {
-            font-weight: 700;
-            font-size: 1.25rem;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+      .slider-input input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--color-accent);
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(45, 212, 191, 0.5);
+      }
 
+      .result-display {
+        text-align: center;
+        padding: 2rem 0;
+      }
+
+      .result-value {
+        font-family: var(--font-mono);
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--color-success);
+        margin: 1rem 0;
+      }
+
+      /* Comparison Table */
+      .comparison-table {
+        background: rgba(26, 26, 36, 0.6);
+        border-radius: 1.5rem;
+        overflow: hidden;
+        border: 1px dashed rgba(45, 212, 191, 0.2);
+        margin: 2rem 0;
+      }
+
+      .comparison-table table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .comparison-table th {
+        background: rgba(0, 0, 0, 0.3);
+        padding: 1.25rem;
+        font-weight: 600;
+        text-align: left;
+      }
+
+      .comparison-table td {
+        padding: 1rem 1.25rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .check-icon {
+        color: var(--color-success);
+        font-size: 1.25rem;
+      }
+
+      .x-icon {
+        color: #71717a;
+        font-size: 1.25rem;
+      }
+
+      /* Process Visualization */
+      .process-loop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+
+      .process-step {
+        background: rgba(26, 26, 36, 0.6);
+        border: 2px solid var(--color-accent);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        text-align: center;
+        position: relative;
+        min-width: 200px;
+      }
+
+      .process-arrow {
+        color: var(--color-accent);
+        font-size: 2rem;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
         .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
+          display: none;
         }
 
-        .nav-link {
-            color: var(--color-text-secondary);
-            font-weight: 500;
-            transition: color 0.2s ease;
-            text-decoration: none;
+        .hero-title {
+          font-size: 2.5rem;
         }
 
-        .nav-link:hover {
-            color: var(--color-text-primary);
-        }
-
-        /* Animations */
-        .animate-fade-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .animate-fade-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .stagger-children > * {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .stagger-children.visible > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
-        .stagger-children.visible > *:nth-child(2) { transition-delay: 100ms; opacity: 1; transform: translateY(0); }
-        .stagger-children.visible > *:nth-child(3) { transition-delay: 200ms; opacity: 1; transform: translateY(0); }
-        .stagger-children.visible > *:nth-child(4) { transition-delay: 300ms; opacity: 1; transform: translateY(0); }
-
-        @keyframes countUp {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .float {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        /* Pricing Cards */
-        .pricing-card {
-            background: linear-gradient(180deg, rgba(26, 26, 36, 0.8) 0%, rgba(26, 26, 36, 0.4) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 2rem;
-            padding: 2.5rem;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .pricing-card.featured {
-            border-color: var(--color-accent);
-            box-shadow: 0 0 60px rgba(59, 130, 246, 0.2);
-        }
-
-        .pricing-card.featured::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-primary);
-        }
-
-        /* Layout */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section {
-            padding: 5rem 0;
-        }
-
-        .grid {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .grid-cols-3 {
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-
+        .grid-cols-3,
         .grid-cols-4 {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        /* Calculator Styles */
-        .calculator-card {
-            background: rgba(26, 26, 36, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1.5rem;
-            padding: 2rem;
-            margin: 2rem 0;
+          grid-template-columns: 1fr;
         }
 
         .slider-input {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin: 1rem 0;
+          flex-direction: column;
+          text-align: center;
         }
-
-        .slider-input input[type="range"] {
-            flex: 1;
-            height: 8px;
-            border-radius: 4px;
-            background: rgba(255, 255, 255, 0.1);
-            outline: none;
-            -webkit-appearance: none;
-        }
-
-        .slider-input input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: var(--color-accent);
-            cursor: pointer;
-            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
-        }
-
-        .result-display {
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        .result-value {
-            font-family: var(--font-mono);
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--color-success);
-            margin: 1rem 0;
-        }
-
-        /* Comparison Table */
-        .comparison-table {
-            background: rgba(26, 26, 36, 0.6);
-            border-radius: 1.5rem;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            margin: 2rem 0;
-        }
-
-        .comparison-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .comparison-table th {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 1.25rem;
-            font-weight: 600;
-            text-align: left;
-        }
-
-        .comparison-table td {
-            padding: 1rem 1.25rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .check-icon {
-            color: var(--color-success);
-            font-size: 1.25rem;
-        }
-
-        .x-icon {
-            color: #71717a;
-            font-size: 1.25rem;
-        }
-
-        /* Process Visualization */
-        .process-loop {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .process-step {
-            background: rgba(26, 26, 36, 0.6);
-            border: 2px solid var(--color-accent);
-            border-radius: 1rem;
-            padding: 1.5rem;
-            text-align: center;
-            position: relative;
-            min-width: 200px;
-        }
-
-        .process-arrow {
-            color: var(--color-accent);
-            font-size: 2rem;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .grid-cols-3,
-            .grid-cols-4 {
-                grid-template-columns: 1fr;
-            }
-            
-            .slider-input {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">The Forensic Data Lab</div>
-            <div class="nav-links">
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#how-it-works" class="nav-link">Process</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="/onboarding.html?service=forensicDiagnostic" class="btn-primary">Get Free Audit</a>
-            </div>
+      <div class="nav-container">
+        <div class="logo">The Forensic Data Lab</div>
+        <div class="nav-links">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#how-it-works" class="nav-link">Process</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+          <a
+            href="/onboarding.html?service=forensicDiagnostic"
+            class="btn-primary"
+            >Start Diagnostic - $1,450</a
+          >
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="section section-glow" style="padding-top: 8rem; min-height: 100vh; display: flex; align-items: center;">
-        <div class="container">
-            <div class="text-center animate-fade-up">
-                <h1 class="hero-title">
-                    We Don't Stop Until Your<br>
-                    <span style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                        Tracking is Perfect.
-                    </span>
-                </h1>
-                
-                <p class="subheadline">
-                    Stop losing $47K/month to broken analytics.<br>
-                    Professional signal restoration for e-commerce.
-                </p>
+    <section
+      class="section section-glow"
+      style="
+        padding-top: 8rem;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      "
+    >
+      <div class="container">
+        <div class="text-center animate-fade-up">
+          <h1 class="hero-title">
+            Recover the 11-20% of Revenue<br />
+            <span
+              style="
+                background: var(--gradient-primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+              "
+            >
+              Your Analytics Can't See.
+            </span>
+          </h1>
 
-                <!-- Interactive ROI Calculator -->
-                <div class="calculator-card float">
-                    <h3 style="margin-bottom: 1rem; color: var(--color-text-primary);">Calculate Your Revenue Loss</h3>
-                    <div class="slider-input">
-                        <span style="color: var(--color-text-secondary);">Monthly Ad Spend:</span>
-                        <input type="range" id="adSpendSlider" min="5000" max="250000" step="5000" value="25000">
-                        <span id="adSpendValue" style="color: var(--color-accent); font-weight: 600;">$25,000</span>
-                    </div>
-                    
-                    <div class="result-display">
-                        <div style="color: var(--color-text-secondary); margin-bottom: 0.5rem;">Revenue You're Losing:</div>
-                        <div class="result-value" id="revenueLoss">$47,000</div>
-                        <div style="color: var(--color-text-muted); font-size: 0.9rem;">per month with broken tracking</div>
-                    </div>
-                </div>
+          <p class="subheadline">
+            Shopify brands lose 11-20% of revenue to signal degradation.<br />
+            We restore your revenue visibility with our systematic approach.
+          </p>
 
-                <div style="margin-top: 3rem; gap: 1rem; display: flex; justify-content: center; flex-wrap: wrap;">
-                    <a href="/onboarding.html?service=forensicDiagnostic" class="btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">Get Free Audit</a>
-                    <a href="#how-it-works" class="btn-secondary">See How</a>
-                </div>
+          <!-- Interactive ROI Calculator -->
+          <div class="calculator-card float">
+            <h3 style="margin-bottom: 1rem; color: var(--color-text-primary)">
+              Calculate Your Revenue Loss
+            </h3>
+            <div class="slider-input">
+              <span style="color: var(--color-text-secondary)"
+                >Monthly Ad Spend:</span
+              >
+              <input
+                type="range"
+                id="adSpendSlider"
+                min="5000"
+                max="250000"
+                step="5000"
+                value="25000"
+              />
+              <span
+                id="adSpendValue"
+                style="color: var(--color-accent); font-weight: 600"
+                >$25,000</span
+              >
             </div>
+
+            <div class="result-display">
+              <div
+                style="
+                  color: var(--color-text-secondary);
+                  margin-bottom: 0.5rem;
+                "
+              >
+                Revenue You're Losing:
+              </div>
+              <div class="result-value" id="revenueLoss">$0</div>
+              <div style="color: var(--color-text-muted); font-size: 0.9rem">
+                per month with signal loss
+              </div>
+            </div>
+          </div>
+
+          <div
+            style="
+              margin-top: 3rem;
+              gap: 1rem;
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+            "
+          >
+            <a
+              href="/onboarding.html?service=forensicDiagnostic"
+              class="btn-primary"
+              style="font-size: 1.125rem; padding: 1rem 2.5rem"
+              >Start Diagnostic - $1,450</a
+            >
+            <a href="#how-it-works" class="btn-secondary">See How</a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Stats Section -->
     <section class="section">
-        <div class="container">
-            <div class="grid grid-cols-4 stagger-children text-center">
-                <div class="card">
-                    <div class="data-number" data-count="80">0%</div>
-                    <div class="body-text">of stores have broken tracking</div>
-                </div>
-                <div class="card">
-                    <div class="data-number" style="color: #ef4444;">$47K</div>
-                    <div class="body-text">avg monthly revenue lost</div>
-                </div>
-                <div class="card">
-                    <div class="data-number" data-count="15">0</div>
-                    <div class="body-text">e-commerce events we audit</div>
-                </div>
-                <div class="card">
-                    <div class="data-number" data-count="100">0%</div>
-                    <div class="body-text">success rate guaranteed</div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="grid grid-cols-4 stagger-children text-center">
+          <div class="card">
+            <div class="data-number">11-20%</div>
+            <div class="body-text">revenue typically underreported</div>
+          </div>
+          <div class="card">
+            <div class="data-number" style="color: #ef4444">11-20%</div>
+            <div class="body-text">revenue visibility typically lost</div>
+          </div>
+          <div class="card">
+            <div class="data-number" data-count="7">0</div>
+            <div class="body-text">days to full signal restoration</div>
+          </div>
+          <div class="card">
+            <div class="data-number" data-count="100">0%</div>
+            <div class="body-text">signal integrity our goal</div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="section section-glow">
-        <div class="container">
-            <div class="text-center animate-fade-up">
-                <h2 class="section-title">What We Fix</h2>
-                <p class="subheadline">Comprehensive signal restoration across your entire tracking stack</p>
+      <div class="container">
+        <div class="text-center animate-fade-up">
+          <h2 class="section-title">What We Restore</h2>
+          <p class="subheadline">
+            Comprehensive signal restoration across your entire tracking stack
+          </p>
+        </div>
+
+        <div class="grid grid-cols-3 stagger-children" style="margin-top: 3rem">
+          <div class="card">
+            <h3 style="color: var(--color-accent); margin-bottom: 1rem">
+              Event Tracking
+            </h3>
+            <p class="body-text">
+              Fix missing or misconfigured events hiding your real customer
+              behavior
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="color: var(--color-accent); margin-bottom: 1rem">
+              Conversion Attribution
+            </h3>
+            <p class="body-text">
+              Identify lost conversions and revenue leaks in your sales funnel
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="color: var(--color-accent); margin-bottom: 1rem">
+              Cross-Platform Tracking
+            </h3>
+            <p class="body-text">
+              Ensure accurate attribution across all devices and touchpoints
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="color: var(--color-accent); margin-bottom: 1rem">
+              Data Quality
+            </h3>
+            <p class="body-text">
+              Remove duplicates, spam, and bad data poisoning your analytics
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="color: var(--color-accent); margin-bottom: 1rem">
+              Server-Side Tracking
+            </h3>
+            <p class="body-text">
+              Implement bulletproof tracking that bypasses ad blockers
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="color: var(--color-accent); margin-bottom: 1rem">
+              Custom Implementation
+            </h3>
+            <p class="body-text">
+              Build tracking for unique business requirements and workflows
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry Examples Section -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center animate-fade-up">
+          <h2 class="section-title">Built for Shopify Brands Like Yours</h2>
+          <p class="subheadline">
+            We specialize in $5M-$20M e-commerce brands across these verticals
+          </p>
+        </div>
+
+        <div class="grid grid-cols-4 stagger-children" style="margin-top: 3rem">
+          <div class="card" style="text-align: center">
+            <div style="font-size: 2rem; margin-bottom: 1rem">Fashion</div>
+            <p class="body-text">
+              Apparel, accessories, and luxury goods brands losing attribution
+              on high-value purchases
+            </p>
+          </div>
+          <div class="card" style="text-align: center">
+            <div style="font-size: 2rem; margin-bottom: 1rem">Beauty</div>
+            <p class="body-text">
+              Skincare, cosmetics, and wellness brands with complex subscription
+              funnels
+            </p>
+          </div>
+          <div class="card" style="text-align: center">
+            <div style="font-size: 2rem; margin-bottom: 1rem">Supplements</div>
+            <p class="body-text">
+              Health and nutrition brands needing accurate LTV attribution
+            </p>
+          </div>
+          <div class="card" style="text-align: center">
+            <div style="font-size: 2rem; margin-bottom: 1rem">Home Goods</div>
+            <p class="body-text">
+              Furniture, decor, and lifestyle brands with high AOV products
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Shopify Brands Lose Revenue Section -->
+    <section id="why-brands-lose" class="section section-glow">
+      <div class="container">
+        <div class="text-center animate-fade-up">
+          <h2 class="section-title">Why Shopify Brands Lose Revenue</h2>
+          <p class="subheadline">
+            The hidden signal degradation costing you 11-20% of your data
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2" style="margin-top: 3rem; gap: 2rem">
+          <!-- Left Column: Main Issues -->
+          <div>
+            <div
+              class="card"
+              style="margin-bottom: 1.5rem; border-left: 4px solid #ef4444"
+            >
+              <h3 style="color: #ef4444; margin-bottom: 1rem">
+                iOS 14+ Privacy Changes
+              </h3>
+              <p class="body-text">
+                Apple's ATT framework blocks up to 85% of user tracking on iOS
+                devices. Without proper server-side implementation, your Meta
+                Pixel is blind to most conversions.
+              </p>
+              <div
+                style="
+                  margin-top: 1rem;
+                  padding-top: 1rem;
+                  border-top: 1px solid rgba(255, 255, 255, 0.1);
+                "
+              >
+                <span style="color: var(--color-accent); font-weight: 600"
+                  >Impact:</span
+                >
+                <span class="body-text"> 15-40% of purchases invisible</span>
+              </div>
             </div>
 
-            <div class="grid grid-cols-3 stagger-children" style="margin-top: 3rem;">
-                <div class="card">
-                    <h3 style="color: var(--color-accent); margin-bottom: 1rem;">Event Tracking</h3>
-                    <p class="body-text">Fix missing or misconfigured events hiding your real customer behavior</p>
-                </div>
-                <div class="card">
-                    <h3 style="color: var(--color-accent); margin-bottom: 1rem;">Conversion Attribution</h3>
-                    <p class="body-text">Identify lost conversions and revenue leaks in your sales funnel</p>
-                </div>
-                <div class="card">
-                    <h3 style="color: var(--color-accent); margin-bottom: 1rem;">Cross-Platform Tracking</h3>
-                    <p class="body-text">Ensure accurate attribution across all devices and touchpoints</p>
-                </div>
-                <div class="card">
-                    <h3 style="color: var(--color-accent); margin-bottom: 1rem;">Data Quality</h3>
-                    <p class="body-text">Remove duplicates, spam, and bad data poisoning your analytics</p>
-                </div>
-                <div class="card">
-                    <h3 style="color: var(--color-accent); margin-bottom: 1rem;">Server-Side Tracking</h3>
-                    <p class="body-text">Implement bulletproof tracking that bypasses ad blockers</p>
-                </div>
-                <div class="card">
-                    <h3 style="color: var(--color-accent); margin-bottom: 1rem;">Custom Implementation</h3>
-                    <p class="body-text">Build tracking for unique business requirements and workflows</p>
-                </div>
+            <div
+              class="card"
+              style="margin-bottom: 1.5rem; border-left: 4px solid #f59e0b"
+            >
+              <h3 style="color: #f59e0b; margin-bottom: 1rem">
+                Ad Blockers & Browser Restrictions
+              </h3>
+              <p class="body-text">
+                30%+ of users run ad blockers that prevent GA4 and GTM from
+                loading. Safari's ITP limits cookie lifespan to 7 days, breaking
+                attribution windows.
+              </p>
+              <div
+                style="
+                  margin-top: 1rem;
+                  padding-top: 1rem;
+                  border-top: 1px solid rgba(255, 255, 255, 0.1);
+                "
+              >
+                <span style="color: var(--color-accent); font-weight: 600"
+                  >Impact:</span
+                >
+                <span class="body-text"> 8-15% data loss on browsers</span>
+              </div>
             </div>
+
+            <div
+              class="card"
+              style="margin-bottom: 1.5rem; border-left: 4px solid #8b5cf6"
+            >
+              <h3 style="color: #8b5cf6; margin-bottom: 1rem">
+                Consent Banner Misconfig
+              </h3>
+              <p class="body-text">
+                Improperly configured cookie consent banners block tracking
+                before users even interact. Default "reject all" implementations
+                destroy data collection.
+              </p>
+              <div
+                style="
+                  margin-top: 1rem;
+                  padding-top: 1rem;
+                  border-top: 1px solid rgba(255, 255, 255, 0.1);
+                "
+              >
+                <span style="color: var(--color-accent); font-weight: 600"
+                  >Impact:</span
+                >
+                <span class="body-text"> 20-60% of EU traffic untracked</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: More Issues -->
+          <div>
+            <div
+              class="card"
+              style="margin-bottom: 1.5rem; border-left: 4px solid #ec4899"
+            >
+              <h3 style="color: #ec4899; margin-bottom: 1rem">
+                Shopify Checkout Limitations
+              </h3>
+              <p class="body-text">
+                Standard Shopify checkout restricts custom JavaScript. Without
+                Plus or proper workarounds, purchase events often fire
+                incorrectly or not at all.
+              </p>
+              <div
+                style="
+                  margin-top: 1rem;
+                  padding-top: 1rem;
+                  border-top: 1px solid rgba(255, 255, 255, 0.1);
+                "
+              >
+                <span style="color: var(--color-accent); font-weight: 600"
+                  >Impact:</span
+                >
+                <span class="body-text"> 5-25% purchase events missing</span>
+              </div>
+            </div>
+
+            <div
+              class="card"
+              style="margin-bottom: 1.5rem; border-left: 4px solid #06b6d4"
+            >
+              <h3 style="color: #06b6d4; margin-bottom: 1rem">
+                Cross-Domain Tracking Gaps
+              </h3>
+              <p class="body-text">
+                Subdomains, third-party checkouts, and payment redirects break
+                session continuity. Users appear as new visitors, inflating
+                acquisition metrics.
+              </p>
+              <div
+                style="
+                  margin-top: 1rem;
+                  padding-top: 1rem;
+                  border-top: 1px solid rgba(255, 255, 255, 0.1);
+                "
+              >
+                <span style="color: var(--color-accent); font-weight: 600"
+                  >Impact:</span
+                >
+                <span class="body-text"> 10-30% misattributed sessions</span>
+              </div>
+            </div>
+
+            <div
+              class="card"
+              style="margin-bottom: 1.5rem; border-left: 4px solid #14b8a6"
+            >
+              <h3 style="color: #14b8a6; margin-bottom: 1rem">
+                GTM/GA4 Config Errors
+              </h3>
+              <p class="body-text">
+                Duplicate tags, incorrect triggers, and broken data layers are
+                endemic. Most implementations have 3-7 silent errors firing on
+                every page.
+              </p>
+              <div
+                style="
+                  margin-top: 1rem;
+                  padding-top: 1rem;
+                  border-top: 1px solid rgba(255, 255, 255, 0.1);
+                "
+              >
+                <span style="color: var(--color-accent); font-weight: 600"
+                  >Impact:</span
+                >
+                <span class="body-text"> Data accuracy reduced 15-40%</span>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="text-center" style="margin-top: 3rem">
+          <p class="subheadline" style="margin-bottom: 1.5rem">
+            The good news? All of these issues are fixable. We systematically
+            restore your signals until they meet our quality standards.
+          </p>
+          <a href="#pricing" class="btn btn-primary" style="font-size: 1.1rem"
+            >See Recovery Options</a
+          >
+        </div>
+      </div>
     </section>
 
     <!-- Process Section -->
     <section id="how-it-works" class="section">
-        <div class="container">
-            <div class="text-center animate-fade-up">
-                <h2 class="section-title">Automated Verification Loop</h2>
-                <p class="subheadline">We don't stop until your tracking is 100% perfect</p>
-            </div>
-
-            <div class="process-loop">
-                <div class="process-step">
-                    <h3 style="color: var(--color-accent); margin-bottom: 0.5rem;">AUDIT</h3>
-                    <p class="body-text">Deep scan of tracking setup</p>
-                </div>
-                <div class="process-arrow">↓</div>
-                <div class="process-step">
-                    <h3 style="color: var(--color-accent); margin-bottom: 0.5rem;">DIAGNOSE</h3>
-                    <p class="body-text">Identify all issues and gaps</p>
-                </div>
-                <div class="process-arrow">↓</div>
-                <div class="process-step">
-                    <h3 style="color: var(--color-accent); margin-bottom: 0.5rem;">REPAIR</h3>
-                    <p class="body-text">Implement all fixes</p>
-                </div>
-                <div class="process-arrow">↓</div>
-                <div class="process-step">
-                    <h3 style="color: var(--color-accent); margin-bottom: 0.5rem;">VERIFY</h3>
-                    <p class="body-text">Test everything works</p>
-                </div>
-                <div class="process-arrow">↺</div>
-                <div style="color: var(--color-text-secondary); text-align: center;">
-                    Not Perfect? → Loop Back to Audit<br>
-                    Perfect? → ✓ Done!
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center animate-fade-up">
+          <h2 class="section-title">Automated Verification Loop</h2>
+          <p class="subheadline">
+            We keep iterating until your tracking meets our quality standards
+          </p>
         </div>
+
+        <div class="process-loop">
+          <div class="process-step">
+            <h3 style="color: var(--color-accent); margin-bottom: 0.5rem">
+              AUDIT
+            </h3>
+            <p class="body-text">Deep scan of tracking setup</p>
+          </div>
+          <div class="process-arrow">↓</div>
+          <div class="process-step">
+            <h3 style="color: var(--color-accent); margin-bottom: 0.5rem">
+              DIAGNOSE
+            </h3>
+            <p class="body-text">Identify all issues and gaps</p>
+          </div>
+          <div class="process-arrow">↓</div>
+          <div class="process-step">
+            <h3 style="color: var(--color-accent); margin-bottom: 0.5rem">
+              REPAIR
+            </h3>
+            <p class="body-text">Implement all fixes</p>
+          </div>
+          <div class="process-arrow">↓</div>
+          <div class="process-step">
+            <h3 style="color: var(--color-accent); margin-bottom: 0.5rem">
+              VERIFY
+            </h3>
+            <p class="body-text">Test everything works</p>
+          </div>
+          <div class="process-arrow">↺</div>
+          <div style="color: var(--color-text-secondary); text-align: center">
+            Not Perfect? → Loop Back to Audit<br />
+            Perfect? → Done!
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Pricing Section -->
     <section id="pricing" class="section section-glow">
-        <div class="container">
-            <div class="text-center animate-fade-up">
-                <h2 class="section-title">Service Tiers</h2>
-                <p class="subheadline">Choose your tracking fix package</p>
-            </div>
-
-            <div class="grid grid-cols-3" style="margin-top: 3rem;">
-                <!-- Detective -->
-                <div class="pricing-card">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">DETECTIVE</h3>
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-accent); margin-bottom: 1rem;">$497</div>
-                    <p class="body-text" style="margin-bottom: 2rem;">Audit only</p>
-                    
-                    <ul style="list-style: none; margin-bottom: 2rem;">
-                        <li style="padding: 0.5rem 0; color: var(--color-text-secondary);">• 48hr report</li>
-                        <li style="padding: 0.5rem 0; color: var(--color-text-secondary);">• DIY fixes</li>
-                    </ul>
-                    
-                    <a href="/onboarding.html?service=forensicDiagnostic" class="btn-primary" style="width: 100%; text-align: center;">Get Started</a>
-                </div>
-
-                <!-- Surgeon (Featured) -->
-                <div class="pricing-card featured">
-                    <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gradient-primary); color: white; padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">
-                        POPULAR
-                    </div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; margin-top: 1rem;">SURGEON</h3>
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-success); margin-bottom: 1rem;">$1,497</div>
-                    <p class="body-text" style="margin-bottom: 2rem;">Full repair</p>
-                    
-                    <ul style="list-style: none; margin-bottom: 2rem;">
-                        <li style="padding: 0.5rem 0; color: var(--color-text-secondary);">• 1 week</li>
-                        <li style="padding: 0.5rem 0; color: var(--color-text-secondary);">• Guaranteed</li>
-                        <li style="padding: 0.5rem 0; font-weight: 600; color: var(--color-success);">• We implement ALL fixes</li>
-                    </ul>
-                    
-                    <a href="/onboarding.html?service=signalRestoration" class="btn-primary" style="width: 100%; text-align: center;">Get Started</a>
-                </div>
-
-                <!-- Architect -->
-                <div class="pricing-card">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">ARCHITECT</h3>
-                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-accent); margin-bottom: 1rem;">$2,997</div>
-                    <p class="body-text" style="margin-bottom: 2rem;">Enterprise</p>
-                    
-                    <ul style="list-style: none; margin-bottom: 2rem;">
-                        <li style="padding: 0.5rem 0; color: var(--color-text-secondary);">• Ongoing</li>
-                        <li style="padding: 0.5rem 0; color: var(--color-text-secondary);">• Dedicated</li>
-                    </ul>
-                    
-                    <a href="/contact.html?service=agencyAssurance" class="btn-secondary" style="width: 100%; text-align: center;">Contact Us</a>
-                </div>
-            </div>
-
-            <!-- Comparison Table -->
-            <div class="comparison-table" style="margin-top: 4rem;">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Feature</th>
-                            <th style="color: var(--color-success);">Us</th>
-                            <th>Typical Agency</th>
-                            <th>DIY Solution</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Setup Time</td>
-                            <td><span class="check-icon">✓</span> 48 hours</td>
-                            <td><span class="x-icon">×</span> 2-4 weeks</td>
-                            <td><span class="x-icon">×</span> 3-6 months</td>
-                        </tr>
-                        <tr>
-                            <td>Success Guarantee</td>
-                            <td><span class="check-icon">✓</span> 100%</td>
-                            <td><span class="x-icon">×</span> No guarantee</td>
-                            <td><span class="x-icon">×</span> Trial & error</td>
-                        </tr>
-                        <tr>
-                            <td>Automated Verification</td>
-                            <td><span class="check-icon">✓</span> Built-in</td>
-                            <td><span class="x-icon">×</span> Manual</td>
-                            <td><span class="x-icon">×</span> None</td>
-                        </tr>
-                        <tr>
-                            <td>Revenue Recovery</td>
-                            <td><span class="check-icon">✓</span> Immediate</td>
-                            <td><span class="x-icon">×</span> Gradual</td>
-                            <td><span class="x-icon">×</span> Maybe never</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+      <div class="container">
+        <div class="text-center animate-fade-up">
+          <h2 class="section-title">Revenue Recovery Packages</h2>
+          <p class="subheadline">
+            For Shopify brands generating $5M-$20M annually
+          </p>
         </div>
+
+        <div class="grid grid-cols-3" style="margin-top: 3rem">
+          <!-- Forensic Diagnostic -->
+          <div class="pricing-card">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem">
+              FORENSIC DIAGNOSTIC
+            </h3>
+            <div
+              style="
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: var(--color-accent);
+                margin-bottom: 1rem;
+              "
+            >
+              $1,450
+            </div>
+            <p class="body-text" style="margin-bottom: 2rem">
+              Revenue leakage analysis
+            </p>
+
+            <ul style="list-style: none; margin-bottom: 2rem">
+              <li style="padding: 0.5rem 0; color: var(--color-text-secondary)">
+                • 48hr comprehensive report
+              </li>
+              <li style="padding: 0.5rem 0; color: var(--color-text-secondary)">
+                • Revenue impact quantification
+              </li>
+            </ul>
+
+            <a
+              href="/onboarding.html?service=forensicDiagnostic"
+              class="btn-primary"
+              style="width: 100%; text-align: center"
+              >Get Started</a
+            >
+          </div>
+
+          <!-- Signal Restoration (Featured) -->
+          <div class="pricing-card featured">
+            <div
+              style="
+                position: absolute;
+                top: -12px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: var(--gradient-primary);
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 9999px;
+                font-size: 0.875rem;
+                font-weight: 600;
+              "
+            >
+              MOST POPULAR
+            </div>
+            <h3
+              style="font-size: 1.5rem; margin-bottom: 0.5rem; margin-top: 1rem"
+            >
+              SIGNAL RESTORATION
+            </h3>
+            <div
+              style="
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: var(--color-success);
+                margin-bottom: 1rem;
+              "
+            >
+              $2,950
+            </div>
+            <p class="body-text" style="margin-bottom: 2rem">
+              Complete revenue signal recovery
+            </p>
+
+            <ul style="list-style: none; margin-bottom: 2rem">
+              <li style="padding: 0.5rem 0; color: var(--color-text-secondary)">
+                • 7-day implementation
+              </li>
+              <li style="padding: 0.5rem 0; color: var(--color-text-secondary)">
+                • Full signal restoration
+              </li>
+              <li
+                style="
+                  padding: 0.5rem 0;
+                  font-weight: 600;
+                  color: var(--color-success);
+                "
+              >
+                • We implement ALL fixes
+              </li>
+            </ul>
+
+            <a
+              href="/onboarding.html?service=signalRestoration"
+              class="btn-primary"
+              style="width: 100%; text-align: center"
+              >Get Started</a
+            >
+          </div>
+
+          <!-- Shadow Monitoring -->
+          <div class="pricing-card">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem">
+              SHADOW MONITORING
+            </h3>
+            <div
+              style="
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: var(--color-accent);
+                margin-bottom: 1rem;
+              "
+            >
+              $350<span style="font-size: 1rem">/mo</span>
+            </div>
+            <p class="body-text" style="margin-bottom: 2rem">
+              Ongoing signal maintenance
+            </p>
+
+            <ul style="list-style: none; margin-bottom: 2rem">
+              <li style="padding: 0.5rem 0; color: var(--color-text-secondary)">
+                • Continuous monitoring
+              </li>
+              <li style="padding: 0.5rem 0; color: var(--color-text-secondary)">
+                • Instant degradation alerts
+              </li>
+            </ul>
+
+            <a
+              href="/onboarding.html?service=shadowMonitoring"
+              class="btn-secondary"
+              style="width: 100%; text-align: center"
+              >Get Started</a
+            >
+          </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="comparison-table" style="margin-top: 4rem">
+          <h3
+            style="
+              text-align: center;
+              margin-bottom: 2rem;
+              color: var(--color-text-secondary);
+            "
+          >
+            Why Brands Choose Us Over Traditional Consultants
+          </h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th style="color: var(--color-success)">
+                  The Forensic Data Lab
+                </th>
+                <th>Analytics Consultant</th>
+                <th>DIY / In-House</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Time to Results</td>
+                <td><span class="check-icon">✓</span> 7 days</td>
+                <td><span class="x-icon">×</span> 4-8 weeks</td>
+                <td><span class="x-icon">×</span> 3-6 months</td>
+              </tr>
+              <tr>
+                <td>Investment</td>
+                <td><span class="check-icon">✓</span> $1,450-$2,950</td>
+                <td><span class="x-icon">×</span> $10,000-$25,000</td>
+                <td><span class="x-icon">×</span> $50K+ salary</td>
+              </tr>
+              <tr>
+                <td>Quality Assurance</td>
+                <td><span class="check-icon">✓</span> Satisfaction guarantee</td>
+                <td><span class="x-icon">×</span> No guarantee</td>
+                <td><span class="x-icon">×</span> Trial & error</td>
+              </tr>
+              <tr>
+                <td>Shopify Specialization</td>
+                <td><span class="check-icon">✓</span> 100% focused</td>
+                <td><span class="x-icon">×</span> Generalist</td>
+                <td><span class="x-icon">×</span> Learning curve</td>
+              </tr>
+              <tr>
+                <td>Automated Verification</td>
+                <td><span class="check-icon">✓</span> Browser automation</td>
+                <td><span class="x-icon">×</span> Manual QA</td>
+                <td><span class="x-icon">×</span> None</td>
+              </tr>
+              <tr>
+                <td>Ongoing Monitoring</td>
+                <td><span class="check-icon">✓</span> $350/mo option</td>
+                <td><span class="x-icon">×</span> Hourly retainer</td>
+                <td><span class="x-icon">×</span> Full-time job</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="section">
-        <div class="container">
-            <div class="card text-center" style="max-width: 600px; margin: 0 auto;">
-                <h2 style="margin-bottom: 1rem;">Stop Guessing. Start Knowing.</h2>
-                <p class="body-text" style="margin-bottom: 2rem;">
-                    Get a detailed audit of your tracking setup with zero obligation
-                </p>
-                <a href="/onboarding.html?service=forensicDiagnostic" class="btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">
-                    Start Forensic Diagnostic - $497
-                </a>
-            </div>
+    <section class="section section-glow">
+      <div class="container">
+        <div class="card text-center" style="max-width: 600px; margin: 0 auto">
+          <h2 style="margin-bottom: 1rem">Stop Guessing. Start Knowing.</h2>
+          <p class="body-text" style="margin-bottom: 2rem">
+            Get a detailed revenue leakage analysis with zero obligation
+          </p>
+          <a
+            href="/onboarding.html?service=forensicDiagnostic"
+            class="btn-primary"
+            style="font-size: 1.125rem; padding: 1rem 2.5rem"
+          >
+            Start Forensic Diagnostic - $1,450
+          </a>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer style="border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 2rem 0; background: var(--color-dark);">
-        <div class="container text-center">
-            <p style="color: var(--color-text-muted);">© 2025 The Forensic Data Lab. All rights reserved.</p>
-        </div>
+    <footer
+      style="
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 2rem 0;
+        background: var(--color-dark);
+      "
+    >
+      <div class="container text-center">
+        <p style="color: var(--color-text-muted)">
+          © 2025 The Forensic Data Lab. All rights reserved.
+        </p>
+      </div>
     </footer>
 
     <script>
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
 
-        // Observe all animated elements
-        document.querySelectorAll('.animate-fade-up, .stagger-children').forEach(el => {
-            observer.observe(el);
+      // Observe all animated elements
+      document
+        .querySelectorAll(".animate-fade-up, .stagger-children")
+        .forEach((el) => {
+          observer.observe(el);
         });
 
-        // ROI Calculator
-        const adSpendSlider = document.getElementById('adSpendSlider');
-        const adSpendValue = document.getElementById('adSpendValue');
-        const revenueLoss = document.getElementById('revenueLoss');
+      // ROI Calculator
+      const adSpendSlider = document.getElementById("adSpendSlider");
+      const adSpendValue = document.getElementById("adSpendValue");
+      const revenueLoss = document.getElementById("revenueLoss");
 
-        function updateCalculator() {
-            const adSpend = parseInt(adSpendSlider.value);
-            const loss = Math.round(adSpend * 1.88); // 188% multiplier for revenue loss
-            
-            adSpendValue.textContent = `$${adSpend.toLocaleString()}`;
-            revenueLoss.textContent = `$${loss.toLocaleString()}`;
-        }
+      function updateCalculator() {
+        const adSpend = parseInt(adSpendSlider.value);
+        const loss = Math.round(adSpend * 1.88); // 188% multiplier for revenue loss
 
-        adSpendSlider.addEventListener('input', updateCalculator);
-        updateCalculator(); // Initialize
+        adSpendValue.textContent = `$${adSpend.toLocaleString()}`;
+        revenueLoss.textContent = `$${loss.toLocaleString()}`;
+      }
 
-        // Animated Counters
-        function animateCounter(element, target) {
-            let current = 0;
-            const increment = target / 100;
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                element.textContent = Math.floor(current) + (target === 100 ? '%' : target === 15 ? '' : '%');
-            }, 20);
-        }
+      adSpendSlider.addEventListener("input", updateCalculator);
+      updateCalculator(); // Initialize
 
-        // Trigger counters when stats section is visible
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counters = entry.target.querySelectorAll('[data-count]');
-                    counters.forEach(counter => {
-                        const target = parseInt(counter.dataset.count);
-                        animateCounter(counter, target);
-                    });
-                    statsObserver.unobserve(entry.target);
-                }
+      // Animated Counters
+      function animateCounter(element, target) {
+        let current = 0;
+        const increment = target / 100;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          element.textContent =
+            Math.floor(current) +
+            (target === 100 ? "%" : target === 15 ? "" : "%");
+        }, 20);
+      }
+
+      // Trigger counters when stats section is visible
+      const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const counters = entry.target.querySelectorAll("[data-count]");
+            counters.forEach((counter) => {
+              const target = parseInt(counter.dataset.count);
+              animateCounter(counter, target);
             });
-        }, observerOptions);
-
-        const statsSection = document.querySelector('.grid-cols-4');
-        if (statsSection) {
-            statsObserver.observe(statsSection);
-        }
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+            statsObserver.unobserve(entry.target);
+          }
         });
+      }, observerOptions);
+
+      const statsSection = document.querySelector(".grid-cols-4");
+      if (statsSection) {
+        statsObserver.observe(statsSection);
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
     </script>
-</body>
+  </body>
 </html>

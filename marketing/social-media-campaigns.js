@@ -37,23 +37,21 @@ class SocialMediaCampaigns {
             {
               type: "text_post",
               theme: "problem_awareness",
-              content: `REALITY CHECK: 80% of businesses have broken GA4 tracking.
+              content: `REALITY CHECK: Many businesses have GA4 tracking issues.
 
-That means 4 out of 5 companies are making marketing decisions based on incomplete (or wrong) data.
+That means companies are making marketing decisions based on incomplete (or wrong) data.
 
 Here's what I see every day:
-→ Facebook ads getting blamed when the tracking is broken
-→ "Best performing" campaigns that aren't actually working  
+→ Facebook ads getting blamed when the signals are degraded
+→ "Best performing" campaigns that aren't actually working
 → Marketing budgets cut because ROI "looks bad"
 → Successful channels getting paused by mistake
 
-The worst part? Most businesses don't even know their tracking is broken.
+The worst part? Most businesses don't even know their signals are degraded.
 
-We just audited a $5M company. Their tracking was so bad, they were about to fire their entire marketing team. 
+When tracking is broken, good marketing looks bad. Don't make decisions based on faulty data.
 
-Plot twist: The marketing was working. The tracking wasn't.
-
-Don't let broken tracking kill your growth.
+Don't let signal loss kill your growth.
 
 #GA4 #MarketingAnalytics #DataDriven #MarketingROI`,
               hashtags: [
@@ -69,7 +67,7 @@ Don't let broken tracking kill your growth.
               type: "carousel_post",
               theme: "educational",
               content:
-                "5 Signs Your GA4 Tracking Is Broken (And Costing You Money)",
+                "5 Signs Your GA4 signals are degraded (And Costing You Money)",
               slides: [
                 {
                   title: "Sign #1: Your conversion numbers don't add up",
@@ -97,30 +95,28 @@ Don't let broken tracking kill your growth.
                     "Sessions break when users go from site to checkout",
                 },
               ],
-              cta: "Get your free tracking audit: [link]",
+              cta: "Get a tracking audit ($1,450): [link]",
             },
             {
               type: "video_post",
-              theme: "social_proof",
-              content: `Client spotlight: How we saved TechCorp $89K/month in 6 days.
+              theme: "educational",
+              content: `How our "Automated Verification Loop" methodology works
 
-The problem: Their tracking was so broken, they couldn't tell which marketing channels were working.
+The problem: Many businesses have tracking so broken, they can't tell which marketing channels are working.
 
-The solution: Our "Automated Verification Loop" methodology that doesn't stop until tracking is 100% perfect.
+The solution: Our systematic methodology that keeps iterating until tracking meets our quality standards.
 
-The result: 22% → 100% tracking accuracy in less than a week.
+The result: Improved signal integrity for better marketing decisions.
 
-"The Forensic Data Lab didn't just fix our tracking - they gave us back visibility into our entire funnel." - Marcus Thompson, CEO
+Ready to restore your signals?
 
-Ready to fix your tracking?
-
-#ClientSuccess #GA4Fix #MarketingROI`,
+#GA4Fix #MarketingROI #TrackingAnalytics`,
               video_script: [
-                "Hook: $89,000 per month. That's how much one tracking error was costing TechCorp.",
+                "Hook: Is your tracking costing you money?",
                 "Problem: Show broken GA4 dashboard with missing data",
                 "Solution: Quick overview of our audit process",
-                "Results: Before/after comparison of tracking accuracy",
-                "CTA: Get your free audit at Forensic Data Lab.pro",
+                "Results: Show how proper tracking enables better decisions",
+                "CTA: Learn more at TheForensicDataLab.com",
               ],
             },
           ],
@@ -133,24 +129,22 @@ Ready to fix your tracking?
             {
               type: "text_post",
               theme: "urgency",
-              content: `Free audit spots for this week: 3 remaining
+              content: `Limited availability this week
 
-I'm personally reviewing tracking setups for the next 3 businesses that book a free audit.
+I'm personally reviewing tracking setups for businesses ready to invest in their data quality.
 
-What you'll get:
-✓ Complete tracking health score
-✓ List of all issues found (usually 10-20)
-✓ Estimated monthly revenue impact
-✓ Priority-ranked fix roadmap
+What you'll get with our Forensic Diagnostic ($1,450):
+ Complete tracking health score
+ List of all issues found
+ Estimated revenue impact
+ Priority-ranked fix roadmap
 
 Takes 5 minutes to book, 48 hours to complete.
 
-Last week's audits found an average of $47K/month in lost revenue per business.
-
-Don't be next week's "what if" story.
+Don't let signal loss hurt your business.
 
 Book below 👇`,
-              cta: "Book your free audit (3 spots left)",
+              cta: "Book your Forensic Diagnostic - $1,450",
             },
           ],
         },
@@ -181,7 +175,7 @@ The ones struggling? They assumed GA4 would "just work."
 Which camp are you in?
 
 #GA4Migration #WebTracking #MarketingAnalytics`,
-              cta: "Not sure if your GA4 is set up correctly? Get a free audit: [link]",
+              cta: "Not sure if your GA4 is set up correctly? Get a Forensic Diagnostic: [link]",
             },
           ],
         },
@@ -202,20 +196,20 @@ Which camp are you in?
               type: "thread",
               theme: "problem_awareness",
               tweets: [
-                "Thread: Why Shopify brands lose 11-20% of revenue visibility (proven by data)",
-                "1/ Your Facebook ads aren't working? Maybe. Or maybe your tracking is broken and you can't see the conversions.",
-                "2/ We audited 500+ businesses this year. Average tracking accuracy: 34%. That means 66% of conversions are invisible.",
+                "Thread: Why Shopify brands lose 11-20% of revenue visibility (industry research)",
+                "1/ Your Facebook ads aren't working? Maybe. Or maybe your signals are degraded and you can't see the conversions.",
+                "2/ Industry research shows many businesses have significant tracking gaps. Much of your conversion data may be invisible.",
                 "3/ The worst part? Most tracking breaks during the GA4 migration and never gets fixed.",
-                "4/ Red flags your tracking is broken:\n→ Facebook shows 'no conversions'\n→ Best traffic source is 'direct' \n→ GA4 ≠ Shopify numbers\n→ E-commerce events at 0%",
+                "4/ Red flags your signals are degraded:\n→ Facebook shows 'no conversions'\n→ Best traffic source is 'direct' \n→ GA4 ≠ Shopify numbers\n→ E-commerce events at 0%",
                 "5/ Good news: It's fixable. We use the 'Automated Verification Loop' - audit, diagnose, repair, verify, repeat until perfect.",
-                "6/ Ready to see what's broken? Free 5-minute audit: [link]",
+                "6/ Ready to see what's broken? Forensic Diagnostic: [link]",
               ],
             },
             {
               type: "single_tweet",
-              theme: "social_proof",
+              theme: "educational",
               content:
-                "Client just texted: 'Holy crap, we can finally see which ads are working'\n\n22% → 100% tracking accuracy in 4 days.\n\nThe Automated Verification Loop strikes again.\n\nWhat's your tracking health score? Find out: [link]",
+                "Imagine finally seeing which ads are actually working.\n\nThat's what proper signal restoration delivers.\n\nThe Automated Verification Loop keeps iterating until your tracking meets our quality standards.\n\nCurious about your tracking health? Learn more: [link]",
             },
             {
               type: "single_tweet",
@@ -239,7 +233,7 @@ Which camp are you in?
               type: "single_tweet",
               theme: "educational",
               content:
-                "Quick test: Go to your GA4 → Events → See if these fire:\n\n✓ view_item\n✓ add_to_cart  \n✓ begin_checkout\n✓ purchase\n\nIf any are missing/broken, you're flying blind.\n\nNeed help? Free audit: [link]",
+                "Quick test: Go to your GA4 → Events → See if these fire:\n\n view_item\n add_to_cart  \n begin_checkout\n purchase\n\nIf any are missing/broken, you're flying blind.\n\nNeed help? Free audit: [link]",
             },
           ],
         },
@@ -261,9 +255,9 @@ Which camp are you in?
               type: "lead_ad",
               headline: "Is Your GA4 Stealing Your Revenue?",
               description:
-                "80% of businesses have broken tracking. Find out what's wrong with yours in 5 minutes.",
+                "Many businesses have signal loss. Find out what's wrong with yours.",
               image_concept:
-                "Split screen: broken tracking dashboard vs fixed dashboard",
+                "Split screen: signal loss dashboard vs fixed dashboard",
               form_fields: ["email", "website", "monthly_revenue"],
               cta_button: "Get Free Audit",
             },
@@ -286,7 +280,7 @@ Which camp are you in?
               type: "carousel_ad",
               headline: "Still Thinking About Your Tracking Issues?",
               description:
-                "Don't let broken tracking cost you another month of revenue.",
+                "Don't let signal loss cost you another month of revenue.",
               cards: [
                 {
                   image_concept: "Audit results screenshot",
@@ -299,9 +293,9 @@ Which camp are you in?
                   description: "We handle everything for you",
                 },
                 {
-                  image_concept: "Happy client testimonial",
-                  headline: "Join 500+ Happy Clients",
-                  description: "100% success guarantee",
+                  image_concept: "Professional service illustration",
+                  headline: "Shopify Specialists",
+                  description: "Satisfaction guarantee",
                 },
               ],
             },
@@ -314,14 +308,14 @@ Which camp are you in?
           type: "image_post",
           theme: "problem_awareness",
           content:
-            "😱 This GA4 setup is costing them $50K/month\n\n❌ 0% e-commerce tracking\n❌ No conversion attribution \n❌ Facebook can't see purchases\n❌ Wasting 70% of ad budget\n\nThe scary part? They had no idea.\n\nIs your tracking broken too? Free audit below 👇",
+            "😱 This GA4 setup is costing them $50K/month\n\n 0% e-commerce tracking\n No conversion attribution \n Facebook can't see purchases\n Wasting 70% of ad budget\n\nThe scary part? They had no idea.\n\nIs your tracking broken too? Free audit below 👇",
           image_concept: "Screenshot of broken GA4 dashboard with red X's",
         },
         {
           type: "video_post",
           theme: "educational",
           content:
-            "Quick test: Is your GA4 tracking working? ✅\n\n1️⃣ Check if purchase events are firing\n2️⃣ Compare GA4 vs Shopify numbers  \n3️⃣ Look at your attribution sources\n4️⃣ Test your conversion funnel\n\nIf anything looks off, you need help.\n\nGet your free audit: [link]",
+            "Quick test: Is your GA4 tracking working? \n\n1⃣ Check if purchase events are firing\n2⃣ Compare GA4 vs Shopify numbers  \n3⃣ Look at your attribution sources\n4⃣ Test your conversion funnel\n\nIf anything looks off, you need help.\n\nGet your free audit: [link]",
           video_concept: "Screen recording showing how to check these 4 things",
         },
       ],
@@ -339,7 +333,7 @@ Which camp are you in?
             type: "carousel_post",
             theme: "behind_the_scenes",
             content:
-              "Behind the scenes: Fixing a $2M company's broken tracking 🛠️\n\nSlide 1: The problem (22% tracking accuracy)\nSlide 2: Our team diving deep into GA4\nSlide 3: Testing every single event\nSlide 4: The result (100% accuracy) \nSlide 5: Happy client testimonial\n\nThis is what the Automated Verification Loop looks like in action.\n\nReady to fix yours? Link in bio 🎯\n\n#Forensic Data Lab #GA4 #MarketingAnalytics #SmallBusiness #Entrepreneur",
+              "Behind the scenes: How we restore signal loss \n\nSlide 1: The problem (poor signal integrity)\nSlide 2: Our team diving deep into GA4\nSlide 3: Testing every single event\nSlide 4: The result (improved accuracy) \nSlide 5: What proper tracking enables\n\nThis is what the Automated Verification Loop looks like in action.\n\nReady to fix yours? Link in bio \n\n#TheForensicDataLab #GA4 #MarketingAnalytics #SmallBusiness #Entrepreneur",
             visual_concept:
               "Behind-the-scenes photos of team working, screenshots of process",
           },
@@ -347,7 +341,7 @@ Which camp are you in?
             type: "reel",
             theme: "educational",
             content:
-              "POV: You just realized your tracking has been broken for months 😅\n\n✅ Save this post\n✅ Tag a friend who needs to see this  \n✅ Get your free audit (link in bio)\n\n#MarketingTips #GA4 #TrackingProblems #SmallBusiness",
+              "POV: You just realized your tracking has been broken for months 😅\n\n Save this post\n Tag a friend who needs to see this  \n Get your free audit (link in bio)\n\n#MarketingTips #GA4 #TrackingProblems #SmallBusiness",
             video_concept:
               "Trending audio with text overlay showing tracking problems",
           },
@@ -385,7 +379,7 @@ Which camp are you in?
             hook: "If your Facebook ads show 'no conversions', this might be why",
             script: [
               "Hook: Facebook ads not showing conversions? Here's the real problem",
-              "Problem: Your tracking is broken, not your ads",
+              "Problem: Your signals are degraded, not your ads",
               "Solution: Show quick audit process",
               "Result: Before/after conversion data",
               "CTA: Link in bio for free audit",
@@ -423,7 +417,7 @@ Which camp are you in?
       content: {
         long_form: [
           {
-            title: "Why 80% of GA4 Setups Are Broken (And How to Fix Yours)",
+            title: "Why Many GA4 Setups Are Broken (And How to Fix Yours)",
             description:
               "Complete guide to auditing and fixing your GA4 tracking setup",
             duration: "15-20 minutes",
@@ -435,7 +429,7 @@ Which camp are you in?
               "Part 4: Verification and testing",
               "Conclusion: When to get professional help",
             ],
-            cta: "Free audit link in description",
+            cta: "Forensic Diagnostic link in description",
           },
         ],
 

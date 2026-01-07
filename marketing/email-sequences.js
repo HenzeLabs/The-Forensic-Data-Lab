@@ -30,7 +30,7 @@ class EmailSequences {
           type: "educational",
           data: {
             preview_text:
-              "Most businesses are losing 30-50% revenue visibility...",
+              "Many businesses have significant revenue visibility gaps...",
             content_blocks: [
               {
                 type: "hero",
@@ -45,10 +45,9 @@ class EmailSequences {
                 revenue_impact: "{{revenue_impact}}",
               },
               {
-                type: "social_proof",
-                testimonial:
-                  "The Forensic Data Lab found 23 issues we didn't even know existed. Now we can actually see which campaigns are working.",
-                author: "Sarah Chen, CMO at TechStart",
+                type: "value_prop",
+                description:
+                  "Our comprehensive audit identifies tracking issues that may be affecting your revenue visibility and marketing attribution.",
               },
               {
                 type: "cta",
@@ -60,18 +59,18 @@ class EmailSequences {
         },
         {
           day: 2,
-          subject: "The $47,000 mistake 80% of businesses make",
+          subject: "Common tracking mistakes that cost real money",
           template: "lead_nurture_2_cost_of_broken_tracking",
           type: "educational",
           data: {
             preview_text:
-              "This one tracking error is costing companies serious money...",
+              "These tracking errors may be costing your business money...",
             content_blocks: [
               {
                 type: "story",
-                title: "The $47,000 Mistake",
+                title: "A Common Scenario",
                 story:
-                  "Last month, we audited a $2M/year e-commerce company. They thought their Facebook ads weren't working and almost cut their entire budget. Turns out, their tracking was so broken that 73% of conversions weren't being attributed. They were literally about to kill their most profitable channel.",
+                  "Many businesses think their Facebook ads aren't working when the real issue is tracking. When conversions aren't being attributed properly, you might be cutting your most profitable channels without knowing it.",
               },
               {
                 type: "lesson",
@@ -94,67 +93,49 @@ class EmailSequences {
         },
         {
           day: 4,
-          subject: "Case study: How we saved TechCorp $89K/month",
-          template: "lead_nurture_3_case_study",
-          type: "social_proof",
+          subject: "How our Automated Verification Loop process works",
+          template: "lead_nurture_3_process",
+          type: "educational",
           data: {
-            preview_text: "From 22% tracking accuracy to 100% in 6 days...",
+            preview_text: "Our systematic approach to signal restoration...",
             content_blocks: [
               {
-                type: "case_study_header",
-                company: "TechCorp",
-                industry: "SaaS",
-                revenue: "$5M ARR",
-                challenge:
-                  "Couldn't track which channels were driving qualified leads",
-              },
-              {
-                type: "before_after",
-                before: {
-                  tracking_score: "22%",
-                  attribution_accuracy: "Unknown",
-                  issues_found: "47",
-                  monthly_waste: "$89,000",
-                },
-                after: {
-                  tracking_score: "100%",
-                  attribution_accuracy: "98%",
-                  issues_found: "0",
-                  monthly_savings: "$89,000",
-                },
+                type: "process_intro",
+                title: "The Automated Verification Loop Process",
+                description:
+                  "Our systematic approach to identifying and fixing tracking issues across your GA4, GTM, and Shopify setup.",
               },
               {
                 type: "process_breakdown",
-                title: "How We Did It (Automated Verification Loop)",
+                title: "How We Work",
                 steps: [
-                  "Day 1: Comprehensive audit revealed 47 critical issues",
-                  "Day 2-3: Fixed GA4 property configuration and GTM setup",
-                  "Day 4-5: Implemented proper e-commerce event tracking",
-                  "Day 6: Verified 100% success with live testing",
+                  "Day 1: Comprehensive audit identifies all tracking issues",
+                  "Day 2-3: Fix GA4 property configuration and GTM setup",
+                  "Day 4-5: Implement proper e-commerce event tracking",
+                  "Day 6-7: Verify success with thorough testing",
                 ],
               },
               {
-                type: "quote",
-                quote:
-                  "The Forensic Data Lab didn't just fix our tracking - they gave us back visibility into our entire funnel. Now we can optimize with confidence.",
-                author: "Marcus Thompson, TechCorp CEO",
+                type: "value_prop",
+                description:
+                  "We keep iterating until your tracking meets our quality standards. Real testimonials will be added as we complete client engagements.",
               },
             ],
           },
         },
         {
           day: 6,
-          subject: 'The "Automated Verification Loop" that guarantees success',
+          subject: 'The "Automated Verification Loop" methodology',
           template: "lead_nurture_4_methodology",
           type: "educational",
           data: {
-            preview_text: "Why our unique process gets 100% success rate...",
+            preview_text: "Our systematic approach to signal restoration...",
             content_blocks: [
               {
                 type: "methodology_intro",
                 title: "Why We're Different",
                 description:
-                  "Most agencies 'fix' tracking once and call it done. We use the 'Automated Verification Loop' - named after the Simpsons character who never gives up - that keeps testing until everything is perfect.",
+                  "Most agencies 'fix' tracking once and call it done. We use the 'Automated Verification Loop' - a systematic approach that keeps testing until your tracking meets our quality standards.",
               },
               {
                 type: "loop_visualization",
@@ -176,21 +157,21 @@ class EmailSequences {
                   },
                   {
                     name: "VERIFY",
-                    description: "Test every single event works perfectly",
+                    description: "Test every single event works correctly",
                     icon: "verify",
                   },
                   {
                     name: "REPEAT",
-                    description: "Loop until 100% success achieved",
+                    description: "Loop until quality standards met",
                     icon: "repeat",
                   },
                 ],
               },
               {
                 type: "guarantee",
-                title: "100% Success Guarantee",
+                title: "Satisfaction Guarantee",
                 description:
-                  "If we can't fix your tracking, you don't pay. Period.",
+                  "We stand behind our work. If you're not satisfied, we'll work with you to make it right.",
               },
             ],
           },
@@ -211,7 +192,7 @@ class EmailSequences {
               },
               {
                 type: "cost_calculator",
-                title: "What Broken Tracking Is Costing You",
+                title: "What signal loss Is Costing You",
                 examples: [
                   { revenue: "$50K/mo", loss: "$15,000/mo" },
                   { revenue: "$200K/mo", loss: "$60,000/mo" },
@@ -220,9 +201,9 @@ class EmailSequences {
               },
               {
                 type: "risk_reversal",
-                title: "Zero Risk, Maximum Reward",
+                title: "Why Work With Us",
                 guarantees: [
-                  "100% success or money back",
+                  "Satisfaction guarantee",
                   "48-hour turnaround",
                   "Fixed price, no surprises",
                   "30-day support included",
@@ -271,12 +252,12 @@ class EmailSequences {
                 type: "next_steps",
                 options: [
                   {
-                    name: "DIY with our guide",
+                    name: "Self-service with our guide",
                     price: "$497",
                     best_for: "Technical teams",
                   },
                   {
-                    name: "We fix everything",
+                    name: "we restore everything",
                     price: "$1,497",
                     best_for: "Busy businesses",
                     recommended: true,
@@ -321,7 +302,7 @@ class EmailSequences {
                   {
                     objection: "Not sure it will work",
                     response:
-                      "100% money-back guarantee. If we can't fix it, it's free.",
+                      "We offer a satisfaction guarantee. If you're not happy with our work, we'll make it right.",
                   },
                 ],
               },
@@ -330,7 +311,7 @@ class EmailSequences {
         },
         {
           day: 7,
-          subject: "⏰ Final chance to fix your tracking (closing soon)",
+          subject: " Final chance to restore your signals (closing soon)",
           template: "audit_followup_3_last_chance",
           type: "final_conversion",
           data: {
@@ -368,7 +349,7 @@ class EmailSequences {
         {
           day: 0,
           subject:
-            "📈 How {{client_name}} increased revenue 300% with perfect tracking",
+            " How {{client_name}} increased revenue 300% with perfect tracking",
           template: "success_story_detailed",
           type: "social_proof",
           data: {
@@ -457,14 +438,14 @@ class EmailSequences {
                 type: "competitive_pressure",
                 title: "While You Wait, Others Act",
                 message:
-                  "This week alone, we've audited 47 businesses in {{industry}}. The smart ones are already fixing their tracking and gaining an advantage.",
+                  "Many businesses in {{industry}} are proactively fixing their tracking to stay ahead. Don't let tracking issues hold you back.",
               },
               {
-                type: "fomo_stats",
+                type: "industry_insights",
                 stats: [
-                  "Average tracking score in {{industry}}: 34%",
-                  "Businesses we've audited this week: 47",
-                  "Critical issues found on average: 12",
+                  "Many businesses in {{industry}} have tracking gaps",
+                  "Common issues include GA4 migration problems",
+                  "iOS 14+ privacy changes affect most setups",
                 ],
               },
             ],
@@ -500,7 +481,7 @@ class EmailSequences {
                 steps: [
                   "Send your unique referral link",
                   "They mention your name when booking",
-                  "We fix their tracking successfully",
+                  "we restore their tracking successfully",
                   "You get $500 (they get 10% off)",
                 ],
               },
@@ -546,7 +527,7 @@ class EmailSequences {
             <title>${email.subject}</title>
             <style>
                 body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; }
-                .header { background: linear-gradient(135deg, #2563eb, #1e40af); color: white; padding: 2rem; text-align: center; border-radius: 10px 10px 0 0; }
+                .header { background: linear-gradient(135deg, #14b8a6, #0d9488); color: white; padding: 2rem; text-align: center; border-radius: 10px 10px 0 0; }
                 .content { background: #f9fafb; padding: 2rem; }
                 .cta-button { background: #ef4444; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; }
                 .metric-box { background: white; padding: 1rem; margin: 1rem 0; border-radius: 5px; border-left: 4px solid #ef4444; }
@@ -669,7 +650,7 @@ class EmailSequences {
     scheduledFor.setDate(scheduledFor.getDate() + delayDays);
 
     console.log(
-      `📧 Scheduled email "${
+      ` Scheduled email "${
         email.subject
       }" for ${recipientEmail} on ${scheduledFor.toLocaleDateString()}`
     );
@@ -704,13 +685,13 @@ if (require.main === module) {
   };
 
   const email = sequences.renderEmail("lead_nurture", 0, testData);
-  console.log("\n📧 Sample Email Generated:");
+  console.log("\n Sample Email Generated:");
   console.log("Subject:", email.subject);
   console.log("Type:", email.type);
   console.log("HTML length:", email.html.length, "characters");
 
   // List all sequences
-  console.log("\n📋 Available Email Sequences:");
+  console.log("\n Available Email Sequences:");
   sequences.getAllSequences().forEach((seq) => {
     console.log(`- ${seq.name}: ${seq.emails.length} emails`);
   });

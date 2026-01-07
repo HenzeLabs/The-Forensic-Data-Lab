@@ -6,9 +6,9 @@
 class ClientOnboardingSystem {
   constructor() {
     this.workflows = {
-      forensicDiagnostic: this.createDetectiveWorkflow(),
-      signalRestoration: this.createSurgeonWorkflow(),
-      agencyAssurance: this.createArchitectWorkflow(),
+      forensicDiagnostic: this.createForensicDiagnosticWorkflow(),
+      signalRestoration: this.createSignalRestorationWorkflow(),
+      shadowMonitoring: this.createShadowMonitoringWorkflow(),
     };
   }
 
@@ -51,7 +51,7 @@ class ClientOnboardingSystem {
     return client;
   }
 
-  createDetectiveWorkflow() {
+  createForensicDiagnosticWorkflow() {
     return {
       name: "Forensic Diagnostic",
       estimatedDays: 2,
@@ -84,7 +84,7 @@ class ClientOnboardingSystem {
         {
           id: 3,
           name: "Report Generation",
-          description: "Create detailed audit report and DIY guide",
+          description: "Create detailed audit report and implementation guide",
           type: "automated",
           estimatedHours: 0.5,
           actions: [
@@ -137,7 +137,7 @@ class ClientOnboardingSystem {
     };
   }
 
-  createSurgeonWorkflow() {
+  createSignalRestorationWorkflow() {
     return {
       name: "Signal Restoration",
       estimatedDays: 7,
@@ -276,9 +276,9 @@ class ClientOnboardingSystem {
     };
   }
 
-  createArchitectWorkflow() {
+  createShadowMonitoringWorkflow() {
     return {
-      name: "Agency Assurance",
+      name: "Shadow Monitoring",
       estimatedDays: 21,
       steps: [
         {
@@ -309,7 +309,7 @@ class ClientOnboardingSystem {
         {
           id: 3,
           name: "Architecture Design",
-          description: "Custom tracking architecture design",
+          description: "Custom shadow monitoringure design",
           type: "manual",
           estimatedHours: 8,
           actions: [
@@ -583,7 +583,7 @@ class ClientOnboardingSystem {
     return `
         <h1>Welcome to The Forensic Data Lab, ${client.name}!</h1>
         
-        <p>Thank you for choosing our <strong>${client.tier.toUpperCase()}</strong> service package. We're excited to help you achieve 100% tracking accuracy.</p>
+        <p>Thank you for choosing our <strong>${client.tier.toUpperCase()}</strong> service package. We're excited to help you improve your signal integrity.</p>
         
         <h2>What happens next:</h2>
         <ul>
@@ -594,7 +594,7 @@ class ClientOnboardingSystem {
                 ? "Self-implementation roadmap provided"
                 : "Complete signal restoration by our team"
             }</li>
-            <li>100% revenue signal verification</li>
+            <li>Thorough revenue signal verification</li>
         </ul>
         
         <p><strong>Estimated completion:</strong> ${new Date(
