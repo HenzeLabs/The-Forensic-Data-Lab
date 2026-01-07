@@ -1,0 +1,137 @@
+{
+  "summary": {
+    "totalIssues": 2,
+    "totalFixes": 4,
+    "estimatedTime": "4-6 hours",
+    "businessValue": {
+      "dataAccuracy": 90,
+      "conversionTracking": "Full restoration",
+      "adOptimization": "Moderate improvement"
+    }
+  },
+  "fixes": {
+    "gtm": [],
+    "ga4": [],
+    "ecommerce": [
+      {
+        "event": "view_item",
+        "fix": "Add product view tracking",
+        "code": {
+          "liquidCode": "{%- comment -%} Product View Tracking {%- endcomment -%}\n{% if template contains 'product' %}\n<script>\nwindow.dataLayer = window.dataLayer || [];\ndataLayer.push({\n  'event': 'view_item',\n  'ecommerce': {\n    'currency': '{{ cart.currency.iso_code }}',\n    'value': {{ product.price | money_without_currency | remove: ',' }},\n    'items': [{\n      'item_id': '{{ product.id }}',\n      'item_name': {{ product.title | json }},\n      'item_category': '{{ product.type }}',\n      'item_variant': '{{ product.selected_or_first_available_variant.title }}',\n      'price': {{ product.selected_or_first_available_variant.price | money_without_currency | remove: ',' }},\n      'quantity': 1\n    }]\n  }\n});\n</script>\n{% endif %}",
+          "installLocation": "Add to product.liquid template",
+          "triggerCondition": "When product page loads"
+        }
+      },
+      {
+        "event": "add_to_cart",
+        "fix": "Add cart tracking",
+        "code": {
+          "liquidCode": "{%- comment -%} Add to Cart Tracking {%- endcomment -%}\n<script>\ndocument.addEventListener('DOMContentLoaded', function() {\n  // Track add to cart\n  document.querySelector('form[action*=\"/cart/add\"]').addEventListener('submit', function(e) {\n    const formData = new FormData(e.target);\n    const variantId = formData.get('id');\n    const quantity = formData.get('quantity') || 1;\n    \n    // Get variant data\n    fetch('/products/{{ product.handle }}.js')\n      .then(response => response.json())\n      .then(product => {\n        const variant = product.variants.find(v => v.id == variantId);\n        \n        window.dataLayer = window.dataLayer || [];\n        dataLayer.push({\n          'event': 'add_to_cart',\n          'ecommerce': {\n            'currency': '{{ cart.currency.iso_code }}',\n            'value': (variant.price / 100) * quantity,\n            'items': [{\n              'item_id': variant.id,\n              'item_name': product.title,\n              'item_category': product.product_type,\n              'item_variant': variant.title,\n              'price': variant.price / 100,\n              'quantity': parseInt(quantity)\n            }]\n          }\n        });\n      });\n  });\n});\n</script>",
+          "installLocation": "Add to product.liquid template",
+          "triggerCondition": "When add to cart form is submitted"
+        }
+      },
+      {
+        "event": "view_cart",
+        "fix": "Add cart page tracking",
+        "code": {
+          "liquidCode": "{%- comment -%} Cart View Tracking {%- endcomment -%}\n{% if template == 'cart' %}\n<script>\nwindow.dataLayer = window.dataLayer || [];\ndataLayer.push({\n  'event': 'view_cart',\n  'ecommerce': {\n    'currency': '{{ cart.currency.iso_code }}',\n    'value': {{ cart.total_price | money_without_currency | remove: ',' }},\n    'items': [\n      {% for item in cart.items %}\n      {\n        'item_id': '{{ item.variant.id }}',\n        'item_name': {{ item.product.title | json }},\n        'item_category': '{{ item.product.type }}',\n        'item_variant': '{{ item.variant.title }}',\n        'price': {{ item.price | money_without_currency | remove: ',' }},\n        'quantity': {{ item.quantity }}\n      }{% unless forloop.last %},{% endunless %}\n      {% endfor %}\n    ]\n  }\n});\n</script>\n{% endif %}",
+          "installLocation": "Add to cart.liquid template",
+          "triggerCondition": "When cart page loads"
+        }
+      },
+      {
+        "event": "begin_checkout",
+        "fix": "Add checkout tracking",
+        "code": {
+          "liquidCode": "{%- comment -%} Checkout Begin Tracking {%- endcomment -%}\n{% if first_time_accessed %}\n<script>\nwindow.dataLayer = window.dataLayer || [];\ndataLayer.push({\n  'event': 'begin_checkout',\n  'ecommerce': {\n    'currency': '{{ checkout.currency }}',\n    'value': {{ checkout.total_price | money_without_currency | remove: ',' }},\n    'items': [\n      {% for line_item in checkout.line_items %}\n      {\n        'item_id': '{{ line_item.variant.id }}',\n        'item_name': {{ line_item.title | json }},\n        'item_category': '{{ line_item.product.type }}',\n        'item_variant': '{{ line_item.variant.title }}',\n        'price': {{ line_item.price | money_without_currency | remove: ',' }},\n        'quantity': {{ line_item.quantity }}\n      }{% unless forloop.last %},{% endunless %}\n      {% endfor %}\n    ]\n  }\n});\n</script>\n{% endif %}",
+          "installLocation": "Add to checkout.liquid template",
+          "triggerCondition": "When checkout process begins"
+        }
+      }
+    ]
+  },
+  "installation": [
+    {
+      "step": 1,
+      "title": "Backup Your Current Setup",
+      "description": "Download a copy of your current theme before making changes",
+      "commands": [
+        "Download theme files",
+        "Export current GTM container"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Install GTM Fixes",
+      "description": "Apply Google Tag Manager configuration updates",
+      "files": []
+    },
+    {
+      "step": 3,
+      "title": "Install GA4 Fixes",
+      "description": "Apply Google Analytics 4 configuration updates",
+      "files": []
+    },
+    {
+      "step": 4,
+      "title": "Install E-commerce Tracking",
+      "description": "Add enhanced e-commerce event tracking",
+      "files": [
+        {
+          "file": "Add to product.liquid template",
+          "changes": "Add view_item tracking"
+        },
+        {
+          "file": "Add to product.liquid template",
+          "changes": "Add add_to_cart tracking"
+        },
+        {
+          "file": "Add to cart.liquid template",
+          "changes": "Add view_cart tracking"
+        },
+        {
+          "file": "Add to checkout.liquid template",
+          "changes": "Add begin_checkout tracking"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "title": "Test Implementation",
+      "description": "Verify all tracking is working correctly",
+      "commands": [
+        "Open GTM Preview mode",
+        "Open GA4 DebugView",
+        "Navigate through site",
+        "Verify events are firing",
+        "Check Real-time reports"
+      ]
+    },
+    {
+      "step": 6,
+      "title": "Go Live",
+      "description": "Publish changes to production",
+      "commands": [
+        "Publish GTM container",
+        "Deploy theme changes",
+        "Monitor for 24 hours",
+        "Verify data in GA4 reports"
+      ]
+    }
+  ],
+  "testing": {
+    "preDeployment": [
+      "GTM Preview mode verification",
+      "GA4 DebugView testing",
+      "Cross-browser testing",
+      "Mobile device testing"
+    ],
+    "postDeployment": [
+      "Real-time report monitoring",
+      "Event tracking verification",
+      "Conversion tracking validation",
+      "24-hour data validation"
+    ]
+  }
+}

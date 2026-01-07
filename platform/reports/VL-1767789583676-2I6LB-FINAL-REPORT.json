@@ -1,0 +1,75 @@
+{
+  "sessionSummary": {
+    "sessionId": "VL-1767789583676-2I6LB",
+    "targetUrl": "https://lwscientific.com",
+    "totalIterations": 1,
+    "finalStatus": "SUCCESS",
+    "duration": "0m 0s",
+    "finalSignalHealth": 100,
+    "revenueRecovered": 0,
+    "totalIssuesFixed": 0
+  },
+  "performanceMetrics": {
+    "signalHealthProgression": [
+      {
+        "iteration": 1,
+        "health": 100,
+        "improvement": 100
+      }
+    ],
+    "revenueImpactReduction": [
+      {
+        "iteration": 1,
+        "monthlyLeakage": 0,
+        "annualImpact": 0
+      }
+    ]
+  },
+  "businessValue": {
+    "monthlyRevenueRecovered": 0,
+    "annualRevenueRecovered": 0,
+    "adSpendOptimization": 0,
+    "algorithmImprovement": "Minor",
+    "roi": 0,
+    "timeToPayback": "N/A"
+  },
+  "recommendations": [
+    "Maintain current configuration with regular monitoring",
+    "Set up alerts for signal degradation",
+    "Schedule quarterly verification loops",
+    "Consider Shadow Monitoring service for ongoing maintenance"
+  ],
+  "detailedIterations": [
+    {
+      "number": 1,
+      "timestamp": "2026-01-07T12:39:43.677Z",
+      "auditResults": {
+        "timestamp": "2026-01-07T12:39:43.677Z",
+        "url": "https://lwscientific.com",
+        "signalHealth": 100,
+        "revenueLeakage": {
+          "monthlyLoss": 0,
+          "annualLoss": 0,
+          "signalLossPercentage": 0
+        },
+        "signalFailures": [],
+        "ecommerceJourney": {
+          "productView": true,
+          "addToCart": true,
+          "viewCart": true,
+          "beginCheckout": true,
+          "purchase": true
+        },
+        "fromCache": true,
+        "setup": {
+          "webContainer": "GTM-KMKS7RMC",
+          "serverContainer": "GTM-5VT8N6KP",
+          "ga4Property": "382698683"
+        }
+      },
+      "repairResults": null,
+      "deploymentStatus": null,
+      "signalImprovements": 100
+    }
+  ]
+}

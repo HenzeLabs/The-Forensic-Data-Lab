@@ -1,0 +1,530 @@
+{
+  "timestamp": "2026-01-07T11:58:08.274Z",
+  "url": "https://store.labessentials.com",
+  "overallScore": 70,
+  "issues": [
+    {
+      "severity": "high",
+      "category": "ecommerce_tracking",
+      "title": "Missing Cart View Tracking",
+      "description": "view_cart event not fired on cart page",
+      "impact": "No cart abandonment data",
+      "page": "cart"
+    },
+    {
+      "severity": "high",
+      "category": "ecommerce_tracking",
+      "title": "Missing E-commerce Events (5/5)",
+      "description": "Events not firing: view_item, add_to_cart, view_cart, begin_checkout, purchase",
+      "impact": "Incomplete conversion tracking"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "category": "ecommerce_tracking",
+      "title": "Implement E-commerce Event Tracking",
+      "description": "Set up complete e-commerce event tracking for conversion analysis",
+      "steps": [
+        "Implement view_item events on product pages",
+        "Set up add_to_cart tracking",
+        "Configure view_cart events",
+        "Add begin_checkout tracking",
+        "Implement purchase event tracking",
+        "Set up enhanced e-commerce parameters"
+      ],
+      "estimatedTime": "4-8 hours",
+      "businessValue": "Enables conversion tracking and ROI analysis"
+    }
+  ],
+  "networkRequests": [
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-WNG6Z9ZD",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:09.536Z",
+      "type": "gtm_load"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-7NR2JG1EDP&cx=c&gtm=4e6150",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:09.809Z",
+      "type": "gtag_load"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/destination?id=G-QCSHJ4TDMY&cx=c&gtm=4e6150",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:09.979Z",
+      "type": "other"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-7NR2JG1EDP&gtm=45je6150v9136496498z89224857331za20gzb9224857331zd9224857331&_p=1767787089532&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EA&_s=1&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~105391252~115583767~115616986~115938465~115938469~116682876&sid=1767787089&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2F&dt=Lab%20Essentials%20%7C%20Precision%20Lab%20Equipment%20%26%20Supplies&_tu=QA&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1055",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:09.979Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-YEM357F2XN&gtm=45je6150v9136496498z89224857331za20gzb9224857331zd9224857331&_p=1767787089532&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EA&_s=1&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~105391252~115583767~115616986~115938465~115938469~116682876&sid=1767787089&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2F&dt=Lab%20Essentials%20%7C%20Precision%20Lab%20Equipment%20%26%20Supplies&_tu=QA&en=page_view&_fv=1&_ss=1&tfd=1060",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:09.979Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787089532&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~105391253~115583767~115616985~115938465~115938468~116682876&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2F&dt=Lab%20Essentials%20%7C%20Precision%20Lab%20Equipment%20%26%20Supplies&en=select_item&_fv=1&_ss=1&tfd=1219",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:10.161Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787089532&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~105391253~115583767~115616985~115938465~115938468~116682876&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2F&dt=Lab%20Essentials%20%7C%20Precision%20Lab%20Equipment%20%26%20Supplies&_s=2&tfd=1239",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:10.161Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787089532&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&_s=3&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~105391253~115583767~115616985~115938465~115938468~116682876&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2F&dt=Lab%20Essentials%20%7C%20Precision%20Lab%20Equipment%20%26%20Supplies&en=purchase&_c=1&tfd=1240",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:10.161Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/privacy-sandbox/register-conversion?_c=1&cid=1636262719.1767787090&dbk=11562410609994926774&dma=0&en=purchase&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&npa=0&tid=G-QCSHJ4TDMY&dl=https%3A%2F%2Fstore.labessentials.com%3F",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:10.277Z",
+      "type": "other"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-7NR2JG1EDP&gtm=45je6150v9136496498za20gzb9224857331zd9224857331&_p=1767787089532&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=2&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~105391252~115583767~115616986~115938465~115938469~116682876&sid=1767787089&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2F&dt=Lab%20Essentials%20%7C%20Precision%20Lab%20Equipment%20%26%20Supplies&_tu=QA&en=user_engagement&_et=4417&tfd=5473",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:14.398Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-YEM357F2XN&gtm=45je6150v9136496498za20gzb9224857331zd9224857331&_p=1767787089532&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=2&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~105391252~115583767~115616986~115938465~115938469~116682876&sid=1767787089&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2F&dt=Lab%20Essentials%20%7C%20Precision%20Lab%20Equipment%20%26%20Supplies&_tu=QA&en=user_engagement&_et=4414&tfd=5475",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:14.398Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787089532&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~105391253~115583767~115616985~115938465~115938468~116682876&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2F&dt=Lab%20Essentials%20%7C%20Precision%20Lab%20Equipment%20%26%20Supplies&_s=4&tfd=5476",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:14.398Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-WNG6Z9ZD",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:14.411Z",
+      "type": "gtm_load"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-7NR2JG1EDP&cx=c&gtm=4e6150",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:14.445Z",
+      "type": "gtag_load"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/destination?id=G-QCSHJ4TDMY&cx=c&gtm=4e6150",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:14.461Z",
+      "type": "other"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787094402&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~105391252~115583767~115938466~115938468&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2Fproducts&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&_s=1&tfd=474",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:14.487Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787094402&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&_s=2&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~105391252~115583767~115938466~115938468&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2Fproducts&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&en=purchase&_c=1&tfd=474",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:14.487Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/privacy-sandbox/register-conversion?_c=1&cid=1636262719.1767787090&dbk=15866577123343109744&dma=0&en=purchase&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&npa=0&tid=G-QCSHJ4TDMY&dl=https%3A%2F%2Fstore.labessentials.com%3F",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:14.613Z",
+      "type": "other"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-7NR2JG1EDP&gtm=45je6150v9136496498z89224857331za20gzb9224857331zd9224857331&_p=1767787094402&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=1&tag_exp=103116026~103200004~104527906~104528500~104684208~104684211~105391252~115583767~115616986~115938466~115938468&sid=1767787089&sct=1&seg=1&dl=https%3A%2F%2Fstore.labessentials.com%2Fproducts&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&_tu=QA&en=page_view&tfd=709",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:14.716Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-YEM357F2XN&gtm=45je6150v9136496498z89224857331za20gzb9224857331zd9224857331&_p=1767787094402&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=1&tag_exp=103116026~103200004~104527906~104528500~104684208~104684211~105391252~115583767~115616986~115938466~115938468&sid=1767787089&sct=1&seg=1&dl=https%3A%2F%2Fstore.labessentials.com%2Fproducts&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&_tu=QA&en=page_view&tfd=709",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:14.718Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787094402&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~105391252~115583767~115938466~115938468&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2Fproducts&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&_s=3&tfd=710",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:14.718Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-WNG6Z9ZD",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:14.736Z",
+      "type": "gtm_load"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-7NR2JG1EDP&cx=c&gtm=4e6150",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:14.762Z",
+      "type": "gtag_load"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/destination?id=G-QCSHJ4TDMY&cx=c&gtm=4e6150",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:14.774Z",
+      "type": "other"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787094726&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~105391252~115583767~115938465~115938468&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2Fshop&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&_s=1&tfd=259",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:14.792Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787094726&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&_s=2&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~105391252~115583767~115938465~115938468&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2Fshop&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&en=purchase&_c=1&_et=1&tfd=260",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:14.792Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/privacy-sandbox/register-conversion?_c=1&cid=1636262719.1767787090&dbk=15030807224710988212&dma=0&en=purchase&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&npa=0&tid=G-QCSHJ4TDMY&dl=https%3A%2F%2Fstore.labessentials.com%3F",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:14.878Z",
+      "type": "other"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-7NR2JG1EDP&gtm=45je6150v9136496498z89224857331za20gzb9224857331zd9224857331&_p=1767787094726&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=1&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391252~115583767~115616985~115938465~115938468&sid=1767787089&sct=1&seg=1&dl=https%3A%2F%2Fstore.labessentials.com%2Fshop&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&_tu=QA&en=page_view&tfd=562",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:15.094Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-YEM357F2XN&gtm=45je6150v9136496498z89224857331za20gzb9224857331zd9224857331&_p=1767787094726&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=1&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391252~115583767~115616985~115938465~115938468&sid=1767787089&sct=1&seg=1&dl=https%3A%2F%2Fstore.labessentials.com%2Fshop&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&_tu=QA&en=page_view&tfd=562",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:15.094Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787094726&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~105391252~115583767~115938465~115938468&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2Fshop&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&_s=3&tfd=563",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:15.094Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-WNG6Z9ZD",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:15.100Z",
+      "type": "gtm_load"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-7NR2JG1EDP&cx=c&gtm=4e6150",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:15.123Z",
+      "type": "gtag_load"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/destination?id=G-QCSHJ4TDMY&cx=c&gtm=4e6150",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:15.134Z",
+      "type": "other"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787095097&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~105391253~115583767~115938465~115938469~116682877~116744867&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2Fproduct&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&_s=1&tfd=290",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:15.149Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787095097&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&_s=2&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~105391253~115583767~115938465~115938469~116682877~116744867&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2Fproduct&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&en=purchase&_c=1&tfd=290",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:15.149Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/privacy-sandbox/register-conversion?_c=1&cid=1636262719.1767787090&dbk=6859365806733405726&dma=0&en=purchase&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&npa=0&tid=G-QCSHJ4TDMY&dl=https%3A%2F%2Fstore.labessentials.com%3F",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:15.240Z",
+      "type": "other"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-7NR2JG1EDP&gtm=45je6150v9136496498z89224857331za20gzb9224857331zd9224857331&_p=1767787095097&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=1&tag_exp=103116026~103200004~104527906~104528500~104684208~104684211~105391253~115583767~115938465~115938469~116682877~116744867&sid=1767787089&sct=1&seg=1&dl=https%3A%2F%2Fstore.labessentials.com%2Fproduct&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&_tu=QA&en=page_view&tfd=527",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:15.385Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-YEM357F2XN&gtm=45je6150v9136496498z89224857331za20gzb9224857331zd9224857331&_p=1767787095097&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=1&tag_exp=103116026~103200004~104527906~104528500~104684208~104684211~105391253~115583767~115938465~115938469~116682877~116744867&sid=1767787089&sct=1&seg=1&dl=https%3A%2F%2Fstore.labessentials.com%2Fproduct&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&_tu=QA&en=page_view&tfd=527",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:15.386Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787095097&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~105391253~115583767~115938465~115938469~116682877~116744867&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2Fproduct&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&_s=3&tfd=528",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:15.386Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-WNG6Z9ZD",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:15.397Z",
+      "type": "gtm_load"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-7NR2JG1EDP&cx=c&gtm=4e6150",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:15.419Z",
+      "type": "gtag_load"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/destination?id=G-QCSHJ4TDMY&cx=c&gtm=4e6150",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:15.444Z",
+      "type": "other"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787095391&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391252~115583767~115938466~115938468~116682876&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2F&dt=Lab%20Essentials%20%7C%20Precision%20Lab%20Equipment%20%26%20Supplies&_s=1&tfd=244",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:15.461Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787095391&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&_s=2&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391252~115583767~115938466~115938468~116682876&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2F&dt=Lab%20Essentials%20%7C%20Precision%20Lab%20Equipment%20%26%20Supplies&en=purchase&_c=1&tfd=244",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:15.461Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/privacy-sandbox/register-conversion?_c=1&cid=1636262719.1767787090&dbk=17778864260540389260&dma=0&en=purchase&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&npa=0&tid=G-QCSHJ4TDMY&dl=https%3A%2F%2Fstore.labessentials.com%3F",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:15.550Z",
+      "type": "other"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-7NR2JG1EDP&gtm=45je6150v9136496498z89224857331za20gzb9224857331zd9224857331&_p=1767787095391&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=1&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391253~115583767~115616986~115938466~115938469~116682876&sid=1767787089&sct=1&seg=1&dl=https%3A%2F%2Fstore.labessentials.com%2F&dt=Lab%20Essentials%20%7C%20Precision%20Lab%20Equipment%20%26%20Supplies&_tu=QA&en=page_view&tfd=5226",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:20.442Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-YEM357F2XN&gtm=45je6150v9136496498z89224857331za20gzb9224857331zd9224857331&_p=1767787095391&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=1&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391253~115583767~115616986~115938466~115938469~116682876&sid=1767787089&sct=1&seg=1&dl=https%3A%2F%2Fstore.labessentials.com%2F&dt=Lab%20Essentials%20%7C%20Precision%20Lab%20Equipment%20%26%20Supplies&_tu=QA&en=page_view&tfd=5227",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:20.442Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787095391&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391252~115583767~115938466~115938468~116682876&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2F&dt=Lab%20Essentials%20%7C%20Precision%20Lab%20Equipment%20%26%20Supplies&_s=3&tfd=5247",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:20.462Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-7NR2JG1EDP&gtm=45je6150v9136496498za20gzb9224857331zd9224857331&_p=1767787095391&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=2&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391253~115583767~115616986~115938466~115938469~116682876&sid=1767787089&sct=1&seg=1&dl=https%3A%2F%2Fstore.labessentials.com%2F&dt=Lab%20Essentials%20%7C%20Precision%20Lab%20Equipment%20%26%20Supplies&_tu=QA&en=user_engagement&_et=30890&tfd=31115",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:46.334Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-YEM357F2XN&gtm=45je6150v9136496498za20gzb9224857331zd9224857331&_p=1767787095391&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=2&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391253~115583767~115616986~115938466~115938469~116682876&sid=1767787089&sct=1&seg=1&dl=https%3A%2F%2Fstore.labessentials.com%2F&dt=Lab%20Essentials%20%7C%20Precision%20Lab%20Equipment%20%26%20Supplies&_tu=QA&en=user_engagement&_et=30890&tfd=31117",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:46.334Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-WNG6Z9ZD",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:46.346Z",
+      "type": "gtm_load"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-7NR2JG1EDP&cx=c&gtm=4e6150",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:46.377Z",
+      "type": "gtag_load"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/destination?id=G-QCSHJ4TDMY&cx=c&gtm=4e6150",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:46.395Z",
+      "type": "other"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787126342&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391253~115583767~115938465~115938469&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2Fcart&dt=Lab%20Essentials&_s=1&tfd=259",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:46.414Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787126342&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&_s=2&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391253~115583767~115938465~115938469&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2Fcart&dt=Lab%20Essentials&en=purchase&_c=1&tfd=260",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:46.414Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/privacy-sandbox/register-conversion?_c=1&cid=1636262719.1767787090&dbk=8665866128183970540&dma=0&en=purchase&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&npa=0&tid=G-QCSHJ4TDMY&dl=https%3A%2F%2Fstore.labessentials.com%3F",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:46.499Z",
+      "type": "other"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-7NR2JG1EDP&gtm=45je6150v9136496498z89224857331za20gzb9224857331zd9224857331&_p=1767787126342&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=1&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391253~115583767~115938465~115938469&sid=1767787089&sct=1&seg=1&dl=https%3A%2F%2Fstore.labessentials.com%2Fcart&dt=Lab%20Essentials&_tu=QA&en=page_view&tfd=3218",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:49.373Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-7NR2JG1EDP&gtm=45je6150v9136496498za20gzb9224857331zd9224857331&_p=1767787126342&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=2&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391253~115583767~115938465~115938469&sid=1767787089&sct=1&seg=1&dl=https%3A%2F%2Fstore.labessentials.com%2Fcart&dt=Lab%20Essentials&_tu=QA&en=user_engagement&_et=2980&tfd=3218",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:49.373Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-YEM357F2XN&gtm=45je6150v9136496498z89224857331za20gzb9224857331zd9224857331&_p=1767787126342&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=1&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391253~115583767~115938465~115938469&sid=1767787089&sct=1&seg=1&dl=https%3A%2F%2Fstore.labessentials.com%2Fcart&dt=Lab%20Essentials&_tu=QA&en=page_view&tfd=3220",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:49.373Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-YEM357F2XN&gtm=45je6150v9136496498za20gzb9224857331zd9224857331&_p=1767787126342&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&ir=1&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EAAAAAQ&_s=2&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391253~115583767~115938465~115938469&sid=1767787089&sct=1&seg=1&dl=https%3A%2F%2Fstore.labessentials.com%2Fcart&dt=Lab%20Essentials&_tu=QA&en=user_engagement&_et=2978&tfd=3220",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:49.373Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787126342&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391253~115583767~115938465~115938469&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2Fcart&dt=Lab%20Essentials&_s=3&tfd=3220",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:49.373Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-WNG6Z9ZD",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:49.383Z",
+      "type": "gtm_load"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-7NR2JG1EDP&cx=c&gtm=4e6150",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:49.413Z",
+      "type": "gtag_load"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/destination?id=G-QCSHJ4TDMY&cx=c&gtm=4e6150",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:49.425Z",
+      "type": "other"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787129377&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391253~115583767~115616985~115938466~115938468&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2Fcheckout&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&_s=1&tfd=262",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:49.451Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QCSHJ4TDMY&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&_p=1767787129377&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1636262719.1767787090&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B143.0.7499.4%7CChromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=26.2.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&_s=2&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391253~115583767~115616985~115938466~115938468&sid=1767787090&sct=1&seg=0&dl=https%3A%2F%2Fstore.labessentials.com%2Fcheckout&dt=Page%20Not%20Found%20%7C%20Lab%20Essentials&en=purchase&_c=1&tfd=262",
+      "method": "POST",
+      "timestamp": "2026-01-07T11:58:49.451Z",
+      "type": "ga4"
+    },
+    {
+      "url": "https://www.google-analytics.com/privacy-sandbox/register-conversion?_c=1&cid=1636262719.1767787090&dbk=4181860886431369522&dma=0&en=purchase&gtm=45je6150v9132815456z89224857331za20gzb9224857331zd9224857331&npa=0&tid=G-QCSHJ4TDMY&dl=https%3A%2F%2Fstore.labessentials.com%3F",
+      "method": "GET",
+      "timestamp": "2026-01-07T11:58:49.528Z",
+      "type": "other"
+    }
+  ],
+  "pageMetrics": {
+    "loadTime": 310,
+    "domReady": 200,
+    "firstPaint": 228
+  },
+  "gtmContainers": [
+    "GTM-WNG6Z9ZD"
+  ],
+  "ga4Properties": [
+    "G-7NR2JG1EDP"
+  ],
+  "ecommerceEvents": {
+    "view_item": false,
+    "add_to_cart": false,
+    "view_cart": false,
+    "begin_checkout": false,
+    "purchase": false
+  },
+  "tests": {
+    "homepage": {
+      "status": "completed",
+      "trackingElements": {
+        "gtmPresent": true,
+        "dataLayerPresent": true,
+        "gtagPresent": true,
+        "fbqPresent": false
+      },
+      "url": "https://store.labessentials.com/"
+    },
+    "cartPage": {
+      "status": "completed",
+      "cartData": {
+        "hasCartItems": false,
+        "hasCheckoutButton": false
+      },
+      "url": "https://store.labessentials.com/cart"
+    },
+    "gtmConfiguration": {
+      "status": "completed",
+      "gtmInfo": {
+        "containers": [
+          "GTM-WNG6Z9ZD"
+        ],
+        "dataLayerLength": 4,
+        "gtmPresent": true
+      }
+    },
+    "ga4Setup": {
+      "status": "completed",
+      "ga4Info": {
+        "properties": [
+          "G-7NR2JG1EDP"
+        ],
+        "gtagPresent": true
+      }
+    },
+    "ecommerceEvents": {
+      "status": "completed",
+      "eventTests": {
+        "view_item": false,
+        "add_to_cart": false,
+        "view_cart": false,
+        "begin_checkout": false,
+        "purchase": false
+      }
+    },
+    "networkAnalysis": {
+      "status": "completed",
+      "ga4RequestCount": 39,
+      "gtmRequestCount": 21,
+      "totalTrackingRequests": 60
+    },
+    "performance": {
+      "status": "completed",
+      "perfMetrics": {
+        "loadTime": 310,
+        "domReady": 200,
+        "firstPaint": 228
+      }
+    }
+  },
+  "businessImpact": {
+    "dataLoss": 30,
+    "optimizationLoss": 40,
+    "attributionLoss": 30
+  }
+}

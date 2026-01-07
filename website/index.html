@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      The Forensic Data Lab - We Don't Stop Until Your Tracking is Perfect
+      The Forensic Data Lab - Revenue Recovery for Shopify Brands
     </title>
     <meta
       name="description"
-      content="Shopify brands lose 11-20% revenue visibility to signal degradation. Professional revenue signal restoration for e-commerce."
+      content="Recover the 20% of revenue your ad algorithms are currently blind to. Forensic data repair for $5M-$20M GMV Shopify brands."
     />
 
     <!-- Fonts -->
@@ -68,14 +68,17 @@
         box-sizing: border-box;
       }
 
-      /* Main page background - subtle gradient */
+      /* Main page background with dotted grid pattern (like Renalta) */
       body {
-        background: linear-gradient(
-          180deg,
-          #0a1419 0%,
-          #0d1a1f 50%,
-          #0a1419 100%
-        );
+        background: 
+          radial-gradient(circle, rgba(45, 212, 191, 0.15) 1px, transparent 1px),
+          linear-gradient(
+            180deg,
+            #0a1419 0%,
+            #0d1a1f 50%,
+            #0a1419 100%
+          );
+        background-size: 24px 24px, 100% 100%;
         font-family: var(--font-primary);
         color: var(--color-text-primary);
         line-height: 1.6;
@@ -105,25 +108,56 @@
         background: rgba(17, 36, 40, 0.8);
       }
 
-      /* Corner dots on cards */
+      /* Corner dots on cards (all 4 corners like Renalta) */
       .card::before,
       .card::after {
         content: "";
         position: absolute;
-        width: 6px;
-        height: 6px;
+        width: 8px;
+        height: 8px;
         border-radius: 50%;
         background: rgba(45, 212, 191, 0.3);
       }
 
       .card::before {
-        top: -3px;
-        left: -3px;
+        top: -4px;
+        left: -4px;
       }
 
       .card::after {
-        top: -3px;
-        right: -3px;
+        top: -4px;
+        right: -4px;
+      }
+      
+      .card:hover::before,
+      .card:hover::after {
+        background: rgba(45, 212, 191, 0.6);
+      }
+
+      /* Add bottom corner dots */
+      .card .corner-bl,
+      .card .corner-br {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(45, 212, 191, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .card .corner-bl {
+        bottom: -4px;
+        left: -4px;
+      }
+
+      .card .corner-br {
+        bottom: -4px;
+        right: -4px;
+      }
+      
+      .card:hover .corner-bl,
+      .card:hover .corner-br {
+        background: rgba(45, 212, 191, 0.6);
       }
 
       /* Typography */
@@ -311,6 +345,22 @@
 
       .float {
         animation: float 6s ease-in-out infinite;
+      }
+
+      /* Feature Grid Item Hover Effects */
+      .feature-grid-item:hover {
+        border-color: rgba(45, 212, 191, 0.4);
+        background: rgba(17, 36, 40, 0.8);
+        box-shadow: 0 0 30px rgba(45, 212, 191, 0.1);
+        transform: translateY(-2px);
+      }
+
+      /* Mobile responsiveness for 2x2 grid */
+      @media (max-width: 768px) {
+        .feature-grid-container {
+          grid-template-columns: 1fr !important;
+          gap: 1rem !important;
+        }
       }
 
       /* Pricing Cards */
@@ -534,7 +584,7 @@
       <div class="container">
         <div class="text-center animate-fade-up">
           <h1 class="hero-title">
-            Recover the 11-20% of Revenue<br />
+            Recover the 20% of Revenue<br />
             <span
               style="
                 background: var(--gradient-primary);
@@ -543,13 +593,13 @@
                 background-clip: text;
               "
             >
-              Your Analytics Can't See.
+              Your Ad Algorithms Are Blind To
             </span>
           </h1>
 
           <p class="subheadline">
-            Shopify brands lose 11-20% of revenue to signal degradation.<br />
-            We restore your revenue visibility with our systematic approach.
+            90% of GA4 setups are structurally flawed, creating 20%-30% discrepancies between Shopify and Ad platforms.<br />
+            We perform forensic data repair to stop Revenue Leakage and restore algorithmic efficiency.
           </p>
 
           <!-- Interactive ROI Calculator -->
@@ -637,8 +687,107 @@
       </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Signature 2x2 Feature Grid (Like Renalta Security Section) -->
     <section id="services" class="section section-glow">
+      <div class="container">
+        <div class="text-center animate-fade-up">
+          <h2 class="section-title">The Ralph Wiggum Verification Loop</h2>
+          <p class="subheadline">
+            Automated browser testing that doesn't stop until your tracking is perfect
+          </p>
+        </div>
+
+        <!-- 2x2 Grid with Renalta-style dashed borders -->
+        <div class="feature-grid-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 3rem 0; max-width: 800px; margin-left: auto; margin-right: auto;">
+          <!-- Top Left -->
+          <div style="
+            background: rgba(17, 36, 40, 0.6);
+            border: 1px dashed rgba(45, 212, 191, 0.2);
+            border-right: 0.5px dashed rgba(45, 212, 191, 0.2);
+            border-bottom: 0.5px dashed rgba(45, 212, 191, 0.2);
+            padding: 2.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+          " class="feature-grid-item">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+            <h3 style="color: var(--color-accent); margin-bottom: 1rem; font-size: 1.25rem;">
+              Automated Audits
+            </h3>
+            <p class="body-text">
+              Every tracking event scanned and verified automatically across your entire customer journey.
+            </p>
+            <div class="corner-bl"></div>
+            <div class="corner-br"></div>
+          </div>
+          
+          <!-- Top Right -->
+          <div style="
+            background: rgba(17, 36, 40, 0.6);
+            border: 1px dashed rgba(45, 212, 191, 0.2);
+            border-left: 0.5px dashed rgba(45, 212, 191, 0.2);
+            border-bottom: 0.5px dashed rgba(45, 212, 191, 0.2);
+            padding: 2.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+          " class="feature-grid-item">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌐</div>
+            <h3 style="color: var(--color-accent); margin-bottom: 1rem; font-size: 1.25rem;">
+              Real Browser Testing
+            </h3>
+            <p class="body-text">
+              We test your actual site with Playwright browser automation across all devices and browsers.
+            </p>
+            <div class="corner-bl"></div>
+            <div class="corner-br"></div>
+          </div>
+          
+          <!-- Bottom Left -->
+          <div style="
+            background: rgba(17, 36, 40, 0.6);
+            border: 1px dashed rgba(45, 212, 191, 0.2);
+            border-right: 0.5px dashed rgba(45, 212, 191, 0.2);
+            border-top: 0.5px dashed rgba(45, 212, 191, 0.2);
+            padding: 2.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+          " class="feature-grid-item">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">✓</div>
+            <h3 style="color: var(--color-success); margin-bottom: 1rem; font-size: 1.25rem;">
+              100% Guarantee
+            </h3>
+            <p class="body-text">
+              We don't stop until your tracking hits 100% accuracy. No exceptions.
+            </p>
+            <div class="corner-bl"></div>
+            <div class="corner-br"></div>
+          </div>
+          
+          <!-- Bottom Right -->
+          <div style="
+            background: rgba(17, 36, 40, 0.6);
+            border: 1px dashed rgba(45, 212, 191, 0.2);
+            border-left: 0.5px dashed rgba(45, 212, 191, 0.2);
+            border-top: 0.5px dashed rgba(45, 212, 191, 0.2);
+            padding: 2.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+          " class="feature-grid-item">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔄</div>
+            <h3 style="color: var(--color-accent); margin-bottom: 1rem; font-size: 1.25rem;">
+              Loop Until Perfect
+            </h3>
+            <p class="body-text">
+              Our Ralph Wiggum Loop keeps fixing, testing, and verifying until everything is perfect.
+            </p>
+            <div class="corner-bl"></div>
+            <div class="corner-br"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Services Details Section -->
+    <section class="section">
       <div class="container">
         <div class="text-center animate-fade-up">
           <h2 class="section-title">What We Restore</h2>
@@ -1250,10 +1399,24 @@
 
       function updateCalculator() {
         const adSpend = parseInt(adSpendSlider.value);
-        const loss = Math.round(adSpend * 1.88); // 188% multiplier for revenue loss
+        
+        // Use real calculation logic from our platform
+        // Estimate monthly revenue as 4x ad spend (conservative)
+        const monthlyRevenue = adSpend * 4;
+        
+        // Assume 30% signal loss (typical for broken tracking)
+        const signalLoss = 30;
+        
+        // Calculate real impact: 8% revenue loss + 15% ad waste
+        const revenueImpact = 0.08;
+        const adWasteMultiplier = 0.15;
+        
+        const monthlyRevenueLoss = Math.round(monthlyRevenue * (signalLoss / 100) * revenueImpact);
+        const monthlyAdWaste = Math.round(adSpend * (signalLoss / 100) * adWasteMultiplier);
+        const totalLoss = monthlyRevenueLoss + monthlyAdWaste;
 
         adSpendValue.textContent = `$${adSpend.toLocaleString()}`;
-        revenueLoss.textContent = `$${loss.toLocaleString()}`;
+        revenueLoss.textContent = `$${totalLoss.toLocaleString()}`;
       }
 
       adSpendSlider.addEventListener("input", updateCalculator);
